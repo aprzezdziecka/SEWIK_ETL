@@ -1,0 +1,169 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/8/2026 5:35:03 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ALICJA"
+  DTS:CreatorName="ALICJA\alapr"
+  DTS:DTSID="{6B798D96-82DF-49BF-8CE2-791D4AE36A0B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="01_Load_SEWIK_XML"
+  DTS:PackageType="5"
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{E3D496D2-F22A-4B92-856D-1D4F8B72A10C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CE9827D9-7FCF-48B8-AD5E-01BFBF4ABE73}"
+      DTS:ObjectName="ALICJA.DWH_SEWIK_METEO.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ALICJA;User ID=sa;Initial Catalog=DWH_SEWIK_METEO;Provider=SQLNCLI11.1;Application Name=SSIS-01_Load_SEWIK_XML-{CE9827D9-7FCF-48B8-AD5E-01BFBF4ABE73}ALICJA.DWH_SEWIK_METEO.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC8R/9jcLAkGsQPWQI2Qq5BLma37jUQg3wsFoCaMVXd0QAAAAAOgAAAAAIAACAAAABugVUzSmNt5eNvo6weO2ZNS7cMCwoLWjo7LBcVhcF4qCAAAACMXp1ZN8dlhV0DTdVzb/LqH0rJZ1un/cmWRSTwMSPAjUAAAAAqIxpuClgs2Vg1QHp6tIirCVRm8fjglClIsb/Z9CA/soeLhGsTjCJHGADWjtXr90Lmow1O3sVgXSp50etqOcjW</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B3A5408F-6066-4B11-AFA4-A4862C8214C7}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SqlStatement">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B8B2445C-525E-49D2-A649-55E963C50DF6}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="XmlFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\MAZOWIECKIE\clean\FIXED_SEWIK_EXP_N_XML_02_WOJ__MAZOWIECKIE_2018_clean.xml</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{C2053095-4CF1-4C71-B44E-430AA1F76BF7}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{EAE291F7-E26C-4F46-A740-6FBB71DA8EBE}"
+        DTS:ObjectName="{EAE291F7-E26C-4F46-A740-6FBB71DA8EBE}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\PODLASKIE\clean" />
+            <FEFEProperty
+              FileSpec="*_clean.xml" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{C40F65CF-413B-469D-8C61-C4D1A63AF3BA}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"DECLARE @hdoc INT, @xml XML; " +
+"SELECT @xml = xml_content FROM OPENROWSET(BULK N'" + @[User::XmlFilePath] + "', SINGLE_BLOB) AS x(xml_content); " +
+"EXEC sp_xml_preparedocument @hdoc OUTPUT, @xml; " +
+
+"INSERT INTO dbo.STG_Zdarzenie (id_zdarzenia, nr_karty_wypadku, kod_gus, jednostka_miejsca, jednostka_likwidujaca, jednostka_operatora, woj, powiat, gmina, miejscowosc, ulica_adres, numer_domu, ulica_skrzyz, km_hm, gps_x_gus, gps_y_gus, data_zdarzenia, data_zdarz, godzina_zdarz, predkosc_dopuszczalna, droga_publiczna, rodzaj_zdarzenia_kod, nawierzchnia_kod, stan_nawierzchni_kod, oznakowanie_poz_kod, geometria_drogi_kod, obszar_zabudowany_kod, charakt_miejsca_kod, warunki_atm_kod, inne_przyczyny_kod, zssd_kod, oswietlenie_kod, typ_skrzyzowania_kod, strefa_zamieszkala, strefa_ruchu, liczba_pasow, odleglosc_skrzyz) " +
+"SELECT z.ID, z.NR_KW, z.KOD_GUS, z.JEDNOSTKA_MIEJSCA, z.JEDNOSTKA_LIKWIDUJACA, z.JEDNOSTKA_OPERATORA, z.WOJ, z.POWIAT, z.GMINA, z.MIEJSCOWOSC, z.ULICA_ADRES, z.NUMER_DOMU, z.ULICA_SKRZYZ, z.KM_HM, z.GPS_X_GUS, z.GPS_Y_GUS, z.DATA_ZDARZENIA, z.DATA_ZDARZ, z.GODZINA_ZDARZ, z.PREDKOSC_DOPUSZCZALNA, z.DROGA_PUBLICZNA, z.SZRD_KOD, nadr.NADR_KOD, stna.STNA_KOD, ozpo.OZPO_KOD, geod.GEOD_KOD, zabu.ZABU_KOD, chmz.CHMZ_KOD, sswa.SSWA_KOD, spip.SPIP_KOD, z.ZSSD_KOD, z.SZOS_KOD, z.TYP_SKRZYZOWANIA_KOD, z.STREFA_ZAMIESZKANIA, z.STREFA_RUCHU, z.LICZBA_PASOW, z.ODLEGLOSC_SKRZYZ " +
+"FROM OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE', 2) WITH (ID NVARCHAR(50) 'ID', NR_KW NVARCHAR(100) 'NR_KW', KOD_GUS NVARCHAR(20) 'KOD_GUS', JEDNOSTKA_MIEJSCA NVARCHAR(200) 'JEDNOSTKA_MIEJSCA', JEDNOSTKA_LIKWIDUJACA NVARCHAR(200) 'JEDNOSTKA_LIKWIDUJACA', JEDNOSTKA_OPERATORA NVARCHAR(200) 'JEDNOSTKA_OPERATORA', WOJ NVARCHAR(100) 'WOJ', POWIAT NVARCHAR(100) 'POWIAT', GMINA NVARCHAR(100) 'GMINA', MIEJSCOWOSC NVARCHAR(200) 'MIEJSCOWOSC', ULICA_ADRES NVARCHAR(200) 'ULICA_ADRES', NUMER_DOMU NVARCHAR(50) 'NUMER_DOMU', ULICA_SKRZYZ NVARCHAR(200) 'ULICA_SKRZYZ', KM_HM NVARCHAR(20) 'KM_HM', GPS_X_GUS NVARCHAR(30) 'GPS_X_GUS', GPS_Y_GUS NVARCHAR(30) 'GPS_Y_GUS', DATA_ZDARZENIA NVARCHAR(30) 'DATA_ZDARZENIA', DATA_ZDARZ NVARCHAR(20) 'DATA_ZDARZ', GODZINA_ZDARZ NVARCHAR(10) 'GODZINA_ZDARZ', PREDKOSC_DOPUSZCZALNA NVARCHAR(10) 'PREDKOSC_DOPUSZCZALNA', DROGA_PUBLICZNA NVARCHAR(5) 'DROGA_PUBLICZNA', SZRD_KOD NVARCHAR(10) 'SZRD_KOD', ZSSD_KOD NVARCHAR(20) 'ZSSD_KOD', SZOS_KOD NVARCHAR(10) 'SZOS_KOD', TYP_SKRZYZOWANIA_KOD NVARCHAR(10) 'TYP_SKRZYZOWANIA_KOD', STREFA_ZAMIESZKANIA NVARCHAR(10) 'STREFA_ZAMIESZKANIA', STREFA_RUCHU NVARCHAR(10) 'STREFA_RUCHU', LICZBA_PASOW NVARCHAR(10) 'LICZBA_PASOW', ODLEGLOSC_SKRZYZ NVARCHAR(20) 'ODLEGLOSC_SKRZYZ') z " +
+"LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/INFO_O_DRODZE/NAWIERZCHNIA/NADR_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', NADR_KOD NVARCHAR(10) 'NADR_KOD') nadr ON z.ID = nadr.ZSZD_ID " +
+"LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/INFO_O_DRODZE/STAN_NAWIERZCHNI/STNA_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', STNA_KOD NVARCHAR(10) 'STNA_KOD') stna ON z.ID = stna.ZSZD_ID " +
+"LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/INFO_O_DRODZE/OZNAKOWANIE_POZIOME/OZPO_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', OZPO_KOD NVARCHAR(10) 'OZPO_KOD') ozpo ON z.ID = ozpo.ZSZD_ID " +
+"LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/MIEJSCE/GEOMETRIA_DROGI/GEOD_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', GEOD_KOD NVARCHAR(10) 'GEOD_KOD') geod ON z.ID = geod.ZSZD_ID " +
+"LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/MIEJSCE/OBSZAR_ZABUDOWANY/ZABU_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', ZABU_KOD NVARCHAR(10) 'ZABU_KOD') zabu ON z.ID = zabu.ZSZD_ID " +
+"LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/MIEJSCE/CHARAKT_MIEJSCA/CHMZ_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', CHMZ_KOD NVARCHAR(10) 'CHMZ_KOD') chmz ON z.ID = chmz.ZSZD_ID " +
+"LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/WARUNKI_ATMOSFERYCZNE/SSWA_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', SSWA_KOD NVARCHAR(10) 'SSWA_KOD') sswa ON z.ID = sswa.ZSZD_ID " +
+"LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/INNE_PRZYCZYNY/SPIP_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', SPIP_KOD NVARCHAR(10) 'SPIP_KOD') spip ON z.ID = spip.ZSZD_ID; " +
+
+"INSERT INTO dbo.STG_Pojazd (id_pojazdu, id_zdarzenia, nr_pojazdu, rodzaj_pojazdu, marka, rok_produkcji, stan_pojazdu_kod, wyposazenie_dod, data_ost_bad_tech) " +
+"SELECT ID, ZSZD_ID, NR_POJAZDU, RODZAJ_POJAZDU, MARKA, ROK_PRODUKCJI, SPSU_KOD, WYPOSAZENIE_DOD, DATA_OST_BAD_TECH " +
+"FROM OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/POJAZDY/POJAZD', 1) " +
+"WITH (ID NVARCHAR(50) 'ID', ZSZD_ID NVARCHAR(50) 'ZSZD_ID', NR_POJAZDU NVARCHAR(10) 'NR_POJAZDU', RODZAJ_POJAZDU NVARCHAR(20) 'RODZAJ_POJAZDU', MARKA NVARCHAR(100) 'MARKA', ROK_PRODUKCJI NVARCHAR(10) 'ROK_PRODUKCJI', SPSU_KOD NVARCHAR(20) 'SPSU_KOD', WYPOSAZENIE_DOD NVARCHAR(200) 'WYPOSAZENIE_DOD', DATA_OST_BAD_TECH NVARCHAR(20) 'DATA_OST_BAD_TECH'); " +
+
+"INSERT INTO dbo.STG_Osoba (id_osoby, id_zdarzenia, id_pojazdu, rola_uczestnika_kod, data_urodzenia, plec, obcokrajowiec_kod, stan_uczestnika_kod, miejsce_w_poj_kod, odblaski, inwalida, zbiegl_z_miejsca, liczba_lat_kier, poziom_alkoholu, pod_wplywem_kod, stopien_obrazen_kod, przyczyna_kier_kod, przyczyna_piesz_kod, jazda_bez_upr_kod, rozstrzygniecie_kod) " +
+"SELECT ID, ZSZD_ID, ZSPO_ID, SSRU_KOD, DATA_UR, PLEC, SOBY_KOD, SUSU_KOD, MIEJSCE_W_POJ_KOD, ODBLASKI, INWALIDA, ZBIEGL_Z_MIEJSCA, LICZBA_LAT_KIEROWANIA, POZIOM_ALKOHOLU, POD_WPLYWEM_KOD, STOPIEN_OBRAZEN_KOD, PRZYCZYNA_KIER_KOD, PRZYCZYNA_PIESZ_KOD, JAZDA_BEZ_UPR_KOD, ROZSTRZYGNIECIE_KOD " +
+"FROM OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/UCZESTNICY/OSOBA', 1) " +
+"WITH (ID NVARCHAR(50) 'ID', ZSZD_ID NVARCHAR(50) 'ZSZD_ID', ZSPO_ID NVARCHAR(50) 'ZSPO_ID', SSRU_KOD NVARCHAR(20) 'SSRU_KOD', DATA_UR NVARCHAR(20) 'DATA_UR', PLEC NVARCHAR(5) 'PLEC', SOBY_KOD NVARCHAR(20) 'SOBY_KOD', SUSU_KOD NVARCHAR(20) 'SUSU_KOD', MIEJSCE_W_POJ_KOD NVARCHAR(20) 'MIEJSCE_W_POJ_KOD', ODBLASKI NVARCHAR(5) 'ODBLASKI', INWALIDA NVARCHAR(5) 'INWALIDA', ZBIEGL_Z_MIEJSCA NVARCHAR(5) 'ZBIEGL_Z_MIEJSCA', LICZBA_LAT_KIEROWANIA NVARCHAR(10) 'LICZBA_LAT_KIEROWANIA', POZIOM_ALKOHOLU NVARCHAR(20) 'POZIOM_ALKOHOLU', POD_WPLYWEM_KOD NVARCHAR(20) 'POD_WPLYWEM_KOD', STOPIEN_OBRAZEN_KOD NVARCHAR(20) 'STOPIEN_OBRAZEN_KOD', PRZYCZYNA_KIER_KOD NVARCHAR(20) 'PRZYCZYNA_KIER_KOD', PRZYCZYNA_PIESZ_KOD NVARCHAR(20) 'PRZYCZYNA_PIESZ_KOD', JAZDA_BEZ_UPR_KOD NVARCHAR(20) 'JAZDA_BEZ_UPR_KOD', ROZSTRZYGNIECIE_KOD NVARCHAR(20) 'ROZSTRZYGNIECIE_KOD'); " +
+
+"EXEC sp_xml_removedocument @hdoc;"</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CE9827D9-7FCF-48B8-AD5E-01BFBF4ABE73}"
+              SQLTask:SqlStatementSource="DECLARE @hdoc INT, @xml XML; SELECT @xml = xml_content FROM OPENROWSET(BULK N'C:\MAZOWIECKIE\clean\FIXED_SEWIK_EXP_N_XML_02_WOJ__MAZOWIECKIE_2018_clean.xml', SINGLE_BLOB) AS x(xml_content); EXEC sp_xml_preparedocument @hdoc OUTPUT, @xml; INSERT INTO dbo.STG_Zdarzenie (id_zdarzenia, nr_karty_wypadku, kod_gus, jednostka_miejsca, jednostka_likwidujaca, jednostka_operatora, woj, powiat, gmina, miejscowosc, ulica_adres, numer_domu, ulica_skrzyz, km_hm, gps_x_gus, gps_y_gus, data_zdarzenia, data_zdarz, godzina_zdarz, predkosc_dopuszczalna, droga_publiczna, rodzaj_zdarzenia_kod, nawierzchnia_kod, stan_nawierzchni_kod, oznakowanie_poz_kod, geometria_drogi_kod, obszar_zabudowany_kod, charakt_miejsca_kod, warunki_atm_kod, inne_przyczyny_kod, zssd_kod, oswietlenie_kod, typ_skrzyzowania_kod, strefa_zamieszkala, strefa_ruchu, liczba_pasow, odleglosc_skrzyz) SELECT z.ID, z.NR_KW, z.KOD_GUS, z.JEDNOSTKA_MIEJSCA, z.JEDNOSTKA_LIKWIDUJACA, z.JEDNOSTKA_OPERATORA, z.WOJ, z.POWIAT, z.GMINA, z.MIEJSCOWOSC, z.ULICA_ADRES, z.NUMER_DOMU, z.ULICA_SKRZYZ, z.KM_HM, z.GPS_X_GUS, z.GPS_Y_GUS, z.DATA_ZDARZENIA, z.DATA_ZDARZ, z.GODZINA_ZDARZ, z.PREDKOSC_DOPUSZCZALNA, z.DROGA_PUBLICZNA, z.SZRD_KOD, nadr.NADR_KOD, stna.STNA_KOD, ozpo.OZPO_KOD, geod.GEOD_KOD, zabu.ZABU_KOD, chmz.CHMZ_KOD, sswa.SSWA_KOD, spip.SPIP_KOD, z.ZSSD_KOD, z.SZOS_KOD, z.TYP_SKRZYZOWANIA_KOD, z.STREFA_ZAMIESZKANIA, z.STREFA_RUCHU, z.LICZBA_PASOW, z.ODLEGLOSC_SKRZYZ FROM OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE', 2) WITH (ID NVARCHAR(50) 'ID', NR_KW NVARCHAR(100) 'NR_KW', KOD_GUS NVARCHAR(20) 'KOD_GUS', JEDNOSTKA_MIEJSCA NVARCHAR(200) 'JEDNOSTKA_MIEJSCA', JEDNOSTKA_LIKWIDUJACA NVARCHAR(200) 'JEDNOSTKA_LIKWIDUJACA', JEDNOSTKA_OPERATORA NVARCHAR(200) 'JEDNOSTKA_OPERATORA', WOJ NVARCHAR(100) 'WOJ', POWIAT NVARCHAR(100) 'POWIAT', GMINA NVARCHAR(100) 'GMINA', MIEJSCOWOSC NVARCHAR(200) 'MIEJSCOWOSC', ULICA_ADRES NVARCHAR(200) 'ULICA_ADRES', NUMER_DOMU NVARCHAR(50) 'NUMER_DOMU', ULICA_SKRZYZ NVARCHAR(200) 'ULICA_SKRZYZ', KM_HM NVARCHAR(20) 'KM_HM', GPS_X_GUS NVARCHAR(30) 'GPS_X_GUS', GPS_Y_GUS NVARCHAR(30) 'GPS_Y_GUS', DATA_ZDARZENIA NVARCHAR(30) 'DATA_ZDARZENIA', DATA_ZDARZ NVARCHAR(20) 'DATA_ZDARZ', GODZINA_ZDARZ NVARCHAR(10) 'GODZINA_ZDARZ', PREDKOSC_DOPUSZCZALNA NVARCHAR(10) 'PREDKOSC_DOPUSZCZALNA', DROGA_PUBLICZNA NVARCHAR(5) 'DROGA_PUBLICZNA', SZRD_KOD NVARCHAR(10) 'SZRD_KOD', ZSSD_KOD NVARCHAR(20) 'ZSSD_KOD', SZOS_KOD NVARCHAR(10) 'SZOS_KOD', TYP_SKRZYZOWANIA_KOD NVARCHAR(10) 'TYP_SKRZYZOWANIA_KOD', STREFA_ZAMIESZKANIA NVARCHAR(10) 'STREFA_ZAMIESZKANIA', STREFA_RUCHU NVARCHAR(10) 'STREFA_RUCHU', LICZBA_PASOW NVARCHAR(10) 'LICZBA_PASOW', ODLEGLOSC_SKRZYZ NVARCHAR(20) 'ODLEGLOSC_SKRZYZ') z LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/INFO_O_DRODZE/NAWIERZCHNIA/NADR_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', NADR_KOD NVARCHAR(10) 'NADR_KOD') nadr ON z.ID = nadr.ZSZD_ID LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/INFO_O_DRODZE/STAN_NAWIERZCHNI/STNA_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', STNA_KOD NVARCHAR(10) 'STNA_KOD') stna ON z.ID = stna.ZSZD_ID LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/INFO_O_DRODZE/OZNAKOWANIE_POZIOME/OZPO_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', OZPO_KOD NVARCHAR(10) 'OZPO_KOD') ozpo ON z.ID = ozpo.ZSZD_ID LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/MIEJSCE/GEOMETRIA_DROGI/GEOD_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', GEOD_KOD NVARCHAR(10) 'GEOD_KOD') geod ON z.ID = geod.ZSZD_ID LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/MIEJSCE/OBSZAR_ZABUDOWANY/ZABU_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', ZABU_KOD NVARCHAR(10) 'ZABU_KOD') zabu ON z.ID = zabu.ZSZD_ID LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/MIEJSCE/CHARAKT_MIEJSCA/CHMZ_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', CHMZ_KOD NVARCHAR(10) 'CHMZ_KOD') chmz ON z.ID = chmz.ZSZD_ID LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/WARUNKI_ATMOSFERYCZNE/SSWA_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', SSWA_KOD NVARCHAR(10) 'SSWA_KOD') sswa ON z.ID = sswa.ZSZD_ID LEFT JOIN OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/INNE_PRZYCZYNY/SPIP_KOD', 2) WITH (ZSZD_ID NVARCHAR(50) 'ZSZD_ID', SPIP_KOD NVARCHAR(10) 'SPIP_KOD') spip ON z.ID = spip.ZSZD_ID; INSERT INTO dbo.STG_Pojazd (id_pojazdu, id_zdarzenia, nr_pojazdu, rodzaj_pojazdu, marka, rok_produkcji, stan_pojazdu_kod, wyposazenie_dod, data_ost_bad_tech) SELECT ID, ZSZD_ID, NR_POJAZDU, RODZAJ_POJAZDU, MARKA, ROK_PRODUKCJI, SPSU_KOD, WYPOSAZENIE_DOD, DATA_OST_BAD_TECH FROM OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/POJAZDY/POJAZD', 1) WITH (ID NVARCHAR(50) 'ID', ZSZD_ID NVARCHAR(50) 'ZSZD_ID', NR_POJAZDU NVARCHAR(10) 'NR_POJAZDU', RODZAJ_POJAZDU NVARCHAR(20) 'RODZAJ_POJAZDU', MARKA NVARCHAR(100) 'MARKA', ROK_PRODUKCJI NVARCHAR(10) 'ROK_PRODUKCJI', SPSU_KOD NVARCHAR(20) 'SPSU_KOD', WYPOSAZENIE_DOD NVARCHAR(200) 'WYPOSAZENIE_DOD', DATA_OST_BAD_TECH NVARCHAR(20) 'DATA_OST_BAD_TECH'); INSERT INTO dbo.STG_Osoba (id_osoby, id_zdarzenia, id_pojazdu, rola_uczestnika_kod, data_urodzenia, plec, obcokrajowiec_kod, stan_uczestnika_kod, miejsce_w_poj_kod, odblaski, inwalida, zbiegl_z_miejsca, liczba_lat_kier, poziom_alkoholu, pod_wplywem_kod, stopien_obrazen_kod, przyczyna_kier_kod, przyczyna_piesz_kod, jazda_bez_upr_kod, rozstrzygniecie_kod) SELECT ID, ZSZD_ID, ZSPO_ID, SSRU_KOD, DATA_UR, PLEC, SOBY_KOD, SUSU_KOD, MIEJSCE_W_POJ_KOD, ODBLASKI, INWALIDA, ZBIEGL_Z_MIEJSCA, LICZBA_LAT_KIEROWANIA, POZIOM_ALKOHOLU, POD_WPLYWEM_KOD, STOPIEN_OBRAZEN_KOD, PRZYCZYNA_KIER_KOD, PRZYCZYNA_PIESZ_KOD, JAZDA_BEZ_UPR_KOD, ROZSTRZYGNIECIE_KOD FROM OPENXML(@hdoc, '/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/UCZESTNICY/OSOBA', 1) WITH (ID NVARCHAR(50) 'ID', ZSZD_ID NVARCHAR(50) 'ZSZD_ID', ZSPO_ID NVARCHAR(50) 'ZSPO_ID', SSRU_KOD NVARCHAR(20) 'SSRU_KOD', DATA_UR NVARCHAR(20) 'DATA_UR', PLEC NVARCHAR(5) 'PLEC', SOBY_KOD NVARCHAR(20) 'SOBY_KOD', SUSU_KOD NVARCHAR(20) 'SUSU_KOD', MIEJSCE_W_POJ_KOD NVARCHAR(20) 'MIEJSCE_W_POJ_KOD', ODBLASKI NVARCHAR(5) 'ODBLASKI', INWALIDA NVARCHAR(5) 'INWALIDA', ZBIEGL_Z_MIEJSCA NVARCHAR(5) 'ZBIEGL_Z_MIEJSCA', LICZBA_LAT_KIEROWANIA NVARCHAR(10) 'LICZBA_LAT_KIEROWANIA', POZIOM_ALKOHOLU NVARCHAR(20) 'POZIOM_ALKOHOLU', POD_WPLYWEM_KOD NVARCHAR(20) 'POD_WPLYWEM_KOD', STOPIEN_OBRAZEN_KOD NVARCHAR(20) 'STOPIEN_OBRAZEN_KOD', PRZYCZYNA_KIER_KOD NVARCHAR(20) 'PRZYCZYNA_KIER_KOD', PRZYCZYNA_PIESZ_KOD NVARCHAR(20) 'PRZYCZYNA_PIESZ_KOD', JAZDA_BEZ_UPR_KOD NVARCHAR(20) 'JAZDA_BEZ_UPR_KOD', ROZSTRZYGNIECIE_KOD NVARCHAR(20) 'ROZSTRZYGNIECIE_KOD'); EXEC sp_xml_removedocument @hdoc;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{A2244970-39E4-477F-A1AB-84B0A6365662}"
+          DTS:ObjectName="{A2244970-39E4-477F-A1AB-84B0A6365662}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::XmlFilePath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Foreach Loop Container\Execute SQL Task"
+          TopLeft="31.5,19.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,117"
+          Size="214,160"
+          Id="Package\Foreach Loop Container"
+          TopLeft="246,93" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
