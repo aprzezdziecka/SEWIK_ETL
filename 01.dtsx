@@ -1,0 +1,156 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/10/2026 11:40:16 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ALICJA"
+  DTS:CreatorName="ALICJA\alapr"
+  DTS:DTSID="{496E84E9-A449-4C84-A0DE-792CB1723BF7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="01"
+  DTS:PackageType="5"
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{A04A946B-5B1A-4845-9459-AF9536572F2F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0A18F87A-4048-4EE7-BBE7-063D60506BC4}"
+      DTS:ObjectName="ALICJA.DWH_SEWIK_METEO.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ALICJA;User ID=sa;Initial Catalog=DWH_SEWIK_METEO;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-01-{0A18F87A-4048-4EE7-BBE7-063D60506BC4}ALICJA.DWH_SEWIK_METEO.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABPLwo83L0vn9PWZmEyQH86W1PwfFduz7r7/MoiW5nRPwAAAAAOgAAAAAIAACAAAACapSk2hYrOlffzXAE3WJloLAfH/5J3u0W8cRI3l30X7SAAAAAvPE4yksoEvecAGi6TvWodVwUTybqKvosc1h6lthk0D0AAAABxGaRcd2M18hjsH7/koaLvBhhsjcTrovIBCUud/cM86SmhoQpGnWj2rrqeZxmfG9PNq2T8TAKvLnDFlBi149kw</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{36F15F34-47D6-4369-B36E-8FE16110BEB6}"
+      DTS:ObjectName="ALICJA.DWH_SEWIK_METEO.sa 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ALICJA;User ID=sa;Initial Catalog=DWH_SEWIK_METEO;Provider=SQLNCLI11.1;Application Name=SSIS-01-{36F15F34-47D6-4369-B36E-8FE16110BEB6}ALICJA.DWH_SEWIK_METEO.sa 1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACHHufZOPYEwRyYJHZ/1v6fFBbA1cWGJkMIbP/6vg8qjwAAAAAOgAAAAAIAACAAAACCfweP1qdR0Ow3QaQLwqOWo4LW5MVvQ0CyBBPb3in7ayAAAAD/7HQgr1D/Xbn5UYza1n6wTYtGbA3ryUO1IE/L2NmljUAAAABTidrd3bBT7XhFFVm2anm63OgV7jjbcbQsm/LuT+wm1Af1hthBl9L1+UP5Fqx34u2pIW64EDcK4itBzdfKgF7T</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C5ACFD2C-843E-4DF5-A006-12E7828F9773}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="XmlFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{30DADD03-88DE-4611-B7AA-A7D63A7C2C0B}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{DFC67B5C-A91F-4D37-85E8-D55E02E44BDD}"
+        DTS:ObjectName="{DFC67B5C-A91F-4D37-85E8-D55E02E44BDD}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\PODLASKIE\clean" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{71FA401B-83C3-4D7A-B733-15D3F8D6817C}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{0A18F87A-4048-4EE7-BBE7-063D60506BC4}"
+              SQLTask:SqlStatementSource="USE DWH_SEWIK_METEO;&#xA;&#xA;DECLARE @xml XML;&#xA;DECLARE @sciezka NVARCHAR(500) = ?;&#xA;DECLARE @sql NVARCHAR(MAX);&#xA;DECLARE @xmltext NVARCHAR(MAX);&#xA;&#xA;SET @sql = N'SELECT @xmltext = CAST(xml_content AS NVARCHAR(MAX)) &#xA;             FROM OPENROWSET(BULK N''' + @sciezka + N''', SINGLE_CLOB) AS x(xml_content)';&#xA;EXEC sp_executesql @sql, N'@xmltext NVARCHAR(MAX) OUTPUT', @xmltext OUTPUT;&#xA;&#xA;SET @xmltext = SUBSTRING(@xmltext, CHARINDEX('&lt;SEWIK', @xmltext), LEN(@xmltext));&#xA;SET @xml = CAST(@xmltext AS XML);&#xA;&#xA;INSERT INTO DWH_SEWIK_METEO.dbo.STG_Zdarzenie (&#xA;    stg_data_wczytania, stg_plik_zrodlowy,&#xA;    id_zdarzenia, nr_karty_wypadku, kod_gus,&#xA;    jednostka_miejsca, jednostka_likwidujaca, jednostka_operatora,&#xA;    woj, powiat, gmina, miejscowosc,&#xA;    ulica_adres, numer_domu, ulica_skrzyz,&#xA;    km_hm, gps_x_gus, gps_y_gus,&#xA;    data_zdarzenia, data_zdarz, godzina_zdarz,&#xA;    data_zgloszenia, data_przyjazdu,&#xA;    predkosc_dopuszczalna, liczba_pasow, droga_publiczna, odleglosc_skrzyz,&#xA;    nawierzchnia_kod, stan_nawierzchni_kod, rodzaj_drogi_kod,&#xA;    oznakowanie_poz_kod, geometria_drogi_kod, obszar_zabudowany_kod,&#xA;    charakt_miejsca_kod, typ_skrzyzowania_kod,&#xA;    strefa_ruchu,&#xA;    rodzaj_zdarzenia_kod, oswietlenie_kod,&#xA;    warunki_atm_kod, inne_przyczyny_kod, zssd_kod,&#xA;    sygnalizacja_swietlna_kod&#xA;)&#xA;SELECT&#xA;    GETDATE(),&#xA;    @sciezka,&#xA;    z.value('(ID)[1]',                                                          'NVARCHAR(50)'),&#xA;    z.value('(NR_KW)[1]',                                                       'NVARCHAR(100)'),&#xA;    z.value('(KOD_GUS)[1]',                                                     'NVARCHAR(20)'),&#xA;    z.value('(JEDNOSTKA_MIEJSCA)[1]',                                            'NVARCHAR(200)'),&#xA;    z.value('(JEDNOSTKA_LIKWIDUJACA)[1]',                                        'NVARCHAR(200)'),&#xA;    z.value('(JEDNOSTKA_OPERATORA)[1]',                                          'NVARCHAR(200)'),&#xA;    z.value('(WOJ)[1]',                                                          'NVARCHAR(100)'),&#xA;    z.value('(POWIAT)[1]',                                                       'NVARCHAR(100)'),&#xA;    z.value('(GMINA)[1]',                                                        'NVARCHAR(100)'),&#xA;    z.value('(MIEJSCOWOSC)[1]',                                                  'NVARCHAR(200)'),&#xA;    z.value('(ULICA_ADRES)[1]',                                                  'NVARCHAR(200)'),&#xA;    z.value('(NUMER_DOMU)[1]',                                                   'NVARCHAR(50)'),&#xA;    z.value('(ULICA_SKRZYZ)[1]',                                                 'NVARCHAR(200)'),&#xA;    z.value('(KM_HM)[1]',                                                        'NVARCHAR(20)'),&#xA;    z.value('(GPS_X_GUS)[1]',                                                    'NVARCHAR(30)'),&#xA;    z.value('(GPS_Y_GUS)[1]',                                                    'NVARCHAR(30)'),&#xA;    z.value('(DATA_ZDARZENIA)[1]',                                               'NVARCHAR(30)'),&#xA;    z.value('(DATA_ZDARZ)[1]',                                                   'NVARCHAR(20)'),&#xA;    z.value('(GODZINA_ZDARZ)[1]',                                                'NVARCHAR(10)'),&#xA;    z.value('(DATA_ZGLOSZENIA)[1]',                                              'NVARCHAR(30)'),&#xA;    z.value('(DATA_PRZYJAZDU)[1]',                                               'NVARCHAR(30)'),&#xA;    z.value('(PREDKOSC_DOPUSZCZALNA)[1]',                                        'NVARCHAR(10)'),&#xA;    z.value('(LICZBA_PASOW)[1]',                                                 'NVARCHAR(10)'),&#xA;    z.value('(DROGA_PUBLICZNA)[1]',                                              'NVARCHAR(5)'),&#xA;    z.value('(ODLEGLOSC_SKRZYZ)[1]',                                             'NVARCHAR(20)'),&#xA;    z.value('(INFO_O_DRODZE/NAWIERZCHNIA/NADR_KOD/NADR_KOD)[1]',               'NVARCHAR(10)'),&#xA;    z.value('(INFO_O_DRODZE/STAN_NAWIERZCHNI/STNA_KOD/STNA_KOD)[1]',           'NVARCHAR(10)'),&#xA;    z.value('(INFO_O_DRODZE/RODZAJ_DROGI/RODR_KOD_CONTAINER/RODR_KOD)[1]',     'NVARCHAR(10)'),&#xA;    z.value('(INFO_O_DRODZE/OZNAKOWANIE_POZIOME/OZPO_KOD/OZPO_KOD)[1]',        'NVARCHAR(10)'),&#xA;    z.value('(MIEJSCE/GEOMETRIA_DROGI/GEOD_KOD/GEOD_KOD)[1]',                  'NVARCHAR(10)'),&#xA;    z.value('(MIEJSCE/OBSZAR_ZABUDOWANY/ZABU_KOD/ZABU_KOD)[1]',                'NVARCHAR(10)'),&#xA;    z.value('(MIEJSCE/CHARAKT_MIEJSCA/CHMZ_KOD/CHMZ_KOD)[1]',                  'NVARCHAR(10)'),&#xA;    z.value('(MIEJSCE/SKRZYZOWANIE/SKRZ_KOD_CONTAINER/SKRZ_KOD)[1]',           'NVARCHAR(10)'),&#xA;    z.value('(STREFA_RUCHU)[1]',                                                 'NVARCHAR(10)'),&#xA;    z.value('(SZRD_KOD)[1]',                                                     'NVARCHAR(10)'),&#xA;    z.value('(SZOS_KOD)[1]',                                                     'NVARCHAR(10)'),&#xA;    z.value('(WARUNKI_ATMOSFERYCZNE/SSWA_KOD/SSWA_KOD)[1]',                    'NVARCHAR(10)'),&#xA;    z.value('(INNE_PRZYCZYNY/SPIP_KOD/SPIP_KOD)[1]',                           'NVARCHAR(10)'),&#xA;    z.value('(ZSSD_KOD)[1]',                                                     'NVARCHAR(100)'),&#xA;    z.value('(INFO_O_DRODZE/SYGNALIZACJA_SWIETLNA/SYSW_KOD/SYSW_KOD)[1]',     'NVARCHAR(10)')&#xA;FROM @xml.nodes('/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE') AS x(z);&#xA;&#xA;INSERT INTO DWH_SEWIK_METEO.dbo.STG_Pojazd (&#xA;    stg_data_wczytania, stg_plik_zrodlowy,&#xA;    id_pojazdu, id_zdarzenia, nr_pojazdu, rodzaj_pojazdu,&#xA;    marka, rok_produkcji, stan_pojazdu_kod, wyposazenie_dod, data_ost_bad_tech&#xA;)&#xA;SELECT&#xA;    GETDATE(),&#xA;    @sciezka,&#xA;    p.value('(ID)[1]',                'NVARCHAR(50)'),&#xA;    p.value('(ZSZD_ID)[1]',           'NVARCHAR(50)'),&#xA;    p.value('(NR_POJAZDU)[1]',        'NVARCHAR(10)'),&#xA;    p.value('(RODZAJ_POJAZDU)[1]',    'NVARCHAR(20)'),&#xA;    p.value('(MARKA)[1]',             'NVARCHAR(100)'),&#xA;    p.value('(ROK_PRODUKCJI)[1]',     'NVARCHAR(10)'),&#xA;    p.value('(SPSU_KOD)[1]',          'NVARCHAR(20)'),&#xA;    p.value('(WYPOSAZENIE_DOD)[1]',   'NVARCHAR(200)'),&#xA;    p.value('(DATA_OST_BAD_TECH)[1]', 'NVARCHAR(20)')&#xA;FROM @xml.nodes('/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/POJAZDY/POJAZD') AS x(p);&#xA;&#xA;INSERT INTO DWH_SEWIK_METEO.dbo.STG_Osoba (&#xA;    stg_data_wczytania, stg_plik_zrodlowy,&#xA;    id_osoby, id_zdarzenia, id_pojazdu,&#xA;    rola_uczestnika_kod, data_urodzenia, plec,&#xA;    obcokrajowiec_kod, stan_uczestnika_kod, miejsce_w_poj_kod,&#xA;    odblaski, inwalida, zbiegl_z_miejsca,&#xA;    liczba_lat_kier, poziom_alkoholu, pod_wplywem_kod,&#xA;    stopien_obrazen_kod, przyczyna_kier_kod, przyczyna_piesz_kod,&#xA;    jazda_bez_upr_kod, rozstrzygniecie_kod&#xA;)&#xA;SELECT&#xA;    GETDATE(),&#xA;    @sciezka,&#xA;    o.value('(ID)[1]',                    'NVARCHAR(50)'),&#xA;    o.value('(ZSZD_ID)[1]',               'NVARCHAR(50)'),&#xA;    o.value('(ZSPO_ID)[1]',               'NVARCHAR(50)'),&#xA;    o.value('(SSRU_KOD)[1]',              'NVARCHAR(20)'),&#xA;    o.value('(DATA_UR)[1]',               'NVARCHAR(20)'),&#xA;    o.value('(PLEC)[1]',                  'NVARCHAR(5)'),&#xA;    o.value('(SOBY_KOD)[1]',              'NVARCHAR(20)'),&#xA;    o.value('(SUSU_KOD)[1]',              'NVARCHAR(20)'),&#xA;    o.value('(MIEJSCE_W_POJ_KOD)[1]',     'NVARCHAR(20)'),&#xA;    o.value('(ODBLASKI)[1]',              'NVARCHAR(5)'),&#xA;    o.value('(INWALIDA)[1]',              'NVARCHAR(5)'),&#xA;    o.value('(ZBIEGL_Z_MIEJSCA)[1]',      'NVARCHAR(5)'),&#xA;    o.value('(LICZBA_LAT_KIEROWANIA)[1]', 'NVARCHAR(10)'),&#xA;    o.value('(POZIOM_ALKOHOLU)[1]',       'NVARCHAR(20)'),&#xA;    o.value('(POD_WPLYWEM_KOD)[1]',       'NVARCHAR(20)'),&#xA;    o.value('(STOPIEN_OBRAZEN_KOD)[1]',   'NVARCHAR(20)'),&#xA;    o.value('(PRZYCZYNA_KIER_KOD)[1]',    'NVARCHAR(20)'),&#xA;    o.value('(PRZYCZYNA_PIESZ_KOD)[1]',   'NVARCHAR(20)'),&#xA;    o.value('(JAZDA_BEZ_UPR_KOD)[1]',     'NVARCHAR(20)'),&#xA;    o.value('(ROZSTRZYGNIECIE_KOD)[1]',   'NVARCHAR(20)')&#xA;FROM @xml.nodes('/SEWIK_EXP_XML_02/ZDARZENIA/ZDARZENIE/UCZESTNICY/OSOBA') AS x(o);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::XmlFilePath"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{26F3A8CF-922F-4EB9-AF28-81DA6C716E3D}"
+          DTS:ObjectName="{26F3A8CF-922F-4EB9-AF28-81DA6C716E3D}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::XmlFilePath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Foreach Loop Container\Execute SQL Task"
+          TopLeft="21.5,33.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,130"
+          Size="205,174"
+          Id="Package\Foreach Loop Container"
+          TopLeft="364,154" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
