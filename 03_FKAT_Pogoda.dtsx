@@ -1,0 +1,1750 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/12/2026 4:56:43 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ALICJA"
+  DTS:CreatorName="ALICJA\alapr"
+  DTS:DTSID="{D41590F3-CE86-4FF3-B0F8-921091081D4F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="03_FKAT_Pogoda"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{C992559F-4D0E-4C26-B93F-264F9F79A775}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CAB6A93F-4BA9-40E7-A91A-020E94C31F76}"
+      DTS:ObjectName="ALICJA.DWH_SEWIK_METEO.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ALICJA;User ID=sa;Initial Catalog=DWH_SEWIK_METEO;Provider=SQLNCLI11.1;Application Name=SSIS-03_FKAT_Pogoda-{CAB6A93F-4BA9-40E7-A91A-020E94C31F76}ALICJA.DWH_SEWIK_METEO.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAG+eaDi37dJkhjwayNQk/TF7T+mOM7SurbeobkUOJn3QAAAAAOgAAAAAIAACAAAACiSsFfLDSqYRbA0d+TtiriYCe2JhjmqP0qG8Khk7TRWCAAAAAI+hjd/lBg5DOLYqtt8Vwo32UObT2edbzhoUeTqPgqwEAAAADaxGzGOhH+kYCdryfWBTxUlTxVSi8fGaEmlo4dVDnkNYmYqaG+BcFdhSlLdeaaecQ/JppVC+LGRwqEYnPdyKEj</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0A13DDE6-676E-452F-B2A8-928522E856F5}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\pogoda_export.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dlugosc_geograficzna"
+              DTS:DTSID="{F252D2D7-2E11-48E7-8FF2-AB033BCD12DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="szerokosc_geograficzna"
+              DTS:DTSID="{57E61AC3-6592-48D6-9543-6B42469675A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="data"
+              DTS:DTSID="{DFA8E088-42F2-4029-8CDF-AA9A1BBB1EC1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="godzina"
+              DTS:DTSID="{70E8B100-2045-413B-B08B-48D37634C7C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="temperatura_c"
+              DTS:DTSID="{9BD7AA23-CD61-4683-A7B3-EB742ABA5AD3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="opady_mm"
+              DTS:DTSID="{BF5322CC-29FC-4E79-8BC2-EB20F61CFE43}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="predkosc_wiatru_kmh"
+              DTS:DTSID="{9F031827-9B6C-4EAD-B6EC-B724C1E5E1E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="kierunek_wiatru_stopnie"
+              DTS:DTSID="{8E44AD04-3264-4187-B199-DF1B7928A412}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="zachmurzenie_procent"
+              DTS:DTSID="{5FA20F68-2BD7-4CB0-A170-4065CA84EFFE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9D46C260-47E9-47D4-83E2-49896AC86E1C}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\pogoda_export.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dlugosc_geograficzna"
+              DTS:DTSID="{75D7BC11-7D41-48F9-A2FA-90D6A7E1C25A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="szerokosc_geograficzna"
+              DTS:DTSID="{C666C297-B216-4F4C-B42B-C66B30D83316}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="data"
+              DTS:DTSID="{340B26FD-30B8-49B8-B683-67E6492D3018}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="godzina"
+              DTS:DTSID="{2A3C96DB-3D2E-4542-AE26-618DF83A4D3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="temperatura_c"
+              DTS:DTSID="{61D11721-83BB-4CF0-ABFB-E4E45EE62ECE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="opady_mm"
+              DTS:DTSID="{F8FDC3F6-4711-4BDE-BF0B-81FC2BCC7AAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="predkosc_wiatru_kmh"
+              DTS:DTSID="{C7F83A40-F7F0-4E1B-8EEC-9A7248B807E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="kierunek_wiatru_stopnie"
+              DTS:DTSID="{927AF40A-BD90-4EFC-B5AE-59196DE2A478}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="zachmurzenie_procent"
+              DTS:DTSID="{DB222966-87DC-4640-924D-1C62ABA55117}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cisnienie_hpa"
+              DTS:DTSID="{A2C58117-A4BD-4BEC-A26B-D5192C9D55BD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="wilgotnosc_procent"
+              DTS:DTSID="{DC122DF3-3A5F-48E9-BE00-627EC8B1154F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Fill_FAKT_Pogoda"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{735BC2FA-F0CD-4197-9996-075D3F3B5E06}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Fill_FAKT_Pogoda"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Fill_FAKT_Pogoda\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Fill_FAKT_Pogoda\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Derived Column.Inputs[Derived Column Input].Columns[dlugosc_geograficzna]"
+                      cachedDataType="r8"
+                      cachedName="dlugosc_geograficzna"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[dlugosc_geograficzna]" />
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Derived Column.Inputs[Derived Column Input].Columns[szerokosc_geograficzna]"
+                      cachedDataType="r8"
+                      cachedName="szerokosc_geograficzna"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[szerokosc_geograficzna]" />
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Derived Column.Inputs[Derived Column Input].Columns[godzina]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="godzina"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[godzina]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Fill_FAKT_Pogoda\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output].Columns[dlugosc_str_calc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output].Columns[dlugosc_str_calc]"
+                      name="dlugosc_str_calc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,10)((DT_I4)([ROUND](#{Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[dlugosc_geograficzna]} * 100,0)))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,10)((DT_I4)(ROUND(dlugosc_geograficzna * 100,0)))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output].Columns[szerokosc_str_calc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output].Columns[szerokosc_str_calc]"
+                      name="szerokosc_str_calc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,10)((DT_I4)([ROUND](#{Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[szerokosc_geograficzna]} * 100,0)))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,10)((DT_I4)(ROUND(szerokosc_geograficzna * 100,0)))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output].Columns[godzina_int]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output].Columns[godzina_int]"
+                      name="godzina_int"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I2)[SUBSTRING](#{Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[godzina]},1,2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I2)SUBSTRING(godzina,1,2)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Fill_FAKT_Pogoda\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fill_FAKT_Pogoda\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fill_FAKT_Pogoda\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[dlugosc_geograficzna]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dlugosc_geograficzna]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[dlugosc_geograficzna]"
+                      name="dlugosc_geograficzna"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[szerokosc_geograficzna]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[szerokosc_geograficzna]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[szerokosc_geograficzna]"
+                      name="szerokosc_geograficzna"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[data]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[data]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[data]"
+                      name="data"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[godzina]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[godzina]"
+                      length="50"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[godzina]"
+                      name="godzina"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[temperatura_c]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[temperatura_c]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[temperatura_c]"
+                      name="temperatura_c"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[opady_mm]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[opady_mm]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[opady_mm]"
+                      name="opady_mm"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[predkosc_wiatru_kmh]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[predkosc_wiatru_kmh]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[predkosc_wiatru_kmh]"
+                      name="predkosc_wiatru_kmh"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[kierunek_wiatru_stopnie]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[kierunek_wiatru_stopnie]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[kierunek_wiatru_stopnie]"
+                      name="kierunek_wiatru_stopnie"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[zachmurzenie_procent]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[zachmurzenie_procent]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[zachmurzenie_procent]"
+                      name="zachmurzenie_procent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[cisnienie_hpa]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cisnienie_hpa]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[cisnienie_hpa]"
+                      name="cisnienie_hpa"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[wilgotnosc_procent]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[wilgotnosc_procent]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[wilgotnosc_procent]"
+                      name="wilgotnosc_procent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dlugosc_geograficzna]"
+                      dataType="r8"
+                      name="dlugosc_geograficzna" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[szerokosc_geograficzna]"
+                      dataType="r8"
+                      name="szerokosc_geograficzna" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[data]"
+                      dataType="dbDate"
+                      name="data" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[godzina]"
+                      dataType="wstr"
+                      length="50"
+                      name="godzina" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[temperatura_c]"
+                      dataType="r8"
+                      name="temperatura_c" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[opady_mm]"
+                      dataType="r8"
+                      name="opady_mm" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[predkosc_wiatru_kmh]"
+                      dataType="r8"
+                      name="predkosc_wiatru_kmh" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[kierunek_wiatru_stopnie]"
+                      dataType="r4"
+                      name="kierunek_wiatru_stopnie" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[zachmurzenie_procent]"
+                      dataType="r8"
+                      name="zachmurzenie_procent" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cisnienie_hpa]"
+                      dataType="r4"
+                      name="cisnienie_hpa" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[wilgotnosc_procent]"
+                      dataType="i4"
+                      name="wilgotnosc_procent" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fill_FAKT_Pogoda\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+    id_siatka,
+    CAST(CAST(ROUND([długość_geograficzna]*100,0) AS INT) AS NVARCHAR(10)) AS dlugosc_str,
+    CAST(CAST(ROUND([szerokość_geograficzna]*100,0) AS INT) AS NVARCHAR(10)) AS szerokosc_str
+FROM dbo.DIM_Siatka_Pogodowa</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT 
+    id_siatka,
+    CAST(CAST(ROUND([długość_geograficzna]*100,0) AS INT) AS NVARCHAR(10)) AS dlugosc_str,
+    CAST(CAST(ROUND([szerokość_geograficzna]*100,0) AS INT) AS NVARCHAR(10)) AS szerokosc_str
+FROM dbo.DIM_Siatka_Pogodowa) [refTable]
+where [refTable].[dlugosc_str] = ? and [refTable].[szerokosc_str] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_siatka" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="dlugosc_str" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="szerokosc_str" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output].Columns[dlugosc_str_calc]};#{Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output].Columns[szerokosc_str_calc]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fill_FAKT_Pogoda\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fill_FAKT_Pogoda\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Lookup.Inputs[Lookup Input].Columns[dlugosc_str_calc]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="dlugosc_str_calc"
+                      lineageId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output].Columns[dlugosc_str_calc]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">dlugosc_str</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Lookup.Inputs[Lookup Input].Columns[szerokosc_str_calc]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="szerokosc_str_calc"
+                      lineageId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output].Columns[szerokosc_str_calc]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">szerokosc_str</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Fill_FAKT_Pogoda\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Lookup.Outputs[Lookup Match Output].Columns[id_siatka]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Fill_FAKT_Pogoda\Lookup.Outputs[Lookup Match Output].Columns[id_siatka]"
+                      name="id_siatka"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_siatka</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Fill_FAKT_Pogoda\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Fill_FAKT_Pogoda\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill_FAKT_Pogoda\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill_FAKT_Pogoda\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fill_FAKT_Pogoda\Lookup 1"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup 1"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT id_data, data FROM dbo.DIM_Data</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT id_data, data FROM dbo.DIM_Data) [refTable]
+where [refTable].[data] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_data" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="data" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[data]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fill_FAKT_Pogoda\Lookup 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fill_FAKT_Pogoda\Lookup 1.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Lookup 1.Inputs[Lookup Input].Columns[data]"
+                      cachedDataType="dbDate"
+                      cachedName="data"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[data]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">data</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\Lookup 1.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Fill_FAKT_Pogoda\Lookup 1.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Lookup 1.Outputs[Lookup Match Output].Columns[id_data]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Fill_FAKT_Pogoda\Lookup 1.Outputs[Lookup Match Output].Columns[id_data]"
+                      name="id_data"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_data</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\Lookup 1.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Fill_FAKT_Pogoda\Lookup 1.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\Lookup 1.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Fill_FAKT_Pogoda\Lookup 1.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill_FAKT_Pogoda\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill_FAKT_Pogoda\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fill_FAKT_Pogoda\Lookup 2"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup 2"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT id_czas, godzina FROM dbo.DIM_Czas</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT id_czas, godzina FROM dbo.DIM_Czas) [refTable]
+where [refTable].[godzina] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_czas" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="godzina" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output].Columns[godzina_int]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fill_FAKT_Pogoda\Lookup 2.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fill_FAKT_Pogoda\Lookup 2.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Lookup 2.Inputs[Lookup Input].Columns[godzina_int]"
+                      cachedDataType="i2"
+                      cachedName="godzina_int"
+                      lineageId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output].Columns[godzina_int]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">godzina</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\Lookup 2.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Fill_FAKT_Pogoda\Lookup 2.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Lookup 2.Outputs[Lookup Match Output].Columns[id_czas]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Fill_FAKT_Pogoda\Lookup 2.Outputs[Lookup Match Output].Columns[id_czas]"
+                      name="id_czas"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_czas</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\Lookup 2.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Fill_FAKT_Pogoda\Lookup 2.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\Lookup 2.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Fill_FAKT_Pogoda\Lookup 2.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill_FAKT_Pogoda\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill_FAKT_Pogoda\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fill_FAKT_Pogoda\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FAKT_Pogoda]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[temperatura_c]"
+                      cachedDataType="r8"
+                      cachedName="temperatura_c"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[temperatura_c]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[temperatura_c]" />
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[opady_mm]"
+                      cachedDataType="r8"
+                      cachedName="opady_mm"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[opady_mm]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[opady_mm]" />
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[predkosc_wiatru_kmh]"
+                      cachedDataType="r8"
+                      cachedName="predkosc_wiatru_kmh"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[predkosc_wiatru_kmh]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[predkosc_wiatru_kmh]" />
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[kierunek_wiatru_stopnie]"
+                      cachedDataType="i4"
+                      cachedName="kierunek_wiatru_stopnie"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[kierunek_wiatru_stopnie]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[kierunek_wiatru_stopnie]" />
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[zachmurzenie_procent]"
+                      cachedDataType="i4"
+                      cachedName="zachmurzenie_procent"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[zachmurzenie_procent]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[zachmurzenie_procent]" />
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cisnienie_hpa]"
+                      cachedDataType="r4"
+                      cachedName="cisnienie_hpa"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cisnienie_hpa]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[cisnienie_hpa]" />
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[wilgotnosc_procent]"
+                      cachedDataType="i4"
+                      cachedName="wilgotnosc_procent"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[wilgotnosc_procent]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output].Columns[wilgotnosc_procent]" />
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_siatka]"
+                      cachedDataType="i4"
+                      cachedName="id_siatka"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_siatka]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Lookup.Outputs[Lookup Match Output].Columns[id_siatka]" />
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_data]"
+                      cachedDataType="i8"
+                      cachedName="id_data"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_data]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Lookup 1.Outputs[Lookup Match Output].Columns[id_data]" />
+                    <inputColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_czas]"
+                      cachedDataType="i4"
+                      cachedName="id_czas"
+                      externalMetadataColumnId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_czas]"
+                      lineageId="Package\Fill_FAKT_Pogoda\Lookup 2.Outputs[Lookup Match Output].Columns[id_czas]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_pogoda]"
+                      dataType="i8"
+                      name="id_pogoda" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_data]"
+                      dataType="i8"
+                      name="id_data" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_czas]"
+                      dataType="i4"
+                      name="id_czas" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_siatka]"
+                      dataType="i4"
+                      name="id_siatka" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[temperatura_c]"
+                      dataType="numeric"
+                      name="temperatura_c"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[opady_mm]"
+                      dataType="numeric"
+                      name="opady_mm"
+                      precision="6"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[predkosc_wiatru_kmh]"
+                      dataType="numeric"
+                      name="predkosc_wiatru_kmh"
+                      precision="5"
+                      scale="1" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[kierunek_wiatru_stopnie]"
+                      dataType="i2"
+                      name="kierunek_wiatru_stopnie" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[zachmurzenie_procent]"
+                      dataType="i2"
+                      name="zachmurzenie_procent" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[widocznosc_km]"
+                      dataType="numeric"
+                      name="widocznosc_km"
+                      precision="5"
+                      scale="1" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cisnienie_hpa]"
+                      dataType="numeric"
+                      name="cisnienie_hpa"
+                      precision="7"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[wilgotnosc_procent]"
+                      dataType="i2"
+                      name="wilgotnosc_procent" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Fill_FAKT_Pogoda.Paths[Derived Column Output]"
+              endId="Package\Fill_FAKT_Pogoda\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Fill_FAKT_Pogoda\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Fill_FAKT_Pogoda.Paths[Flat File Source Output]"
+              endId="Package\Fill_FAKT_Pogoda\Derived Column.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Fill_FAKT_Pogoda\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Fill_FAKT_Pogoda.Paths[Lookup Match Output]"
+              endId="Package\Fill_FAKT_Pogoda\Lookup 1.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fill_FAKT_Pogoda\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fill_FAKT_Pogoda.Paths[Lookup Match Output1]"
+              endId="Package\Fill_FAKT_Pogoda\Lookup 2.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fill_FAKT_Pogoda\Lookup 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fill_FAKT_Pogoda.Paths[Lookup Match Output2]"
+              endId="Package\Fill_FAKT_Pogoda\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Fill_FAKT_Pogoda\Lookup 2.Outputs[Lookup Match Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Fill_FAKT_Pogoda"
+          TopLeft="465.5,165.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Fill_FAKT_Pogoda">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Fill_FAKT_Pogoda\Flat File Source"
+          TopLeft="268.5,59.5" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Fill_FAKT_Pogoda\Lookup"
+          TopLeft="280.5,256.5" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Fill_FAKT_Pogoda\Derived Column"
+          TopLeft="270.5,164.5" />
+        <EdgeLayout
+          Id="Package\Fill_FAKT_Pogoda.Paths[Flat File Source Output]"
+          TopLeft="345.75,101.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_FAKT_Pogoda.Paths[Derived Column Output]"
+          TopLeft="347.5,206.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-10.5,50"
+              Start="0,0"
+              End="-10.5,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21"
+                    Point2="0,25"
+                    Point3="-4,25" />
+                  <mssgle:LineSegment
+                    End="-6.5,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6.5,25"
+                    Point2="-10.5,25"
+                    Point3="-10.5,29" />
+                  <mssgle:LineSegment
+                    End="-10.5,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="122,42"
+          Id="Package\Fill_FAKT_Pogoda\Lookup 1"
+          TopLeft="279.5,366.5" />
+        <EdgeLayout
+          Id="Package\Fill_FAKT_Pogoda.Paths[Lookup Match Output]"
+          TopLeft="338.75,298.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68"
+              Start="0,0"
+              End="0,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,24.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="122,42"
+          Id="Package\Fill_FAKT_Pogoda\Lookup 2"
+          TopLeft="279.5,443.5" />
+        <EdgeLayout
+          Id="Package\Fill_FAKT_Pogoda.Paths[Lookup Match Output1]"
+          TopLeft="340.5,408.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,7.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Fill_FAKT_Pogoda\OLE DB Destination"
+          TopLeft="235.5,523.5" />
+        <EdgeLayout
+          Id="Package\Fill_FAKT_Pogoda.Paths[Lookup Match Output2]"
+          TopLeft="340.5,485.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-19.5,38"
+              Start="0,0"
+              End="-19.5,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15"
+                    Point2="0,19"
+                    Point3="-4,19" />
+                  <mssgle:LineSegment
+                    End="-15.5,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-15.5,19"
+                    Point2="-19.5,19"
+                    Point3="-19.5,23" />
+                  <mssgle:LineSegment
+                    End="-19.5,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-57.94138671875,24,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill_FAKT_Pogoda\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill_FAKT_Pogoda\Lookup 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill_FAKT_Pogoda\Lookup 2">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill_FAKT_Pogoda\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
