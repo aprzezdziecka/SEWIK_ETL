@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="01"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{A04A946B-5B1A-4845-9459-AF9536572F2F}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{16C4ABB5-1B60-42A5-A751-B3F63E9592F6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABPLwo83L0vn9PWZmEyQH86W1PwfFduz7r7/MoiW5nRPwAAAAAOgAAAAAIAACAAAACapSk2hYrOlffzXAE3WJloLAfH/5J3u0W8cRI3l30X7SAAAAAvPE4yksoEvecAGi6TvWodVwUTybqKvosc1h6lthk0D0AAAABxGaRcd2M18hjsH7/koaLvBhhsjcTrovIBCUud/cM86SmhoQpGnWj2rrqeZxmfG9PNq2T8TAKvLnDFlBi149kw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADdEBo6nsQ7Hr8wgi0DUicRuvuqAQpY4K1YLGpImdCruwAAAAAOgAAAAAIAACAAAACgMO7lo8stdga7pdsNIkjqLHRKiUD10LNQ4FUFP2yyQyAAAACWMNWJLKi+c3Xg30cTLpKAKFqKTdGHooXIy6Xeod+1UUAAAACx0eGgWUbHItn4qsF78JD62Olet+JRSHZ81DvQnT5YxkCT7hnGejznzWQ5HLiM+DqKFv5pfmZDn8c9JpFZEJu9</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACHHufZOPYEwRyYJHZ/1v6fFBbA1cWGJkMIbP/6vg8qjwAAAAAOgAAAAAIAACAAAACCfweP1qdR0Ow3QaQLwqOWo4LW5MVvQ0CyBBPb3in7ayAAAAD/7HQgr1D/Xbn5UYza1n6wTYtGbA3ryUO1IE/L2NmljUAAAABTidrd3bBT7XhFFVm2anm63OgV7jjbcbQsm/LuT+wm1Af1hthBl9L1+UP5Fqx34u2pIW64EDcK4itBzdfKgF7T</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC9unkGAVEerIrkmaGFlMcHiWN82FufaeOszA4j50cQxwAAAAAOgAAAAAIAACAAAABAGYk6lTZWx2KmIiaDsWxhKO54vz8qy3vvgQ8GoMhmwSAAAABVaYjA0Zozyim9y+lkEiwzG9R6wTC/WZqIykKtdjznCEAAAABnkH9xLID/dorA2Z3T9kQjr+SIKTXq3puYwF35zq0XXJlEBwKGsuPN86w3t2IXWENyI4DjlFe00kKy0Bf135fK</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -79,7 +79,7 @@
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="C:\PODLASKIE\clean" />
+              Folder="C:\MAZOWIECKIE\clean" />
             <FEFEProperty
               FileSpec="*.*" />
             <FEFEProperty
@@ -119,8 +119,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{26F3A8CF-922F-4EB9-AF28-81DA6C716E3D}"
-          DTS:ObjectName="{26F3A8CF-922F-4EB9-AF28-81DA6C716E3D}"
+          DTS:DTSID="{691F7809-903E-408C-8EF8-E978876E1C72}"
+          DTS:ObjectName="{691F7809-903E-408C-8EF8-E978876E1C72}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::XmlFilePath" />
       </DTS:ForEachVariableMappings>
@@ -145,8 +145,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="205,130"
-          Size="205,174"
+          PanelSize="214,130"
+          Size="214,173"
           Id="Package\Foreach Loop Container"
           TopLeft="364,154" />
       </GraphLayout>
