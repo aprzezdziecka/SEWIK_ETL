@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="00_Fill_DIM_Siatka_Pogodowa"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{ACDEAA72-BB50-4F15-9051-72535C4345DD}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{57119D39-BD62-4C10-8530-FCEA116FE402}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAACU1m1GT364UeszkiJPj6XFsfiFsWkR2xPxQ/kFGT2/AAAAAAOgAAAAAIAACAAAAAfJPvGanfRFAZrSjMvykdLnbDH7uLprr/3euWjDHgJWCAAAACTlYkssH5boxi+gKqcihEA+lTq5sTTyLTQYCtvPJ9BLEAAAADRZtJ+ZVFxAlVhFKzIey14M7CW54f9sae5DU9wASEEpFF8nKUaZmKhi6XW4RiAJ/yl3czhp0aLDYWUsICyDtRU</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAGHH+sNam75pVsDUi3TIHDZJLFQ/6qaHzqQJ1A95BQVQAAAAAOgAAAAAIAACAAAADKEgk2VBP/8xCzBtcC9ddpgUQ7OPnS6M22VE2WAgSx/SAAAADa5aB8rabaQrl3d6JOZaZuaw9kHCVuJ1vvnz4TDAa56UAAAACORzfhMdPrPqHd/ejI2IDMF2SPMP7O0QQu3a5G/Ez0FcpDBzELHAtU4CY/gTyo6N5jWbX1L7Ddr3wWo0L53/lx</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -147,8 +147,10 @@
                       lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].Columns[dlugosc_siatki]" />
                     <inputColumn
                       refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].Columns[rozdzielczosc]"
-                      cachedDataType="i4"
+                      cachedDataType="numeric"
                       cachedName="rozdzielczosc"
+                      cachedPrecision="3"
+                      cachedScale="2"
                       externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].ExternalColumns[rozdzielczość]"
                       lineageId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Output].Columns[rozdzielczosc]" />
                     <inputColumn
@@ -252,20 +254,13 @@ Dlugosci AS (
     SELECT 14.00 + (n * 0.25) AS dlugosc
     FROM Liczby
     WHERE 14.00 + (n * 0.25) &lt;= 24.00
-),
-PelnaSiatka AS (
-    SELECT 
-        sz.szerokosc AS szerokosc_siatki,
-        dl.dlugosc AS dlugosc_siatki
-    FROM Szerokosci sz
-    CROSS JOIN Dlugosci dl
 )
--- Nadajemy unikalne numery ID już na poziomie zapytania źródłowego
 SELECT 
-    ROW_NUMBER() OVER (ORDER BY szerokosc_siatki, dlugosc_siatki) AS id_siatka,
-    szerokosc_siatki,
-    dlugosc_siatki
-FROM PelnaSiatka;</property>
+    ROW_NUMBER() OVER (ORDER BY sz.szerokosc, dl.dlugosc) AS id_siatka,
+    sz.szerokosc AS szerokosc_siatki,
+    dl.dlugosc AS dlugosc_siatki
+FROM Szerokosci sz
+CROSS JOIN Dlugosci dl;</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -442,24 +437,26 @@ FROM PelnaSiatka;</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Output].Columns[rozdzielczosc]"
-                      dataType="i4"
+                      dataType="numeric"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Output].Columns[rozdzielczosc]"
                       name="rozdzielczosc"
+                      precision="3"
+                      scale="2"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">25</property>
+                          name="Expression">0.25</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">25</property>
+                          name="FriendlyExpression">0.25</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -506,7 +503,34 @@ FROM PelnaSiatka;</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQLT_Clear_DIM_Siatka_Pogodowa"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{A03B3BB0-CD37-4B44-83D1-3526976C2C27}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQLT_Clear_DIM_Siatka_Pogodowa"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{ED6BD4F3-1351-49E7-844D-5CC0AA6D85B4}"
+          SQLTask:SqlStatementSource="DELETE FROM DWH_SEWIK_METEO.dbo.DIM_Siatka_Pogodowa;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{ADCB73B1-9F7F-4914-B159-24ECC8669FAD}"
+      DTS:From="Package\SQLT_Clear_DIM_Siatka_Pogodowa"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Fill_DIM_Siatka_Pogodowa" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -518,11 +542,49 @@ FROM PelnaSiatka;</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="206,42"
           Id="Package\Fill_DIM_Siatka_Pogodowa"
-          TopLeft="311.5,101.5" />
+          TopLeft="357.5,178.5" />
+        <NodeLayout
+          Size="248,42"
+          Id="Package\SQLT_Clear_DIM_Siatka_Pogodowa"
+          TopLeft="355.5,73.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="479.5,115.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-19,63"
+              Start="0,0"
+              End="-19,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5"
+                    Point2="0,31.5"
+                    Point3="-4,31.5" />
+                  <mssgle:LineSegment
+                    End="-15,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-15,31.5"
+                    Point2="-19,31.5"
+                    Point3="-19,35.5" />
+                  <mssgle:LineSegment
+                    End="-19,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>

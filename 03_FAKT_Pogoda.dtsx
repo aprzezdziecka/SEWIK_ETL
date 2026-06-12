@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="03_FAKT_Pogoda"
   DTS:PackageType="5"
-  DTS:VersionBuild="48"
-  DTS:VersionGUID="{F3EBEDCF-F2F7-4E28-9959-36919A3ED442}">
+  DTS:VersionBuild="49"
+  DTS:VersionGUID="{C01F2D1B-0560-476F-B944-6772295E4996}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADIdLdK7E2ldg8RjA4aPqdXtL6M19pYGMzEx9Yo4yrPYAAAAAAOgAAAAAIAACAAAADx08ayWnPS4hVEt9EuYFm3skQbpGyo/xiEFncpbqzqdCAAAADV4NeT6MwpHAme7GwRG4EIxMaHvRoanRc61IIyyuCAXEAAAAC2tLHbVbgeZr4j7K8VZVP2JGLat49GVXgbnf7PIiud3slXR0GTN3Xmi5iEUWnf00GZZObcHWMZ4SCgNouKw4bC</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAIYdPIjuOtjX+jk7lVXh0tdEy/5DBvqWVAVBLE5keumQAAAAAOgAAAAAIAACAAAACoQP6xb5WRWi7tGfqbzv86Mt5q4nVAJxZvD/CDi1SlTSAAAADpanvxA2DRxGk5leKpZjPtyYbKZt5D3vk6VGdSIvoJk0AAAAD37sk8ehofrtS5Lzng2l7p1zU1dBLDC4aVZLjwHNJ1pKHQHSzYuc1O+eYVoYSrDMhdF1nvR3/VLi+6eFZrGN7k</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1569,7 +1569,34 @@ where [refTable].[dlugosc_str] = ? and [refTable].[szerokosc_str] = ?</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQLT_Clear_FAKT_Pogoda"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{A8BC6ED3-468E-42FF-895A-E159FB88E711}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQLT_Clear_FAKT_Pogoda"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CAB6A93F-4BA9-40E7-A91A-020E94C31F76}"
+          SQLTask:SqlStatementSource="DELETE FROM DWH_SEWIK_METEO.dbo.FAKT_Pogoda;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{81A6F59C-6A0A-4036-A934-9540111991F6}"
+      DTS:From="Package\SQLT_Clear_FAKT_Pogoda"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Fill_FAKT_Pogoda" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -1581,11 +1608,37 @@ where [refTable].[dlugosc_str] = ? and [refTable].[szerokosc_str] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
           Id="Package\Fill_FAKT_Pogoda"
-          TopLeft="465.5,165.5" />
+          TopLeft="402.5,176.5" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\SQLT_Clear_FAKT_Pogoda"
+          TopLeft="375.5,86.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="481,128.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48"
+              Start="0,0"
+              End="0,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>

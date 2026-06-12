@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="02_Fill_Zdarzenie_Tables"
   DTS:PackageType="5"
-  DTS:VersionBuild="165"
-  DTS:VersionGUID="{C46F296F-7371-41D2-B11F-B9C7FE2F3FC2}">
+  DTS:VersionBuild="173"
+  DTS:VersionGUID="{573202E6-F67C-4D73-A6F9-7785E33CF6A5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB23gvY8dDbRmwVN0zdUFgsi9it2+mjSFHB0nKu5yvR4gAAAAAOgAAAAAIAACAAAACJ/EXojMXWtfipEIgqG+ogK8ktO0BgxruOoC+jM5/+jiAAAABnQ2VFAR5kRCGzDhxM2k6rDirDoSXaVDTousyszKblCUAAAAAdeHlfAmkhvOU3el/iOHxpk4hBGojxMOwONk9pCWQ2lBp1x97nQCLA16qUgoxX49Gcakq5F7+5OMY7S3i3XeNo</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAuTjpOve6+ACa7rSftIqqO3QX5NiHkdVpejgS0FyvF6QAAAAAOgAAAAAIAACAAAABjnnoJuUxdlIzi/dvuUnSgt1c4MzhUwbI/2mnUtXi0LyAAAACiFYJPnXCy1jHlexjbfC0WVs2ak9sUXJ1RjkBiC7rRhUAAAABfeR/GKB8EMj741Q+jnJWUyN8HfhC7J6Ek1OYxwBJ4o18AF8atIeOMUp20nmj9BW937s7cGm56UAMfIMgJ7NE3</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC5yu8KCWsrZw3gAHMvDvvCh5I9WxwDR+MNdsXlMYv3VQAAAAAOgAAAAAIAACAAAAD3qugfq0e6zso2ubxaexmt+fHIhzHLHD7uBtg4Miv1uSAAAAD/ZNO64E1uUVVukB+PLdmx9Sq3fKkTtVpiMKc1a+EblUAAAAD6KmFqk4EJHwhiz2eocJZzuprFhLZdeTO2Z0/QZ1fGlcwb9TFs/EWS7cxLTpoPNM0ezBUcCO8TH7basGM8mi1u</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAAOtYzms2X1IBxhs7MrrKGJSqKNz2SeNlTD2HgzzjoMQAAAAAOgAAAAAIAACAAAACDRSM7jNE8e+/MOK219oeC3TOdF/u3Jxi5mkzkpOxT9iAAAACvIz6JTC0XONrvPRjtxDQpOt2Lo/eQ7IJWVdBqm6T9g0AAAAC+h+zaQBioEnQdB5JDz4SI7WpMdfGI/7iSclB5n02ihztWhFbWZtgRwdRP7+j/GTKYOt61hUPUh7rOeE6xj+kx</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -7785,114 +7785,114 @@ where [refTable].[typ_skrzyzowania_kod] = ?</property>
               startId="Package\Fill_DIM_Droga_Info\DC_Formatowanie_i_Typy.Outputs[Derived Column Output]" />
             <path
               refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output10]"
-              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Oswietlenie.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Rodzaj_Zdarzenia.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output9]"
-              endId="Package\Fill_DIM_Droga_Info\Sort 1.Inputs[Sort Input]"
-              name="Lookup Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Sygnalizacja.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output8]"
-              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Typ_Skrzyżowania.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Charakter_Miejsca.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output6]"
-              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Rodzaj_Drogi.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Oswietlenie.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output5]"
-              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Geometria_Drogi.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Oznakowanie_Poziome.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output7]"
-              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Rodzaj_Zdarzenia.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Typ_Skrzyżowania.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output3]"
-              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Obszar_Zabudowany.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Geometria_Drogi.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output2]"
-              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Stan_Nawierzchni.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Nawierzchni.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output1]"
-              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Oznakowanie_Poziome.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Stan_Nawierzchni.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output]"
-              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Charakter_Miejsca.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Obszar_Zabudowany.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output4]"
               endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Sygnalizacja.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Rodzaj_Drogi.Outputs[Lookup Match Output]" />
             <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output9]"
+              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Charakter_Miejsca.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Obszar_Zabudowany.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output8]"
+              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Oznakowanie_Poziome.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Stan_Nawierzchni.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output6]"
+              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Obszar_Zabudowany.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Geometria_Drogi.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output5]"
+              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Rodzaj_Zdarzenia.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Typ_Skrzyżowania.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output7]"
+              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Stan_Nawierzchni.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Nawierzchni.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output3]"
+              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Rodzaj_Drogi.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Oswietlenie.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output2]"
+              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Typ_Skrzyżowania.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Charakter_Miejsca.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output1]"
+              endId="Package\Fill_DIM_Droga_Info\Sort 1.Inputs[Sort Input]"
+              name="Lookup Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Sygnalizacja.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output]"
+              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Oswietlenie.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Rodzaj_Zdarzenia.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output4]"
+              endId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Geometria_Drogi.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Oznakowanie_Poziome.Outputs[Lookup Match Output]" />
+            <path
               refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output7]"
-              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 3]"
-              name="Lookup No Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Nawierzchni.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output10]"
-              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 9]"
-              name="Lookup No Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Typ_Skrzyżowania.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output9]"
-              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 7]"
-              name="Lookup No Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Charakter_Miejsca.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output8]"
-              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 2]"
-              name="Lookup No Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Sygnalizacja.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output6]"
-              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 5]"
-              name="Lookup No Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Geometria_Drogi.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output]"
-              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 10]"
-              name="Lookup No Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Oswietlenie.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output4]"
-              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 1]"
-              name="Lookup No Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Stan_Nawierzchni.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output3]"
               endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 11]"
               name="Lookup No Match Output"
               startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Rodzaj_Drogi.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output2]"
-              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 12]"
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output10]"
+              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 4]"
               name="Lookup No Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Rodzaj_Zdarzenia.Outputs[Lookup No Match Output]" />
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Oznakowanie_Poziome.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output1]"
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output9]"
               endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 6]"
               name="Lookup No Match Output"
               startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Obszar_Zabudowany.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output5]"
-              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 4]"
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output8]"
+              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 12]"
               name="Lookup No Match Output"
-              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Oznakowanie_Poziome.Outputs[Lookup No Match Output]" />
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Rodzaj_Zdarzenia.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output6]"
+              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 1]"
+              name="Lookup No Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Stan_Nawierzchni.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output]"
+              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 3]"
+              name="Lookup No Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Nawierzchni.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output4]"
+              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 5]"
+              name="Lookup No Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Geometria_Drogi.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output3]"
+              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 2]"
+              name="Lookup No Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Sygnalizacja.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output2]"
+              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 7]"
+              name="Lookup No Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Charakter_Miejsca.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output1]"
+              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 9]"
+              name="Lookup No Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Typ_Skrzyżowania.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output5]"
+              endId="Package\Fill_DIM_Droga_Info\Union All.Inputs[Union All Input 10]"
+              name="Lookup No Match Output"
+              startId="Package\Fill_DIM_Droga_Info\LKP_Slownik_Oswietlenie.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Fill_DIM_Droga_Info.Paths[OLE DB Source Output]"
               endId="Package\Fill_DIM_Droga_Info\DC_Formatowanie_i_Typy.Inputs[Derived Column Input]"
@@ -14339,46 +14339,46 @@ where [refTable].[lon_siatki] = ? and [refTable].[lat_siatki] = ?</property>
                       refId="Package\Fill_FAKT_Zdarzenie\DC_Formatowanie_Fakt.Outputs[Derived Column Output].Columns[new_gps_x_gus]"
                       dataType="wstr"
                       errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="20"
+                      errorRowDisposition="IgnoreFailure"
+                      length="50"
                       lineageId="Package\Fill_FAKT_Zdarzenie\DC_Formatowanie_Fakt.Outputs[Derived Column Output].Columns[new_gps_x_gus]"
                       name="new_gps_x_gus"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="IgnoreFailure">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\Fill_FAKT_Zdarzenie\SRC_STG_Zdarzenie.Outputs[OLE DB Source Output].Columns[gps_x_gus]}) ? "BRAK" : (DT_WSTR,20)([ROUND]((DT_R8)#{Package\Fill_FAKT_Zdarzenie\SRC_STG_Zdarzenie.Outputs[OLE DB Source Output].Columns[gps_x_gus]},6))</property>
+                          name="Expression">(DT_WSTR,50)([ISNULL](#{Package\Fill_FAKT_Zdarzenie\SRC_STG_Zdarzenie.Outputs[OLE DB Source Output].Columns[gps_x_gus]}) ? NULL(DT_R8) : [ROUND]((DT_R8)#{Package\Fill_FAKT_Zdarzenie\SRC_STG_Zdarzenie.Outputs[OLE DB Source Output].Columns[gps_x_gus]},6))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(gps_x_gus) ? "BRAK" : (DT_WSTR,20)(ROUND((DT_R8)gps_x_gus,6))</property>
+                          name="FriendlyExpression">(DT_WSTR,50)(ISNULL(gps_x_gus) ? NULL(DT_R8) : ROUND((DT_R8)gps_x_gus,6))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Fill_FAKT_Zdarzenie\DC_Formatowanie_Fakt.Outputs[Derived Column Output].Columns[new_gps_y_gus]"
                       dataType="wstr"
                       errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="20"
+                      errorRowDisposition="IgnoreFailure"
+                      length="50"
                       lineageId="Package\Fill_FAKT_Zdarzenie\DC_Formatowanie_Fakt.Outputs[Derived Column Output].Columns[new_gps_y_gus]"
                       name="new_gps_y_gus"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="IgnoreFailure">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\Fill_FAKT_Zdarzenie\SRC_STG_Zdarzenie.Outputs[OLE DB Source Output].Columns[gps_y_gus]}) ? "BRAK" : (DT_WSTR,20)([ROUND]((DT_R8)#{Package\Fill_FAKT_Zdarzenie\SRC_STG_Zdarzenie.Outputs[OLE DB Source Output].Columns[gps_y_gus]},6))</property>
+                          name="Expression">(DT_WSTR,50)([ISNULL](#{Package\Fill_FAKT_Zdarzenie\SRC_STG_Zdarzenie.Outputs[OLE DB Source Output].Columns[gps_y_gus]}) ? NULL(DT_R8) : [ROUND]((DT_R8)#{Package\Fill_FAKT_Zdarzenie\SRC_STG_Zdarzenie.Outputs[OLE DB Source Output].Columns[gps_y_gus]},6))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(gps_y_gus) ? "BRAK" : (DT_WSTR,20)(ROUND((DT_R8)gps_y_gus,6))</property>
+                          name="FriendlyExpression">(DT_WSTR,50)(ISNULL(gps_y_gus) ? NULL(DT_R8) : ROUND((DT_R8)gps_y_gus,6))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -20734,7 +20734,9 @@ where [refTable].[lokalizacja_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-91.1678645833333,43.5,50.3357291666667,9.568359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -20756,191 +20758,13 @@ where [refTable].[lokalizacja_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-27.9027473958333,25.46337890625,55.8054947916667,9.5732421875"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output10]"
-          TopLeft="170.5,281.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="391.833333333333,-239"
-              Start="0,0"
-              End="391.833333333333,-231.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-169.514" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-169.514"
-                    Point2="0,-173.514"
-                    Point3="4,-173.514" />
-                  <mssgle:LineSegment
-                    End="387.833333333333,-173.514" />
-                  <mssgle:CubicBezierSegment
-                    Point1="387.833333333333,-173.514"
-                    Point2="391.833333333333,-173.514"
-                    Point3="391.833333333333,-177.514" />
-                  <mssgle:LineSegment
-                    End="391.833333333333,-231.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="140.110279947917,-168.514,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output9]"
-          TopLeft="433.5,270.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="138.25,-228"
-              Start="0,0"
-              End="138.25,-220.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-144.722371967655" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-144.722371967655"
-                    Point2="0,-148.722371967655"
-                    Point3="4,-148.722371967655" />
-                  <mssgle:LineSegment
-                    End="134.25,-148.722371967655" />
-                  <mssgle:CubicBezierSegment
-                    Point1="134.25,-148.722371967655"
-                    Point2="138.25,-148.722371967655"
-                    Point3="138.25,-152.722371967655" />
-                  <mssgle:LineSegment
-                    End="138.25,-220.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="13.31861328125,-143.722371967655,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output8]"
-          TopLeft="1006,375.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-358.916666666667,-333"
-              Start="0,0"
-              End="-358.916666666667,-325.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-268.556933483653" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-268.556933483653"
-                    Point2="0,-272.556933483653"
-                    Point3="-4,-272.556933483653" />
-                  <mssgle:LineSegment
-                    End="-354.916666666667,-272.556933483653" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-354.916666666667,-272.556933483653"
-                    Point2="-358.916666666667,-272.556933483653"
-                    Point3="-358.916666666667,-276.556933483653" />
-                  <mssgle:LineSegment
-                    End="-358.916666666667,-325.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-235.264720052083,-267.556933483653,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output7]"
-          TopLeft="441,192">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="140.166666666667,-149.5"
-              Start="0,0"
-              End="140.166666666667,-142">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-84.5293637846656" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-84.5293637846656"
-                    Point2="0,-88.5293637846656"
-                    Point3="4,-88.5293637846656" />
-                  <mssgle:LineSegment
-                    End="136.166666666667,-88.5293637846656" />
-                  <mssgle:CubicBezierSegment
-                    Point1="136.166666666667,-88.5293637846656"
-                    Point2="140.166666666667,-88.5293637846656"
-                    Point3="140.166666666667,-92.5293637846656" />
-                  <mssgle:LineSegment
-                    End="140.166666666667,-142" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="14.2769466145833,-83.5293637846656,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output6]"
-          TopLeft="941.166666666667,290.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-303.5,-248"
-              Start="0,0"
-              End="-303.5,-240.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-155.368684564543" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-155.368684564543"
-                    Point2="0,-159.368684564543"
-                    Point3="-4,-159.368684564543" />
-                  <mssgle:LineSegment
-                    End="-299.5,-159.368684564543" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-299.5,-159.368684564543"
-                    Point2="-303.5,-159.368684564543"
-                    Point3="-303.5,-163.368684564543" />
-                  <mssgle:LineSegment
-                    End="-303.5,-240.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-207.55638671875,-154.368684564543,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output5]"
           TopLeft="974,168.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -20976,115 +20800,7 @@ where [refTable].[lokalizacja_key] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output4]"
-          TopLeft="706,188.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-96.5833333333334,-146"
-              Start="0,0"
-              End="-96.5833333333334,-138.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-75.160567587752" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-75.160567587752"
-                    Point2="0,-79.160567587752"
-                    Point3="-4,-79.160567587752" />
-                  <mssgle:LineSegment
-                    End="-92.5833333333334,-79.160567587752" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-92.5833333333334,-79.160567587752"
-                    Point2="-96.5833333333334,-79.160567587752"
-                    Point3="-96.5833333333334,-83.160567587752" />
-                  <mssgle:LineSegment
-                    End="-96.5833333333334,-138.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-104.098053385417,-74.160567587752,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output3]"
-          TopLeft="741,376.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-122.166666666667,-334"
-              Start="0,0"
-              End="-122.166666666667,-326.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-193.784665579119" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-193.784665579119"
-                    Point2="0,-197.784665579119"
-                    Point3="-4,-197.784665579119" />
-                  <mssgle:LineSegment
-                    End="-118.166666666667,-197.784665579119" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-118.166666666667,-197.784665579119"
-                    Point2="-122.166666666667,-197.784665579119"
-                    Point3="-122.166666666667,-201.784665579119" />
-                  <mssgle:LineSegment
-                    End="-122.166666666667,-326.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-116.889720052083,-192.784665579119,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output2]"
-          TopLeft="217.75,454.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="335.166666666667,-412"
-              Start="0,0"
-              End="335.166666666667,-404.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-284.429077897778" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-284.429077897778"
-                    Point2="0,-288.429077897778"
-                    Point3="4,-288.429077897778" />
-                  <mssgle:LineSegment
-                    End="331.166666666667,-288.429077897778" />
-                  <mssgle:CubicBezierSegment
-                    Point1="331.166666666667,-288.429077897778"
-                    Point2="335.166666666667,-288.429077897778"
-                    Point3="335.166666666667,-292.429077897778" />
-                  <mssgle:LineSegment
-                    End="335.166666666667,-404.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="111.776946614583,-283.429077897778,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output1]"
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output9]"
           TopLeft="695.5,287.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -21120,7 +20836,115 @@ where [refTable].[lokalizacja_key] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output]"
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output8]"
+          TopLeft="217.75,454.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="335.166666666667,-412"
+              Start="0,0"
+              End="335.166666666667,-404.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-284.429077897778" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-284.429077897778"
+                    Point2="0,-288.429077897778"
+                    Point3="4,-288.429077897778" />
+                  <mssgle:LineSegment
+                    End="331.166666666667,-288.429077897778" />
+                  <mssgle:CubicBezierSegment
+                    Point1="331.166666666667,-288.429077897778"
+                    Point2="335.166666666667,-288.429077897778"
+                    Point3="335.166666666667,-292.429077897778" />
+                  <mssgle:LineSegment
+                    End="335.166666666667,-404.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="111.776946614583,-283.429077897778,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output7]"
+          TopLeft="741,376.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-122.166666666667,-334"
+              Start="0,0"
+              End="-122.166666666667,-326.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-193.784665579119" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-193.784665579119"
+                    Point2="0,-197.784665579119"
+                    Point3="-4,-197.784665579119" />
+                  <mssgle:LineSegment
+                    End="-118.166666666667,-197.784665579119" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-118.166666666667,-197.784665579119"
+                    Point2="-122.166666666667,-197.784665579119"
+                    Point3="-122.166666666667,-201.784665579119" />
+                  <mssgle:LineSegment
+                    End="-122.166666666667,-326.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-116.889720052083,-192.784665579119,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output6]"
+          TopLeft="706,188.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-96.5833333333334,-146"
+              Start="0,0"
+              End="-96.5833333333334,-138.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-75.160567587752" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-75.160567587752"
+                    Point2="0,-79.160567587752"
+                    Point3="-4,-79.160567587752" />
+                  <mssgle:LineSegment
+                    End="-92.5833333333334,-79.160567587752" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-92.5833333333334,-79.160567587752"
+                    Point2="-96.5833333333334,-79.160567587752"
+                    Point3="-96.5833333333334,-83.160567587752" />
+                  <mssgle:LineSegment
+                    End="-96.5833333333334,-138.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-129.443404947917,-74.160567587752,162.3034765625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output5]"
           TopLeft="462.5,373.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -21151,204 +20975,192 @@ where [refTable].[lokalizacja_key] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="8.2352799479165,-174.466766243465,111.6127734375,11.609375"
+              BoundingBox="-21.3884049479168,-174.466766243465,170.860143229167,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output4]"
+          TopLeft="941.166666666667,290.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-303.5,-248"
+              Start="0,0"
+              End="-303.5,-240.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-155.368684564543" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-155.368684564543"
+                    Point2="0,-159.368684564543"
+                    Point3="-4,-159.368684564543" />
+                  <mssgle:LineSegment
+                    End="-299.5,-159.368684564543" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-299.5,-159.368684564543"
+                    Point2="-303.5,-159.368684564543"
+                    Point3="-303.5,-163.368684564543" />
+                  <mssgle:LineSegment
+                    End="-303.5,-240.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-207.55638671875,-154.368684564543,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output3]"
+          TopLeft="1006,375.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-358.916666666667,-333"
+              Start="0,0"
+              End="-358.916666666667,-325.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-268.556933483653" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-268.556933483653"
+                    Point2="0,-272.556933483653"
+                    Point3="-4,-272.556933483653" />
+                  <mssgle:LineSegment
+                    End="-354.916666666667,-272.556933483653" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-354.916666666667,-272.556933483653"
+                    Point2="-358.916666666667,-272.556933483653"
+                    Point3="-358.916666666667,-276.556933483653" />
+                  <mssgle:LineSegment
+                    End="-358.916666666667,-325.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-235.264720052083,-267.556933483653,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output2]"
+          TopLeft="433.5,270.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="138.25,-228"
+              Start="0,0"
+              End="138.25,-220.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-144.722371967655" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-144.722371967655"
+                    Point2="0,-148.722371967655"
+                    Point3="4,-148.722371967655" />
+                  <mssgle:LineSegment
+                    End="134.25,-148.722371967655" />
+                  <mssgle:CubicBezierSegment
+                    Point1="134.25,-148.722371967655"
+                    Point2="138.25,-148.722371967655"
+                    Point3="138.25,-152.722371967655" />
+                  <mssgle:LineSegment
+                    End="138.25,-220.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="13.31861328125,-143.722371967655,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output1]"
+          TopLeft="170.5,281.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="391.833333333333,-239"
+              Start="0,0"
+              End="391.833333333333,-231.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-169.514" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-169.514"
+                    Point2="0,-173.514"
+                    Point3="4,-173.514" />
+                  <mssgle:LineSegment
+                    End="387.833333333333,-173.514" />
+                  <mssgle:CubicBezierSegment
+                    Point1="387.833333333333,-173.514"
+                    Point2="391.833333333333,-173.514"
+                    Point3="391.833333333333,-177.514" />
+                  <mssgle:LineSegment
+                    End="391.833333333333,-231.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="140.110279947917,-168.514,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup No Match Output]"
+          TopLeft="441,192">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="140.166666666667,-149.5"
+              Start="0,0"
+              End="140.166666666667,-142">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-84.5293637846656" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-84.5293637846656"
+                    Point2="0,-88.5293637846656"
+                    Point3="4,-88.5293637846656" />
+                  <mssgle:LineSegment
+                    End="136.166666666667,-88.5293637846656" />
+                  <mssgle:CubicBezierSegment
+                    Point1="136.166666666667,-88.5293637846656"
+                    Point2="140.166666666667,-88.5293637846656"
+                    Point3="140.166666666667,-92.5293637846656" />
+                  <mssgle:LineSegment
+                    End="140.166666666667,-142" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="14.2769466145833,-83.5293637846656,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output10]"
-          TopLeft="163,454.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="299.5,-39"
-              Start="0,0"
-              End="299.5,-31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-15.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-15.5"
-                    Point2="0,-19.5"
-                    Point3="4,-19.5" />
-                  <mssgle:LineSegment
-                    End="295.5,-19.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="295.5,-19.5"
-                    Point2="299.5,-19.5"
-                    Point3="299.5,-23.5" />
-                  <mssgle:LineSegment
-                    End="299.5,-31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="101.55861328125,-14.5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output9]"
-          TopLeft="1006,417.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-81.9891500904159,67"
-              Start="0,0"
-              End="-81.9891500904159,59.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.5"
-                    Point2="0,33.5"
-                    Point3="-4,33.5" />
-                  <mssgle:LineSegment
-                    End="-77.9891500904159,33.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-77.9891500904159,33.5"
-                    Point2="-81.9891500904159,33.5"
-                    Point3="-81.9891500904159,37.5" />
-                  <mssgle:LineSegment
-                    End="-81.9891500904159,59.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-89.1859617639579,38.5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output8]"
-          TopLeft="318.5,291.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-33,11"
-              Start="0,0"
-              End="-25.5,11">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-12.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-12.5,0"
-                    Point2="-16.5,0"
-                    Point3="-16.5,4" />
-                  <mssgle:LineSegment
-                    End="-16.5,7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-16.5,7"
-                    Point2="-16.5,11"
-                    Point3="-20.5,11" />
-                  <mssgle:LineSegment
-                    End="-25.5,11" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-64.69138671875,-17.609375,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output7]"
-          TopLeft="170.5,323.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-62.25,131"
-              Start="0,0"
-              End="-62.25,123.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,82.3193033381713" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,82.3193033381713"
-                    Point2="0,86.3193033381713"
-                    Point3="-4,86.3193033381713" />
-                  <mssgle:LineSegment
-                    End="-58.25,86.3193033381713" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-58.25,86.3193033381713"
-                    Point2="-62.25,86.3193033381713"
-                    Point3="-62.25,90.3193033381713" />
-                  <mssgle:LineSegment
-                    End="-62.25,123.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-79.31638671875,91.3193033381713,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output6]"
-          TopLeft="561.5,396">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="76,0"
-              Start="0,0"
-              End="68.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="68.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-13.94138671875,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output5]"
-          TopLeft="975.5,210.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,80"
-              Start="0,0"
-              End="0,72.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,72.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,30.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output4]"
           TopLeft="844.5,397">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -21367,96 +21179,12 @@ where [refTable].[lokalizacja_key] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-21.44138671875,5,96.3827734375,11.609375"
+              BoundingBox="-53.7950716145833,5,161.090143229167,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output3]"
-          TopLeft="865.5,310">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-49,0"
-              Start="0,0"
-              End="-41.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-41.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-68.94138671875,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output2]"
-          TopLeft="541,211.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="51.5,0"
-              Start="0,0"
-              End="44,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="44,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-26.19138671875,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output1]"
-          TopLeft="819.5,209.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="29,-20"
-              Start="0,0"
-              End="21.5,-20">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="10.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="10.5,0"
-                    Point2="14.5,0"
-                    Point3="14.5,-4" />
-                  <mssgle:LineSegment
-                    End="14.5,-16" />
-                  <mssgle:CubicBezierSegment
-                    Point1="14.5,-16"
-                    Point2="14.5,-20"
-                    Point3="18.5,-20" />
-                  <mssgle:LineSegment
-                    End="21.5,-20" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-33.69138671875,1,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output]"
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output9]"
           TopLeft="574.5,308.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -21487,7 +21215,283 @@ where [refTable].[lokalizacja_key] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-61.19138671875,1,96.3827734375,11.609375"
+              BoundingBox="-93.5450716145833,1,161.090143229167,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output8]"
+          TopLeft="819.5,209.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="29,-20"
+              Start="0,0"
+              End="21.5,-20">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="10.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.5,0"
+                    Point2="14.5,0"
+                    Point3="14.5,-4" />
+                  <mssgle:LineSegment
+                    End="14.5,-16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.5,-16"
+                    Point2="14.5,-20"
+                    Point3="18.5,-20" />
+                  <mssgle:LineSegment
+                    End="21.5,-20" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.0450716145833,1,161.090143229167,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output7]"
+          TopLeft="541,211.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51.5,0"
+              Start="0,0"
+              End="44,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="44,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-58.5450716145833,5,161.090143229167,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output6]"
+          TopLeft="865.5,310">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-49,0"
+              Start="0,0"
+              End="-41.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-41.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-101.295071614583,5,161.090143229167,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output5]"
+          TopLeft="170.5,323.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-62.25,131"
+              Start="0,0"
+              End="-62.25,123.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,82.3193033381713" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,82.3193033381713"
+                    Point2="0,86.3193033381713"
+                    Point3="-4,86.3193033381713" />
+                  <mssgle:LineSegment
+                    End="-58.25,86.3193033381713" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-58.25,86.3193033381713"
+                    Point2="-62.25,86.3193033381713"
+                    Point3="-62.25,90.3193033381713" />
+                  <mssgle:LineSegment
+                    End="-62.25,123.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-111.670071614583,91.3193033381713,161.090143229167,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output4]"
+          TopLeft="975.5,210.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,80"
+              Start="0,0"
+              End="0,72.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,72.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-80.5450716145833,30.4453125,161.090143229167,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output3]"
+          TopLeft="561.5,396">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76,0"
+              Start="0,0"
+              End="68.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="68.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-46.2950716145833,5,161.090143229167,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output2]"
+          TopLeft="318.5,291.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-33,11"
+              Start="0,0"
+              End="-25.5,11">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-12.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.5,0"
+                    Point2="-16.5,0"
+                    Point3="-16.5,4" />
+                  <mssgle:LineSegment
+                    End="-16.5,7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16.5,7"
+                    Point2="-16.5,11"
+                    Point3="-20.5,11" />
+                  <mssgle:LineSegment
+                    End="-25.5,11" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-97.0450716145833,-17.609375,161.090143229167,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output1]"
+          TopLeft="1006,417.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-81.9891500904159,67"
+              Start="0,0"
+              End="-81.9891500904159,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.5"
+                    Point2="0,33.5"
+                    Point3="-4,33.5" />
+                  <mssgle:LineSegment
+                    End="-77.9891500904159,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-77.9891500904159,33.5"
+                    Point2="-81.9891500904159,33.5"
+                    Point3="-81.9891500904159,37.5" />
+                  <mssgle:LineSegment
+                    End="-81.9891500904159,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-121.539646659791,38.5,161.090143229167,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_DIM_Droga_Info.Paths[Lookup Match Output]"
+          TopLeft="163,454.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="299.5,-39"
+              Start="0,0"
+              End="299.5,-31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-15.5"
+                    Point2="0,-19.5"
+                    Point3="4,-19.5" />
+                  <mssgle:LineSegment
+                    End="295.5,-19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="295.5,-19.5"
+                    Point2="299.5,-19.5"
+                    Point3="299.5,-23.5" />
+                  <mssgle:LineSegment
+                    End="299.5,-31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="69.2049283854167,-14.5,161.090143229167,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -21522,14 +21526,16 @@ where [refTable].[lokalizacja_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="23.0972526041667,-15.5732421875,55.8054947916667,9.5732421875"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
           Text="S"
           ParentId="Package\Fill_DIM_Droga_Info"
           FontInfo="{assembly:Null}"
-          Size="35,40"
+          Size="35,NaN"
           Id="2508e766-ab6e-46ae-a513-123f58aac960"
           TopLeft="862,619" />
       </GraphLayout>
@@ -22286,6 +22292,10 @@ where [refTable].[lokalizacja_key] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="98,42"
+          Id="Package\Fill_DIM_Lokalizacja\Sort"
+          TopLeft="331.5,452.5" />
+        <NodeLayout
           Size="113,42"
           Id="Package\Fill_DIM_Lokalizacja\Lookup"
           TopLeft="344.5,344.5" />
@@ -22293,10 +22303,6 @@ where [refTable].[lokalizacja_key] = ?</property>
           Size="163,42"
           Id="Package\Fill_DIM_Lokalizacja\Derived Column 1"
           TopLeft="305.5,241.5" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Fill_DIM_Lokalizacja\Sort"
-          TopLeft="331.5,452.5" />
         <NodeLayout
           Size="180,42"
           Id="Package\Fill_DIM_Lokalizacja\DST_DIM_Lokalizacja"
@@ -22328,7 +22334,9 @@ where [refTable].[lokalizacja_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-27.8734505208333,16.44873046875,55.7469010416667,9.6025390625"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22350,7 +22358,9 @@ where [refTable].[lokalizacja_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-27.9027473958333,17.46337890625,55.8054947916667,9.5732421875"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22385,7 +22395,7 @@ where [refTable].[lokalizacja_key] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-58.44138671875,38,96.3827734375,11.609375"
+              BoundingBox="-90.7950716145833,38,161.090143229167,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -22420,7 +22430,9 @@ where [refTable].[lokalizacja_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-20.9027473958333,35.5,55.8054947916667,9.5732421875"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22442,7 +22454,9 @@ where [refTable].[lokalizacja_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-27.9027473958333,18.46337890625,55.8054947916667,9.5732421875"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -22454,7 +22468,7 @@ where [refTable].[lokalizacja_key] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -22503,25 +22517,29 @@ where [refTable].[lokalizacja_key] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,42"
-          Id="Package\Fill_FAKT_Zdarzenie\DC_Obliczenia_Fakt"
-          TopLeft="116.5,586.5" />
+          Size="178,42"
+          Id="Package\Fill_FAKT_Zdarzenie\UNI_Zbiorka_Bledow"
+          TopLeft="667.5,333.5" />
         <NodeLayout
           Size="150,42"
           Id="Package\Fill_FAKT_Zdarzenie\LKP_DIM_Data"
           TopLeft="130.5,346.5" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Fill_FAKT_Zdarzenie\Derived Column"
+          TopLeft="366.5,133.5" />
         <NodeLayout
           Size="171,42"
           Id="Package\Fill_FAKT_Zdarzenie\LKP_DIM_Jednostki"
           TopLeft="119.5,246.5" />
         <NodeLayout
           Size="178,42"
-          Id="Package\Fill_FAKT_Zdarzenie\UNI_Zbiorka_Bledow"
-          TopLeft="667.5,333.5" />
+          Id="Package\Fill_FAKT_Zdarzenie\LKP_DIM_Lokalizacja"
+          TopLeft="113.5,167.5" />
         <NodeLayout
-          Size="175,42"
-          Id="Package\Fill_FAKT_Zdarzenie\SRC_STG_Zdarzenie"
-          TopLeft="121.5,16.5" />
+          Size="172,42"
+          Id="Package\Fill_FAKT_Zdarzenie\DC_Obliczenia_Fakt"
+          TopLeft="116.5,586.5" />
         <NodeLayout
           Size="149,42"
           Id="Package\Fill_FAKT_Zdarzenie\LKP_DIM_Czas"
@@ -22531,17 +22549,17 @@ where [refTable].[lokalizacja_key] = ?</property>
           Id="Package\Fill_FAKT_Zdarzenie\LKP_DIM_Droga_Info"
           TopLeft="111.5,499.5" />
         <NodeLayout
-          Size="180,42"
-          Id="Package\Fill_FAKT_Zdarzenie\DST_FAKT_Zdarzenie"
-          TopLeft="110.5,651.5" />
-        <NodeLayout
           Size="191,42"
           Id="Package\Fill_FAKT_Zdarzenie\DC_Formatowanie_Fakt"
           TopLeft="106.5,82.5" />
         <NodeLayout
-          Size="178,42"
-          Id="Package\Fill_FAKT_Zdarzenie\LKP_DIM_Lokalizacja"
-          TopLeft="113.5,167.5" />
+          Size="180,42"
+          Id="Package\Fill_FAKT_Zdarzenie\DST_FAKT_Zdarzenie"
+          TopLeft="110.5,651.5" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Fill_FAKT_Zdarzenie\SRC_STG_Zdarzenie"
+          TopLeft="121.5,16.5" />
         <EdgeLayout
           Id="Package\Fill_FAKT_Zdarzenie.Paths[OLE DB Source Output]"
           TopLeft="205.5,58.5">
@@ -22561,7 +22579,9 @@ where [refTable].[lokalizacja_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-20.95265625,3.46337890625,41.9053125,9.5732421875"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22764,7 +22784,7 @@ where [refTable].[lokalizacja_key] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,12.9453125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,12.9453125,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -22860,24 +22880,36 @@ where [refTable].[lokalizacja_key] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,8.9453125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,8.9453125,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fill_FAKT_Zdarzenie.Paths[Derived Column Output]"
-          TopLeft="201.5,628.5">
+          Id="Package\Fill_FAKT_Zdarzenie.Paths[Derived Column Output2]"
+          TopLeft="366.5,160.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,23"
+              EndConnector="-75,28.3333333333333"
               Start="0,0"
-              End="0,15.5">
+              End="-67.5,28.3333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.5" />
+                    End="-27.651376146789,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27.651376146789,0"
+                    Point2="-31.651376146789,0"
+                    Point3="-31.651376146789,4" />
+                  <mssgle:LineSegment
+                    End="-31.651376146789,24.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-31.651376146789,24.3333333333333"
+                    Point2="-31.651376146789,28.3333333333333"
+                    Point3="-35.651376146789,28.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-67.5,28.3333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22886,10 +22918,6 @@ where [refTable].[lokalizacja_key] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Fill_FAKT_Zdarzenie\Derived Column"
-          TopLeft="366.5,133.5" />
         <EdgeLayout
           Id="Package\Fill_FAKT_Zdarzenie.Paths[Derived Column Output1]"
           TopLeft="297.5,103.5">
@@ -22921,35 +22949,25 @@ where [refTable].[lokalizacja_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="19.04640625,-15.568359375,30.9071875,9.568359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fill_FAKT_Zdarzenie.Paths[Derived Column Output2]"
-          TopLeft="366.5,160.166666666667">
+          Id="Package\Fill_FAKT_Zdarzenie.Paths[Derived Column Output]"
+          TopLeft="201.5,628.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-75,28.3333333333333"
+              EndConnector="0,23"
               Start="0,0"
-              End="-67.5,28.3333333333333">
+              End="0,15.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-27.651376146789,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-27.651376146789,0"
-                    Point2="-31.651376146789,0"
-                    Point3="-31.651376146789,4" />
-                  <mssgle:LineSegment
-                    End="-31.651376146789,24.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-31.651376146789,24.3333333333333"
-                    Point2="-31.651376146789,28.3333333333333"
-                    Point3="-35.651376146789,28.3333333333333" />
-                  <mssgle:LineSegment
-                    End="-67.5,28.3333333333333" />
+                    End="0,15.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23008,25 +23026,12 @@ where [refTable].[lokalizacja_key] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fill_FAKT_Zdarzenie\SRC_STG_Zdarzenie">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fill_FAKT_Zdarzenie\LKP_DIM_Czas">
+    design-time-name="Package\Fill_FAKT_Zdarzenie\LKP_DIM_Lokalizacja">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -23036,7 +23041,30 @@ where [refTable].[lokalizacja_key] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill_FAKT_Zdarzenie\LKP_DIM_Czas">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -23049,7 +23077,7 @@ where [refTable].[lokalizacja_key] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -23059,7 +23087,7 @@ where [refTable].[lokalizacja_key] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -23080,25 +23108,15 @@ where [refTable].[lokalizacja_key] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fill_FAKT_Zdarzenie\LKP_DIM_Lokalizacja">
+    design-time-name="Package\Fill_FAKT_Zdarzenie\SRC_STG_Zdarzenie">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
