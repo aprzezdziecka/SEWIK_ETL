@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ALICJA"
   DTS:CreatorName="ALICJA\alapr"
-  DTS:DTSID="{496E84E9-A449-4C84-A0DE-792CB1723BF7}"
+  DTS:DTSID="{56578FE8-6830-41CD-AEFA-A12EC1DE28D7}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="17.0.1010.2"
   DTS:LocaleID="1045"
-  DTS:ObjectName="01"
+  DTS:ObjectName="01_Fill_STG_Tables"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{16C4ABB5-1B60-42A5-A751-B3F63E9592F6}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{4FD3116A-5006-4BC9-8BD7-F1499409917A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADdEBo6nsQ7Hr8wgi0DUicRuvuqAQpY4K1YLGpImdCruwAAAAAOgAAAAAIAACAAAACgMO7lo8stdga7pdsNIkjqLHRKiUD10LNQ4FUFP2yyQyAAAACWMNWJLKi+c3Xg30cTLpKAKFqKTdGHooXIy6Xeod+1UUAAAACx0eGgWUbHItn4qsF78JD62Olet+JRSHZ81DvQnT5YxkCT7hnGejznzWQ5HLiM+DqKFv5pfmZDn8c9JpFZEJu9</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAADojOnTEcTHoo5D/zZqK1vQ/xoUMsTYwDGzKM9OqUCngAAAAAOgAAAAAIAACAAAAA8EAWwdSWzUIw+gu7LsBlPqO83kopUgZkKPwwgn+2hmCAAAACBdf2ziCSTwuU9MaA+9eZl0j9Xc2RHPdfDtMzEDydsP0AAAABHarp4a+koudT++MmvHCrptP9BDpPJ3sHrahZwj9I2rOY/VkS6/+wVS5ce1yTUYA16MAAN5uhnaItITA89vibC</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC9unkGAVEerIrkmaGFlMcHiWN82FufaeOszA4j50cQxwAAAAAOgAAAAAIAACAAAABAGYk6lTZWx2KmIiaDsWxhKO54vz8qy3vvgQ8GoMhmwSAAAABVaYjA0Zozyim9y+lkEiwzG9R6wTC/WZqIykKtdjznCEAAAABnkH9xLID/dorA2Z3T9kQjr+SIKTXq3puYwF35zq0XXJlEBwKGsuPN86w3t2IXWENyI4DjlFe00kKy0Bf135fK</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABfc1vEnhCNgPnyQoT5SjxIV86nFd2Wwr14VsjPG/jz2gAAAAAOgAAAAAIAACAAAADiKUaeOaorvFd3jtB04gxQHcMHwgmlHg/8uuddNda/tSAAAAARdf54949iQqwBSCcy4i+XzkR6QDzmo5ZMpdUsC8osNUAAAACeaLUJsiYxQDNbQudF2hSuVUF2OSJsqjsVWtVK7RgExi8OU+Z5leNV0qBbVAGI2FLvE/cZtnd9vqHMZO/bqx4G</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -65,13 +65,13 @@
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Foreach Loop Container"
+      DTS:refId="Package\Each_File_From_Folder"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
       DTS:DTSID="{30DADD03-88DE-4611-B7AA-A7D63A7C2C0B}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Foreach Loop Container">
+      DTS:ObjectName="Each_File_From_Folder">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
         DTS:DTSID="{DFC67B5C-A91F-4D37-85E8-D55E02E44BDD}"
@@ -92,13 +92,13 @@
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Foreach Loop Container\Execute SQL Task"
+          DTS:refId="Package\Each_File_From_Folder\SQLT_Upload_One_File"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
           DTS:DTSID="{71FA401B-83C3-4D7A-B733-15D3F8D6817C}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Execute SQL Task"
+          DTS:ObjectName="SQLT_Upload_One_File"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
           DTS:ThreadHint="0">
           <DTS:Variables />
@@ -139,15 +139,15 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="163,42"
-          Id="Package\Foreach Loop Container\Execute SQL Task"
+          Size="189,42"
+          Id="Package\Each_File_From_Folder\SQLT_Upload_One_File"
           TopLeft="21.5,33.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="214,130"
           Size="214,173"
-          Id="Package\Foreach Loop Container"
+          Id="Package\Each_File_From_Folder"
           TopLeft="364,154" />
       </GraphLayout>
     </LayoutInfo>

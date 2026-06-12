@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ALICJA"
   DTS:CreatorName="ALICJA\alapr"
-  DTS:DTSID="{799B3F01-419F-42B7-BF6C-9860C2194F82}"
+  DTS:DTSID="{A2429129-5ABD-4D8C-B9F4-CAA6C05177F9}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="17.0.1010.2"
   DTS:LocaleID="1045"
-  DTS:ObjectName="Fill_DIM_Siatka_Pogodowa"
+  DTS:ObjectName="00_Fill_DIM_Siatka_Pogodowa"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{75D7D52F-7039-49F9-9FC4-9AC804795933}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{ACDEAA72-BB50-4F15-9051-72535C4345DD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABgrUREa/ziSDpaIq6JlrogqYIXlSQWJpHmCf2aFzTOawAAAAAOgAAAAAIAACAAAADiw/3hqWyEioax36HJ26QVt2800u4aDPog0qoHs73I9SAAAAAm8Ef1hlNUAmaG+4/Rf/9zMcKu2y0CK3KsL1iPK/ntP0AAAACYpyTXrbTiAvHF7iWcSeeYpBNAIuLVV9qr/jvLu7BQmlwe7fBiHiERw7iIwnL+GeTle1zNEiEICuBayLlWGkVT</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAACU1m1GT364UeszkiJPj6XFsfiFsWkR2xPxQ/kFGT2/AAAAAAOgAAAAAIAACAAAAAfJPvGanfRFAZrSjMvykdLnbDH7uLprr/3euWjDHgJWCAAAACTlYkssH5boxi+gKqcihEA+lTq5sTTyLTQYCtvPJ9BLEAAAADRZtJ+ZVFxAlVhFKzIey14M7CW54f9sae5DU9wASEEpFF8nKUaZmKhi6XW4RiAJ/yl3czhp0aLDYWUsICyDtRU</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -51,107 +51,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Outputs[Derived Column Output].Columns[model_pogody]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Outputs[Derived Column Output].Columns[model_pogody]"
-                      name="model_pogody"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_WSTR,50)"Open-Meteo"</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_WSTR,50)"Open-Meteo"</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Outputs[Derived Column Output].Columns[rozdzielczosc]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Outputs[Derived Column Output].Columns[rozdzielczosc]"
-                      name="rozdzielczosc"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">25</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">25</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination"
+              refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="DBD_DIM_Siatka_Pogodowa"
               usesDispositions="true"
               version="4">
               <properties>
@@ -204,7 +108,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
                   connectionManagerRefId="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
                   description="The OLE DB runtime connection used to access the database."
@@ -212,73 +116,73 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[model_pogody]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].Columns[model_pogody]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="model_pogody"
-                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[model_pogody]"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Outputs[Derived Column Output].Columns[model_pogody]" />
+                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].ExternalColumns[model_pogody]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Output].Columns[model_pogody]" />
                     <inputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[szerokosc_siatki]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].Columns[szerokosc_siatki]"
                       cachedDataType="numeric"
                       cachedName="szerokosc_siatki"
                       cachedPrecision="23"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[szerokość_geograficzna]"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[szerokosc_siatki]" />
+                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].ExternalColumns[szerokość_geograficzna]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].Columns[szerokosc_siatki]" />
                     <inputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dlugosc_siatki]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].Columns[dlugosc_siatki]"
                       cachedDataType="numeric"
                       cachedName="dlugosc_siatki"
                       cachedPrecision="23"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[długość_geograficzna]"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[dlugosc_siatki]" />
+                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].ExternalColumns[długość_geograficzna]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].Columns[dlugosc_siatki]" />
                     <inputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rozdzielczosc]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].Columns[rozdzielczosc]"
                       cachedDataType="i4"
                       cachedName="rozdzielczosc"
-                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rozdzielczość]"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Outputs[Derived Column Output].Columns[rozdzielczosc]" />
+                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].ExternalColumns[rozdzielczość]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Output].Columns[rozdzielczosc]" />
                     <inputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_siatka]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].Columns[id_siatka]"
                       cachedDataType="i8"
                       cachedName="id_siatka"
-                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_siatka]"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_siatka]" />
+                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].ExternalColumns[id_siatka]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].Columns[id_siatka]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_siatka]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].ExternalColumns[id_siatka]"
                       dataType="i4"
                       name="id_siatka" />
                     <externalMetadataColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[długość_geograficzna]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].ExternalColumns[długość_geograficzna]"
                       dataType="numeric"
                       name="długość_geograficzna"
                       precision="8"
                       scale="4" />
                     <externalMetadataColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[szerokość_geograficzna]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].ExternalColumns[szerokość_geograficzna]"
                       dataType="numeric"
                       name="szerokość_geograficzna"
                       precision="8"
                       scale="4" />
                     <externalMetadataColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[model_pogody]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].ExternalColumns[model_pogody]"
                       dataType="wstr"
                       length="50"
                       name="model_pogody" />
                     <externalMetadataColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rozdzielczość]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].ExternalColumns[rozdzielczość]"
                       dataType="i2"
                       name="rozdzielczość" />
                   </externalMetadataColumns>
@@ -286,22 +190,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -310,11 +214,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source"
+              refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="OLE DB Source"
+              name="DBS_Generate_Points"
               usesDispositions="true"
               version="7">
               <properties>
@@ -386,7 +290,7 @@ FROM PelnaSiatka;</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Connections[OleDbConnection]"
+                  refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
                   connectionManagerRefId="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
                   description="The OLE DB runtime connection used to access the database."
@@ -394,95 +298,191 @@ FROM PelnaSiatka;</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[szerokosc_siatki]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].Columns[szerokosc_siatki]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[szerokosc_siatki]"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[szerokosc_siatki]"
+                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].ExternalColumns[szerokosc_siatki]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].Columns[szerokosc_siatki]"
                       name="szerokosc_siatki"
                       precision="23"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[dlugosc_siatki]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].Columns[dlugosc_siatki]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dlugosc_siatki]"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[dlugosc_siatki]"
+                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].ExternalColumns[dlugosc_siatki]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].Columns[dlugosc_siatki]"
                       name="dlugosc_siatki"
                       precision="23"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_siatka]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].Columns[id_siatka]"
                       dataType="i8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_siatka]"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_siatka]"
+                      externalMetadataColumnId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].ExternalColumns[id_siatka]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].Columns[id_siatka]"
                       name="id_siatka"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[szerokosc_siatki]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].ExternalColumns[szerokosc_siatki]"
                       dataType="numeric"
                       name="szerokosc_siatki"
                       precision="23"
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dlugosc_siatki]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].ExternalColumns[dlugosc_siatki]"
                       dataType="numeric"
                       name="dlugosc_siatki"
                       precision="23"
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_siatka]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output].ExternalColumns[id_siatka]"
                       dataType="i8"
                       name="id_siatka" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_siatka]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Error Output].Columns[id_siatka]"
                       dataType="i8"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_siatka]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Error Output].Columns[id_siatka]"
                       name="id_siatka" />
                     <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[szerokosc_siatki]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Error Output].Columns[szerokosc_siatki]"
                       dataType="numeric"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[szerokosc_siatki]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Error Output].Columns[szerokosc_siatki]"
                       name="szerokosc_siatki"
                       precision="23"
                       scale="2" />
                     <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dlugosc_siatki]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Error Output].Columns[dlugosc_siatki]"
                       dataType="numeric"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dlugosc_siatki]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Error Output].Columns[dlugosc_siatki]"
                       name="dlugosc_siatki"
                       precision="23"
                       scale="2" />
                     <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DC_Missing_Columns"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Output].Columns[model_pogody]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Output].Columns[model_pogody]"
+                      name="model_pogody"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,50)"Open-Meteo"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,50)"Open-Meteo"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Output].Columns[rozdzielczosc]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Output].Columns[rozdzielczosc]"
+                      name="rozdzielczosc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">25</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">25</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -494,14 +494,14 @@ FROM PelnaSiatka;</property>
           <paths>
             <path
               refId="Package\Fill_DIM_Siatka_Pogodowa.Paths[Derived Column Output]"
-              endId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Outputs[Derived Column Output]" />
             <path
               refId="Package\Fill_DIM_Siatka_Pogodowa.Paths[OLE DB Source Output]"
-              endId="Package\Fill_DIM_Siatka_Pogodowa\Derived Column.Inputs[Derived Column Input]"
+              endId="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
-              startId="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -532,27 +532,43 @@ FROM PelnaSiatka;</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150,42"
-          Id="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source"
+          Size="181,42"
+          Id="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points"
           TopLeft="345.5,92.5" />
         <NodeLayout
-          Size="154,42"
-          Id="Package\Fill_DIM_Siatka_Pogodowa\Derived Column"
+          Size="179,42"
+          Id="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns"
           TopLeft="336.5,209.5" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa"
+          TopLeft="334.5,319.5" />
         <EdgeLayout
           Id="Package\Fill_DIM_Siatka_Pogodowa.Paths[OLE DB Source Output]"
-          TopLeft="417,134.5">
+          TopLeft="436,134.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,75"
+              EndConnector="-10,75"
               Start="0,0"
-              End="0,67.5">
+              End="-10,67.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,67.5" />
+                    End="0,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.5"
+                    Point2="0,37.5"
+                    Point3="-4,37.5" />
+                  <mssgle:LineSegment
+                    End="-6,37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6,37.5"
+                    Point2="-10,37.5"
+                    Point3="-10,41.5" />
+                  <mssgle:LineSegment
+                    End="-10,67.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -561,24 +577,32 @@ FROM PelnaSiatka;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination"
-          TopLeft="334.5,319.5" />
         <EdgeLayout
           Id="Package\Fill_DIM_Siatka_Pogodowa.Paths[Derived Column Output]"
-          TopLeft="416.75,251.5">
+          TopLeft="426,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,68"
+              EndConnector="15.5,68"
               Start="0,0"
-              End="0,60.5">
+              End="15.5,60.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,60.5" />
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="4,34" />
+                  <mssgle:LineSegment
+                    End="11.5,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.5,34"
+                    Point2="15.5,34"
+                    Point3="15.5,38" />
+                  <mssgle:LineSegment
+                    End="15.5,60.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -591,7 +615,7 @@ FROM PelnaSiatka;</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Source">
+    design-time-name="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -599,7 +623,7 @@ FROM PelnaSiatka;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fill_DIM_Siatka_Pogodowa\OLE DB Destination">
+    design-time-name="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

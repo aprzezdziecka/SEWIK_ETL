@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ALICJA"
   DTS:CreatorName="ALICJA\alapr"
-  DTS:DTSID="{B5DEDCE7-E6C9-4703-AF28-640FF42BB0DB}"
+  DTS:DTSID="{6B3C9EE8-845E-461E-AE0C-040B34BD904E}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="17.0.1010.2"
   DTS:LocaleID="1045"
-  DTS:ObjectName="02"
+  DTS:ObjectName="02_Fill_Zdarzenie_Tables"
   DTS:PackageType="5"
-  DTS:VersionBuild="163"
-  DTS:VersionGUID="{930E6A21-4100-4A3F-B004-0A16F34AA369}">
+  DTS:VersionBuild="165"
+  DTS:VersionGUID="{C46F296F-7371-41D2-B11F-B9C7FE2F3FC2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB3EmstbKOFeYU4aq9bO2pvT7UVAIC+mvZQfm9KronrBwAAAAAOgAAAAAIAACAAAAAcbloNt4vOwYcKK/kOYkNw2Q9Bu8zC8i4JgMPLpsF6liAAAACp6pMeuHZFy4oo8YSEd1xPIpWcp65KTmIReAGAvXAYokAAAAAA93xl0hyUotNN73czj8t6ke6gO0cOqzjNlonafjjS3sTYMLXeMK17qd7LeAvO3RYa9Wg5IqqasNYnQmO/7ABZ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB23gvY8dDbRmwVN0zdUFgsi9it2+mjSFHB0nKu5yvR4gAAAAAOgAAAAAIAACAAAACJ/EXojMXWtfipEIgqG+ogK8ktO0BgxruOoC+jM5/+jiAAAABnQ2VFAR5kRCGzDhxM2k6rDirDoSXaVDTousyszKblCUAAAAAdeHlfAmkhvOU3el/iOHxpk4hBGojxMOwONk9pCWQ2lBp1x97nQCLA16qUgoxX49Gcakq5F7+5OMY7S3i3XeNo</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADL1YnGz214wmO2OXuhy5fAZktIpo8BnCusFj3lEFdyjgAAAAAOgAAAAAIAACAAAAABoGfDmuTEbvZEBUsGYtzXkrV00k+PsPl5Gw33QWiGgyAAAADZFnCvoGtiLa6D7TdSkswfdrWmYOONKza6DgWuguYetEAAAABQ69IkBysThdvHneV5lvbwTFDpMwikyIVzqT4fsl+iyAQoRLLoUIoOsMGsbDiyyidEUjHbKviA6nN/QFv8Jt+p</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC5yu8KCWsrZw3gAHMvDvvCh5I9WxwDR+MNdsXlMYv3VQAAAAAOgAAAAAIAACAAAAD3qugfq0e6zso2ubxaexmt+fHIhzHLHD7uBtg4Miv1uSAAAAD/ZNO64E1uUVVukB+PLdmx9Sq3fKkTtVpiMKc1a+EblUAAAAD6KmFqk4EJHwhiz2eocJZzuprFhLZdeTO2Z0/QZ1fGlcwb9TFs/EWS7cxLTpoPNM0ezBUcCO8TH7basGM8mi1u</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -22764,7 +22764,7 @@ where [refTable].[lokalizacja_key] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-57.0600390625,10.75,114.120078125,16"
+              BoundingBox="-48.19138671875,12.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -22860,7 +22860,7 @@ where [refTable].[lokalizacja_key] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-57.0600390625,6.75,114.120078125,16"
+              BoundingBox="-48.19138671875,8.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
