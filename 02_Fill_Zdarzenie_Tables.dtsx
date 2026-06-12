@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="02_Fill_Zdarzenie_Tables"
   DTS:PackageType="5"
-  DTS:VersionBuild="173"
-  DTS:VersionGUID="{573202E6-F67C-4D73-A6F9-7785E33CF6A5}">
+  DTS:VersionBuild="174"
+  DTS:VersionGUID="{2377BFDF-19B3-46EB-8771-9A49F7B314CE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAuTjpOve6+ACa7rSftIqqO3QX5NiHkdVpejgS0FyvF6QAAAAAOgAAAAAIAACAAAABjnnoJuUxdlIzi/dvuUnSgt1c4MzhUwbI/2mnUtXi0LyAAAACiFYJPnXCy1jHlexjbfC0WVs2ak9sUXJ1RjkBiC7rRhUAAAABfeR/GKB8EMj741Q+jnJWUyN8HfhC7J6Ek1OYxwBJ4o18AF8atIeOMUp20nmj9BW937s7cGm56UAMfIMgJ7NE3</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAzxIWtu6NV5EgWvu9pvBZHCw1URDKaLjr3+Qc/F3bgswAAAAAOgAAAAAIAACAAAADHk3Sj1Skyg5TFZHlGEPEl622xB7MrlXiNMb4IKquCxSAAAADFED48q7UG2LPGrv7NfQw0UGuIZ1E2j6PIcRG6pSVuIUAAAAAHNkwrFViBAisrDpUN0E1Q+6hSG1vPSvZHjhYhg2Z9airmhsCggikSRZEmZvs8h1K445Lcm1KvnvKwgLoWO5eI</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAAOtYzms2X1IBxhs7MrrKGJSqKNz2SeNlTD2HgzzjoMQAAAAAOgAAAAAIAACAAAACDRSM7jNE8e+/MOK219oeC3TOdF/u3Jxi5mkzkpOxT9iAAAACvIz6JTC0XONrvPRjtxDQpOt2Lo/eQ7IJWVdBqm6T9g0AAAAC+h+zaQBioEnQdB5JDz4SI7WpMdfGI/7iSclB5n02ihztWhFbWZtgRwdRP7+j/GTKYOt61hUPUh7rOeE6xj+kx</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABDIXx2xLw+tWUjxBB+da701i87tIOXHZ7oj+JmkWyoAQAAAAAOgAAAAAIAACAAAADDupHt2GsLvY+TR8FiWjcHr5zdkoFRmwpU4ZKGBFNg+iAAAADSirNg8GcCCY8lM4B5A0onGuJOkLZP0oNbyK0QQiBB4EAAAAAPoMzYVW/ag9j5mn1CDbKd12xyXZmWLWQmGmVgTN86ckhlZgZ821nhR9zT2QSCv4mLmuam+S0W6R/GnBk/NfwH</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -20381,7 +20381,7 @@ where [refTable].[lokalizacja_key] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6559574C-C822-476A-9535-AF66EF6E643E}"
-          SQLTask:SqlStatementSource="DELETE FROM DWH_SEWIK_METEO.dbo.FAKT_Zdarzenie;&#xA;DELETE FROM DWH_SEWIK_METEO.dbo.DIM_Droga_Info;&#xA;DELETE FROM DWH_SEWIK_METEO.dbo.DIM_Lokalizacja;&#xA;&#xA;DBCC CHECKIDENT ('DWH_SEWIK_METEO.dbo.FAKT_Zdarzenie', RESEED, 0);&#xA;DBCC CHECKIDENT ('DWH_SEWIK_METEO.dbo.DIM_Droga_Info', RESEED, 0);&#xA;DBCC CHECKIDENT ('DWH_SEWIK_METEO.dbo.DIM_Lokalizacja', RESEED, 0);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DELETE FROM DWH_SEWIK_METEO.dbo.FAKT_Pogoda;&#xA;DBCC CHECKIDENT ('DWH_SEWIK_METEO.dbo.FAKT_Pogoda', RESEED, 0);&#xA;&#xA;DELETE FROM DWH_SEWIK_METEO.dbo.FAKT_Zdarzenie;&#xA;DELETE FROM DWH_SEWIK_METEO.dbo.DIM_Droga_Info;&#xA;DELETE FROM DWH_SEWIK_METEO.dbo.DIM_Lokalizacja;&#xA;DBCC CHECKIDENT ('DWH_SEWIK_METEO.dbo.FAKT_Zdarzenie', RESEED, 0);&#xA;DBCC CHECKIDENT ('DWH_SEWIK_METEO.dbo.DIM_Droga_Info', RESEED, 0);&#xA;DBCC CHECKIDENT ('DWH_SEWIK_METEO.dbo.DIM_Lokalizacja', RESEED, 0);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -22579,9 +22579,7 @@ where [refTable].[lokalizacja_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-20.95265625,3.46337890625,41.9053125,9.5732421875"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22784,7 +22782,7 @@ where [refTable].[lokalizacja_key] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,12.9453125,114.120078125,16"
+              BoundingBox="-57.0600390625,10.75,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -22880,7 +22878,7 @@ where [refTable].[lokalizacja_key] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,8.9453125,114.120078125,16"
+              BoundingBox="-57.0600390625,6.75,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -22949,9 +22947,7 @@ where [refTable].[lokalizacja_key] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="19.04640625,-15.568359375,30.9071875,9.568359375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
