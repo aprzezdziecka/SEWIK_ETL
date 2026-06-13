@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="04_Fill_DIM_Pojazd"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{B59DEB3C-67E0-4729-955F-DEE7089F03BD}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{0598C88B-072D-4B0A-804F-0FD90016009F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAYS9zImo+EQpbL6xCxSulC7xHiFnlh2/7DxmRX4rPbCwAAAAAOgAAAAAIAACAAAAB5lDmc5ERG26XkdlVRzesZa6WgiQ9jNxqlxieZX08frSAAAAAbG4jeEGaoDc55B/da2GpBecZRVwoC8LD3dyVY5Ck7LUAAAAB0pmRlIDYq6T0Brbg5h4Ly72KGq1XJTRW5z7ZHFsZbmY9WRmxEj+EmUPLBMOBcaRkJotsS3NlWzqi+k9TSU7Mf</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABmSI2yl5SveU+NNxRfQwiEzP4JGdEcwmjdodJ9pppH3QAAAAAOgAAAAAIAACAAAAD40H4FOAsltYhnZdTPismMX26H4YjtImtj7PtGkL63miAAAACIjbo5dsslo81hiDZp2VQpkV6fNTEwnnbZlFR5ibo6zkAAAACDptcHwcrclrGu1f5qk4D44bVvidvnKZvkrWjWgSYc/9U++ZW1qJpB/mVdIX61brN4CDRgcTk0vW/KQSnC3lcv</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -576,7 +576,7 @@ where [refTable].[kod] = ?</property>
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rodzaj_pojazdu]"
                       dataType="wstr"
-                      length="10"
+                      length="100"
                       name="rodzaj_pojazdu" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ubezpieczyciel]"
@@ -1033,13 +1033,13 @@ where [refTable].[kod] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="163,42"
-          Id="Package\Execute SQL Task"
-          TopLeft="366.5,118.5" />
-        <NodeLayout
           Size="151,42"
           Id="Package\Data Flow Task"
           TopLeft="353.5,198.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="366.5,118.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="448,160.5">
@@ -1090,6 +1090,14 @@ where [refTable].[kod] = ?</property>
           Size="113,42"
           Id="Package\Data Flow Task\Lookup"
           TopLeft="260.5,147.5" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="228.5,237.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="221.5,340.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="319.75,89.5">
@@ -1112,10 +1120,6 @@ where [refTable].[kod] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="228.5,237.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
           TopLeft="317,189.5">
@@ -1152,10 +1156,6 @@ where [refTable].[kod] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="221.5,340.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
           TopLeft="306.25,279.5">
@@ -1195,7 +1195,7 @@ where [refTable].[kod] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1205,7 +1205,7 @@ where [refTable].[kod] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

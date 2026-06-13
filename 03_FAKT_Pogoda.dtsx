@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="03_FAKT_Pogoda"
   DTS:PackageType="5"
-  DTS:VersionBuild="49"
-  DTS:VersionGUID="{C01F2D1B-0560-476F-B944-6772295E4996}">
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{995EB3DF-3E30-4B58-B0F8-1590F86FC6BB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAIYdPIjuOtjX+jk7lVXh0tdEy/5DBvqWVAVBLE5keumQAAAAAOgAAAAAIAACAAAACoQP6xb5WRWi7tGfqbzv86Mt5q4nVAJxZvD/CDi1SlTSAAAADpanvxA2DRxGk5leKpZjPtyYbKZt5D3vk6VGdSIvoJk0AAAAD37sk8ehofrtS5Lzng2l7p1zU1dBLDC4aVZLjwHNJ1pKHQHSzYuc1O+eYVoYSrDMhdF1nvR3/VLi+6eFZrGN7k</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADcwymBmWqmuasmE8wv9AtDxDi4st7iLAH3F9HaHUmFQAAAAAAOgAAAAAIAACAAAAAqOm6Iuyn9fn/bNoZ/BymT8lU286Xw/dBucjgh7BG2AyAAAAC0npEsR0poKBvSP84wQGx8SqqvJDSdGnkiPrs3gQDDf0AAAAAI4+osE6ihuq2kF9FQEKDC7HGpHkXnHQnC1JMULamFHh1LRDWruCArEnfZYbZdLTEmaZvJ0KBX1r7W+UraFwnj</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1648,111 +1648,29 @@ where [refTable].[dlugosc_str] = ? and [refTable].[szerokosc_str] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="163,42"
-          Id="Package\Fill_FAKT_Pogoda\SRC_Pogoda_CSV"
-          TopLeft="268.5,59.5" />
+          Size="149,42"
+          Id="Package\Fill_FAKT_Pogoda\LKP_DIM_Czas"
+          TopLeft="279.5,443.5" />
         <NodeLayout
           Size="210,42"
           Id="Package\Fill_FAKT_Pogoda\LKP_DIM_Siatka_Pogodowa"
           TopLeft="280.5,256.5" />
         <NodeLayout
-          Size="215,42"
-          Id="Package\Fill_FAKT_Pogoda\DER_Convert_Types_Pogoda"
-          TopLeft="270.5,164.5" />
-        <EdgeLayout
-          Id="Package\Fill_FAKT_Pogoda.Paths[Derived Column Output]"
-          TopLeft="381.75,206.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50"
-              Start="0,0"
-              End="0,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="169,42"
+          Id="Package\Fill_FAKT_Pogoda\DST_FAKT_Pogoda"
+          TopLeft="235.5,523.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Fill_FAKT_Pogoda\SRC_Pogoda_CSV"
+          TopLeft="268.5,59.5" />
         <NodeLayout
           Size="150,42"
           Id="Package\Fill_FAKT_Pogoda\LKP_DIM_Data"
           TopLeft="279.5,366.5" />
-        <EdgeLayout
-          Id="Package\Fill_FAKT_Pogoda.Paths[Lookup Match Output]"
-          TopLeft="385.5,298.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-31,68"
-              Start="0,0"
-              End="-31,60.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30"
-                    Point2="0,34"
-                    Point3="-4,34" />
-                  <mssgle:LineSegment
-                    End="-27,34" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-27,34"
-                    Point2="-31,34"
-                    Point3="-31,38" />
-                  <mssgle:LineSegment
-                    End="-31,60.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-63.69138671875,39,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="149,42"
-          Id="Package\Fill_FAKT_Pogoda\LKP_DIM_Czas"
-          TopLeft="279.5,443.5" />
-        <EdgeLayout
-          Id="Package\Fill_FAKT_Pogoda.Paths[Lookup Match Output1]"
-          TopLeft="354.25,408.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,7.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="169,42"
-          Id="Package\Fill_FAKT_Pogoda\DST_FAKT_Pogoda"
-          TopLeft="235.5,523.5" />
+          Size="215,42"
+          Id="Package\Fill_FAKT_Pogoda\DER_Convert_Types_Pogoda"
+          TopLeft="270.5,164.5" />
         <EdgeLayout
           Id="Package\Fill_FAKT_Pogoda.Paths[Lookup Match Output2]"
           TopLeft="354,485.5">
@@ -1790,6 +1708,66 @@ where [refTable].[dlugosc_str] = ? and [refTable].[szerokosc_str] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Fill_FAKT_Pogoda.Paths[Lookup Match Output1]"
+          TopLeft="354.25,408.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,7.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_FAKT_Pogoda.Paths[Lookup Match Output]"
+          TopLeft="385.5,298.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-31,68"
+              Start="0,0"
+              End="-31,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="-4,34" />
+                  <mssgle:LineSegment
+                    End="-27,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27,34"
+                    Point2="-31,34"
+                    Point3="-31,38" />
+                  <mssgle:LineSegment
+                    End="-31,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-63.69138671875,39,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Fill_FAKT_Pogoda.Paths[Flat File Source Output]"
           TopLeft="350,101.5">
           <EdgeLayout.Curve>
@@ -1823,62 +1801,38 @@ where [refTable].[dlugosc_str] = ? and [refTable].[szerokosc_str] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill_FAKT_Pogoda.Paths[Derived Column Output]"
+          TopLeft="381.75,206.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fill_FAKT_Pogoda\LKP_DIM_Siatka_Pogodowa">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fill_FAKT_Pogoda\LKP_DIM_Data">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Fill_FAKT_Pogoda\LKP_DIM_Czas">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1888,7 +1842,30 @@ where [refTable].[dlugosc_str] = ? and [refTable].[szerokosc_str] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill_FAKT_Pogoda\LKP_DIM_Siatka_Pogodowa">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1905,6 +1882,29 @@ where [refTable].[dlugosc_str] = ? and [refTable].[szerokosc_str] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill_FAKT_Pogoda\LKP_DIM_Data">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
