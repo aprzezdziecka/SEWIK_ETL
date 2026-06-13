@@ -1,0 +1,717 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/13/2026 2:11:00 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-KKSSG5V"
+  DTS:CreatorName="DESKTOP-KKSSG5V\lilia"
+  DTS:DTSID="{9F2D8286-5B9D-4423-A38D-9E6C6A8D3DEE}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="05_fill_DIM_Stan_Uczestnika"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{1F57C668-0B54-4899-A6B9-49D1B5CAD1C0}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E1904461-75F0-4EF5-9E50-D09928C6E7BD}"
+      DTS:ObjectName="local.DWH_SEWIK_METEO.EmergencyAdmin">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-KKSSG5V;User ID=EmergencyAdmin;Initial Catalog=DWH_SEWIK_METEO_3;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-05_fill_DIM_Stan_Uczestnika-{E1904461-75F0-4EF5-9E50-D09928C6E7BD}local.DWH_SEWIK_METEO.EmergencyAdmin;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADH2qiDPoBoBHqgEan1OJO6M7BvNYOoTygha8/dR66w+wAAAAAOgAAAAAIAACAAAABznUVcxpJHKY/vqEOVy0Lc/r3lD4w/aIskSNz9dWYjKDAAAABAvKnSvrlCT7IZrSipL0q5Y90SCwGkyPIWDKKztTkh4K5nl1R7d1vSfFaF4xw2/hpAAAAAeMKZmhINo/loth3gIMWADOudD4T7Tsy6KiYRdGoTrElyVNIjud0QeiMF33LeE+WF19khEmx4z7/xMjwq+4K7yQ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{06505C5F-9586-453C-B7EF-13953F2AFD77}"
+      DTS:ObjectName="local.DWH_SEWIK_METEO.EmergencyAdmin 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=local;User ID=EmergencyAdmin;Initial Catalog=DWH_SEWIK_METEO;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-05_fill_DIM_Stan_Uczestnika-{06505C5F-9586-453C-B7EF-13953F2AFD77}local.DWH_SEWIK_METEO.EmergencyAdmin 1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABH0TrJPD3Ai9ou3SKrR50jilZ1PW3byM0FLvS6InNMlwAAAAAOgAAAAAIAACAAAACxN8coQ+p2cq3a8KKA9snf83Xec02geeGdwNAFrCvz7TAAAABPK/3ImGcwk+Z6VnI+LOpL/kgDbRuAUmZjrMa7NyIOtqLo7Ok5EBVQjgO4UjltOq5AAAAAezdMR0Asa/srpVxXxOEneR+XJoLftl8jCukXYnwr0jnDracq2mzjKz4r2OwXlxJHXdl1OaagV+B+LapaFPUTjg</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_Load_DIM_Stan"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9E0F73C1-C2F8-470E-9E7F-E51F02BC000D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_Load_DIM_Stan"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_Load_DIM_Stan\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DIM_Stan_Uczestnika]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
+                  connectionManagerRefId="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rola_uczestnika_kod]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="rola_uczestnika_kod"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rola_uczestnika_kod]"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[rola_uczestnika_kod]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[obcokrajowiec]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="obcokrajowiec"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[obcokrajowiec]"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[obcokrajowiec]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[odblaski]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="odblaski"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[odblaski]"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[odblaski]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[inwalida]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="inwalida"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[inwalida]"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[inwalida]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pod_wplywem_substancji_kod]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="pod_wplywem_substancji_kod"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pod_wplywem_substancji_kod]"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji_kod]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rola_uczestnika]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="rola_uczestnika"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rola_uczestnika]"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[rola_uczestnika]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pod_wplywem_substancji]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="19"
+                      cachedName="pod_wplywem_substancji"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pod_wplywem_substancji]"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[stan_trzezwosci_slownik]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="stan_trzezwosci_slownik"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[stan_trzezwosci_slownik]"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[stan_trzezwosci_slownik]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[stan_trzezwosci]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="stan_trzezwosci"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[stan_trzezwosci]"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[stan_trzezwosci]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_opis_stanu]"
+                      dataType="i8"
+                      name="id_opis_stanu" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rola_uczestnika]"
+                      dataType="wstr"
+                      length="200"
+                      name="rola_uczestnika" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rola_uczestnika_kod]"
+                      dataType="wstr"
+                      length="10"
+                      name="rola_uczestnika_kod" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[obcokrajowiec]"
+                      dataType="wstr"
+                      length="3"
+                      name="obcokrajowiec" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[odblaski]"
+                      dataType="wstr"
+                      length="3"
+                      name="odblaski" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[inwalida]"
+                      dataType="wstr"
+                      length="3"
+                      name="inwalida" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pod_wplywem_substancji]"
+                      dataType="wstr"
+                      length="200"
+                      name="pod_wplywem_substancji" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pod_wplywem_substancji_kod]"
+                      dataType="wstr"
+                      length="10"
+                      name="pod_wplywem_substancji_kod" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[stan_trzezwosci]"
+                      dataType="wstr"
+                      length="200"
+                      name="stan_trzezwosci" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[stan_trzezwosci_slownik]"
+                      dataType="wstr"
+                      length="10"
+                      name="stan_trzezwosci_slownik" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_DIM_Stan\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT
+    ISNULL(rola_uczestnika_kod, 'N/D') AS rola_uczestnika_kod,
+    CASE ISNULL(rola_uczestnika_kod, '')
+        WHEN 'I' THEN 'Inny'
+        WHEN 'K' THEN 'Kierujący'
+        WHEN 'O' THEN 'Pasażer' 
+        WHEN 'P' THEN 'Pieszy'
+        ELSE 'Nieokreślono'
+    END AS rola_uczestnika,
+    ISNULL(pod_wplywem_kod, 'N/D') AS pod_wplywem_substancji_kod,
+    CASE ISNULL(pod_wplywem_kod, '')
+        WHEN 'A' THEN 'Alkohol'
+        WHEN 'I' THEN 'Inny środek'
+        WHEN 'N' THEN 'Narkotyki'
+        ELSE 'Brak / Nieokreślono'
+    END AS pod_wplywem_substancji,
+    ISNULL(stan_uczestnika_kod, 'N/D') AS stan_trzezwosci_slownik,
+    CASE ISNULL(stan_uczestnika_kod, '')
+        WHEN 'B' THEN 'Badano - Trzeźwy'
+        WHEN 'N' THEN 'Nie badano'
+        WHEN 'P' THEN 'Pijany / Po spożyciu'
+        ELSE 'Nieokreślono'
+    END AS stan_trzezwosci,
+    ISNULL(obcokrajowiec_kod, 'N') AS obcokrajowiec,
+    ISNULL(odblaski, 'N') AS odblaski,
+    ISNULL(inwalida, 'N') AS inwalida
+FROM dbo.STG_Osoba
+WHERE id_osoby IS NOT NULL
+
+EXCEPT
+
+SELECT 
+    rola_uczestnika_kod,
+    rola_uczestnika,
+    pod_wplywem_substancji_kod,
+    pod_wplywem_substancji,
+    stan_trzezwosci_slownik,
+    stan_trzezwosci,
+    obcokrajowiec,
+    odblaski,
+    inwalida
+FROM dbo.DIM_Stan_Uczestnika;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
+                  connectionManagerRefId="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[rola_uczestnika_kod]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rola_uczestnika_kod]"
+                      length="10"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[rola_uczestnika_kod]"
+                      name="rola_uczestnika_kod"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[obcokrajowiec]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[obcokrajowiec]"
+                      length="10"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[obcokrajowiec]"
+                      name="obcokrajowiec"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[odblaski]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[odblaski]"
+                      length="3"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[odblaski]"
+                      name="odblaski"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[inwalida]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[inwalida]"
+                      length="3"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[inwalida]"
+                      name="inwalida"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji_kod]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pod_wplywem_substancji_kod]"
+                      length="10"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji_kod]"
+                      name="pod_wplywem_substancji_kod"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[rola_uczestnika]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rola_uczestnika]"
+                      length="12"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[rola_uczestnika]"
+                      name="rola_uczestnika"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pod_wplywem_substancji]"
+                      length="19"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji]"
+                      name="pod_wplywem_substancji"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[stan_trzezwosci_slownik]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[stan_trzezwosci_slownik]"
+                      length="10"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[stan_trzezwosci_slownik]"
+                      name="stan_trzezwosci_slownik"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[stan_trzezwosci]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[stan_trzezwosci]"
+                      length="20"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[stan_trzezwosci]"
+                      name="stan_trzezwosci"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rola_uczestnika_kod]"
+                      dataType="wstr"
+                      length="10"
+                      name="rola_uczestnika_kod" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[obcokrajowiec]"
+                      dataType="wstr"
+                      length="10"
+                      name="obcokrajowiec" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[odblaski]"
+                      dataType="wstr"
+                      length="3"
+                      name="odblaski" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[inwalida]"
+                      dataType="wstr"
+                      length="3"
+                      name="inwalida" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pod_wplywem_substancji_kod]"
+                      dataType="wstr"
+                      length="10"
+                      name="pod_wplywem_substancji_kod" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rola_uczestnika]"
+                      dataType="wstr"
+                      length="200"
+                      name="rola_uczestnika" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pod_wplywem_substancji]"
+                      dataType="wstr"
+                      length="200"
+                      name="pod_wplywem_substancji" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[stan_trzezwosci_slownik]"
+                      dataType="wstr"
+                      length="10"
+                      name="stan_trzezwosci_slownik" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[stan_trzezwosci]"
+                      dataType="wstr"
+                      length="200"
+                      name="stan_trzezwosci" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rola_uczestnika_kod]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rola_uczestnika_kod]"
+                      name="rola_uczestnika_kod" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rola_uczestnika]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rola_uczestnika]"
+                      name="rola_uczestnika" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[obcokrajowiec]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[obcokrajowiec]"
+                      name="obcokrajowiec" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pod_wplywem_substancji]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pod_wplywem_substancji]"
+                      name="pod_wplywem_substancji" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[stan_trzezwosci_slownik]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[stan_trzezwosci_slownik]"
+                      name="stan_trzezwosci_slownik" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[stan_trzezwosci]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[stan_trzezwosci]"
+                      name="stan_trzezwosci" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[odblaski]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[odblaski]"
+                      name="odblaski" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[inwalida]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[inwalida]"
+                      name="inwalida" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pod_wplywem_substancji_kod]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pod_wplywem_substancji_kod]"
+                      name="pod_wplywem_substancji_kod" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_Load_DIM_Stan.Paths[OLE DB Source Output]"
+              endId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="179,42"
+          Id="Package\DFT_Load_DIM_Stan"
+          TopLeft="180,82" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT_Load_DIM_Stan">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\DFT_Load_DIM_Stan\OLE DB Source"
+          TopLeft="236,51" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\DFT_Load_DIM_Stan\OLE DB Destination"
+          TopLeft="236,154" />
+        <EdgeLayout
+          Id="Package\DFT_Load_DIM_Stan.Paths[OLE DB Source Output]"
+          TopLeft="311,93">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.5,61"
+              Start="0,0"
+              End="10.5,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.5"
+                    Point2="0,30.5"
+                    Point3="4,30.5" />
+                  <mssgle:LineSegment
+                    End="6.5,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.5,30.5"
+                    Point2="10.5,30.5"
+                    Point3="10.5,34.5" />
+                  <mssgle:LineSegment
+                    End="10.5,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_DIM_Stan\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_DIM_Stan\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
