@@ -7,12 +7,12 @@
   DTS:CreatorName="ALICJA\alapr"
   DTS:DTSID="{C9407D90-04A4-4AB0-8CBA-6B797031B4FF}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
   DTS:LocaleID="1045"
   DTS:ObjectName="04_Fill_DIM_Pojazd"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{B59DEB3C-67E0-4729-955F-DEE7089F03BD}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{7A67CA5C-F12C-480C-9D06-BD23A3B5A6E9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,11 +25,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=ALICJA;User ID=sa;Initial Catalog=DWH_SEWIK_METEO;Provider=SQLNCLI11.1;Application Name=SSIS-04_Fill_DIM_Pojazd-{B82302FD-5420-4BD0-9444-72E29B181E0F}ALICJA.DWH_SEWIK_METEO.sa;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=DESKTOP-KKSSG5V;User ID=EmergencyAdmin;Initial Catalog=DWH_SEWIK_METEO_3;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-04_Fill_DIM_Pojazd-{B82302FD-5420-4BD0-9444-72E29B181E0F}ALICJA.DWH_SEWIK_METEO.sa;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAYS9zImo+EQpbL6xCxSulC7xHiFnlh2/7DxmRX4rPbCwAAAAAOgAAAAAIAACAAAAB5lDmc5ERG26XkdlVRzesZa6WgiQ9jNxqlxieZX08frSAAAAAbG4jeEGaoDc55B/da2GpBecZRVwoC8LD3dyVY5Ck7LUAAAAB0pmRlIDYq6T0Brbg5h4Ly72KGq1XJTRW5z7ZHFsZbmY9WRmxEj+EmUPLBMOBcaRkJotsS3NlWzqi+k9TSU7Mf</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAALKP1C8YAsHbQLOVJoQ+qBRPbr51QX15Xp0xYGK33u2gAAAAAOgAAAAAIAACAAAABcTKNa7D8b8p0JXoj+crbTsIi7Zpzdqs3qeqYPaYDAYjAAAABRWk7fMoLvS+6LHRNrkJY2BY9tpdhHuOeYDh63aPGR9VBj0ymy7UIuWeiSnRMuwrJAAAAA+POg37ez73DB3MaLjQJxPXlj6fWUBM3hZ/5Wy7U9TIKNLiNM3Ui7Ew0PgLAPt48DBn/fPQrdEtCddF/LGNSqjw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -377,7 +377,7 @@ where [refTable].[kod] = ?</property>
                 <output
                   refId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
@@ -576,7 +576,7 @@ where [refTable].[kod] = ?</property>
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rodzaj_pojazdu]"
                       dataType="wstr"
-                      length="10"
+                      length="100"
                       name="rodzaj_pojazdu" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ubezpieczyciel]"
@@ -699,6 +699,36 @@ where [refTable].[kod] = ?</property>
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rodzaj_pojazdu]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rodzaj_pojazdu]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rodzaj_pojazdu]"
+                      name="rodzaj_pojazdu"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[marka]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[marka]"
+                      length="100"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[marka]"
+                      name="marka"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rok_produkcji]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rok_produkcji]"
+                      length="10"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rok_produkcji]"
+                      name="rok_produkcji"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[stg_data_wczytania]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
@@ -736,36 +766,6 @@ where [refTable].[kod] = ?</property>
                       length="10"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[nr_pojazdu]"
                       name="nr_pojazdu"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rodzaj_pojazdu]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rodzaj_pojazdu]"
-                      length="20"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rodzaj_pojazdu]"
-                      name="rodzaj_pojazdu"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[marka]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[marka]"
-                      length="100"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[marka]"
-                      name="marka"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rok_produkcji]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rok_produkcji]"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rok_produkcji]"
-                      name="rok_produkcji"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[stan_pojazdu_kod]"
@@ -820,6 +820,21 @@ where [refTable].[kod] = ?</property>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rodzaj_pojazdu]"
+                      dataType="wstr"
+                      length="20"
+                      name="rodzaj_pojazdu" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[marka]"
+                      dataType="wstr"
+                      length="100"
+                      name="marka" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rok_produkcji]"
+                      dataType="wstr"
+                      length="10"
+                      name="rok_produkcji" />
+                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[stg_data_wczytania]"
                       dataType="dbTimeStamp"
                       name="stg_data_wczytania" />
@@ -838,21 +853,6 @@ where [refTable].[kod] = ?</property>
                       dataType="wstr"
                       length="10"
                       name="nr_pojazdu" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rodzaj_pojazdu]"
-                      dataType="wstr"
-                      length="20"
-                      name="rodzaj_pojazdu" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[marka]"
-                      dataType="wstr"
-                      length="100"
-                      name="marka" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rok_produkcji]"
-                      dataType="wstr"
-                      length="10"
-                      name="rok_produkcji" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[stan_pojazdu_kod]"
                       dataType="wstr"
@@ -1033,13 +1033,13 @@ where [refTable].[kod] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="163,42"
-          Id="Package\Execute SQL Task"
-          TopLeft="366.5,118.5" />
-        <NodeLayout
           Size="151,42"
           Id="Package\Data Flow Task"
           TopLeft="353.5,198.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="366.5,118.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="448,160.5">
@@ -1090,6 +1090,14 @@ where [refTable].[kod] = ?</property>
           Size="113,42"
           Id="Package\Data Flow Task\Lookup"
           TopLeft="260.5,147.5" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="228.5,237.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="221.5,340.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="319.75,89.5">
@@ -1112,10 +1120,6 @@ where [refTable].[kod] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="228.5,237.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
           TopLeft="317,189.5">
@@ -1152,10 +1156,6 @@ where [refTable].[kod] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="221.5,340.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
           TopLeft="306.25,279.5">
@@ -1195,7 +1195,7 @@ where [refTable].[kod] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1205,7 +1205,7 @@ where [refTable].[kod] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

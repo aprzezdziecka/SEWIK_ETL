@@ -7,12 +7,12 @@
   DTS:CreatorName="ALICJA\alapr"
   DTS:DTSID="{7AF959F6-6B3F-4C79-A219-F43DA04B7DBC}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
   DTS:LocaleID="1045"
   DTS:ObjectName="03_FAKT_Pogoda"
   DTS:PackageType="5"
-  DTS:VersionBuild="49"
-  DTS:VersionGUID="{C01F2D1B-0560-476F-B944-6772295E4996}">
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{A659CE82-6081-4A16-A556-B295F77B6832}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,11 +25,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=ALICJA;User ID=sa;Initial Catalog=DWH_SEWIK_METEO;Provider=SQLNCLI11.1;Application Name=SSIS-03_FKAT_Pogoda-{CAB6A93F-4BA9-40E7-A91A-020E94C31F76}ALICJA.DWH_SEWIK_METEO.sa;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=DESKTOP-KKSSG5V;User ID=EmergencyAdmin;Initial Catalog=DWH_SEWIK_METEO_3;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-03_FKAT_Pogoda-{CAB6A93F-4BA9-40E7-A91A-020E94C31F76}ALICJA.DWH_SEWIK_METEO.sa;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAIYdPIjuOtjX+jk7lVXh0tdEy/5DBvqWVAVBLE5keumQAAAAAOgAAAAAIAACAAAACoQP6xb5WRWi7tGfqbzv86Mt5q4nVAJxZvD/CDi1SlTSAAAADpanvxA2DRxGk5leKpZjPtyYbKZt5D3vk6VGdSIvoJk0AAAAD37sk8ehofrtS5Lzng2l7p1zU1dBLDC4aVZLjwHNJ1pKHQHSzYuc1O+eYVoYSrDMhdF1nvR3/VLi+6eFZrGN7k</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADX4QaTWEhCXWCW9NKFDodWkXJkwBsDrXG30VPzGVoQVAAAAAAOgAAAAAIAACAAAADzbdgG7Lm4I4xZCse0og+AZQ2Pudv7hNA1q2rw/HpxOzAAAAATiGNU8xcE2EV+5MaRlu7EMVYjGlniFKfG/BEU9wZi2KElr71Ngt6HLCIA5SY9+RdAAAAA5AkeDCjxw2cD7yQbIG5VmHU5b7sqGm/ZorD/EzSxi5c6YMPxiYck5gW7phtQaZa/oolAbD9OkJBqf+lHgp9eHA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1583,7 +1583,7 @@ where [refTable].[dlugosc_str] = ? and [refTable].[szerokosc_str] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{CAB6A93F-4BA9-40E7-A91A-020E94C31F76}"
-          SQLTask:SqlStatementSource="DELETE FROM DWH_SEWIK_METEO.dbo.FAKT_Pogoda;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DELETE FROM DWH_SEWIK_METEO_3.dbo.FAKT_Pogoda;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1827,58 +1827,12 @@ where [refTable].[dlugosc_str] = ? and [refTable].[szerokosc_str] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Fill_FAKT_Pogoda\LKP_DIM_Siatka_Pogodowa">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fill_FAKT_Pogoda\LKP_DIM_Data">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Fill_FAKT_Pogoda\LKP_DIM_Czas">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1888,7 +1842,30 @@ where [refTable].[dlugosc_str] = ? and [refTable].[szerokosc_str] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill_FAKT_Pogoda\LKP_DIM_Siatka_Pogodowa">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1905,6 +1882,29 @@ where [refTable].[dlugosc_str] = ? and [refTable].[szerokosc_str] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill_FAKT_Pogoda\LKP_DIM_Data">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

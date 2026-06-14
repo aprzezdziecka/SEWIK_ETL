@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="06_Fill_DIM_Postepowanie_Uczestnika"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{7FF94701-EDC0-4263-B000-140E90B55740}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{94087AE1-8D10-4020-8F65-479CBB5CB415}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAiqEW3EKCsHFP7cjkjHQ1wp6r3mM5Bhhad528pL9x91AAAAAAOgAAAAAIAACAAAADKexDDZwUPLCjoye7D+74T3vH8yepuPSx/tsVqAqq0IjAAAABrVTBbHBg+us3LbibgRD7iVJAsR25pWogEy7vrfGaczTFIv0ijHkiioq48zyrMUR5AAAAAc3rXBePKNS4J6Fl6ikoQ2L4VAXHSkrHnYF20qhOfyqzDw2dMWvKS3CbQFhqYv7Q5QoT0K5Q+h0bstpH0hmyYuA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADc95WzlzCVTKBeZv8FvUu7rMrrA0lrok1LkV/P04pIFQAAAAAOgAAAAAIAACAAAADi10JOXj4z9cU/KSuLv9cl/v18o7+NDOmvFaYm6znpDzAAAABaKfnGvX7KCIUYKwoj2C01H1npKu1Y3AE7do2lfZqLShFmWsFDEmqW0Qnl2nxvNMtAAAAApOMrM+SUkw9RUfk1nAnOtw2lHkkOEQin6KSsFKq/pLyrJO+8L2ZSWdKSmtl5QAIQ6xkOy8wabHgB3yVsnb9NIA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -88,7 +88,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -658,7 +658,7 @@ FROM dbo.DIM_Postepowanie_Uczestnika;</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -671,7 +671,7 @@ FROM dbo.DIM_Postepowanie_Uczestnika;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Data Flow Task\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

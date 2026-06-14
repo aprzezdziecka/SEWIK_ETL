@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="05_fill_DIM_Stan_Uczestnika"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{1F57C668-0B54-4899-A6B9-49D1B5CAD1C0}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{F7322886-5D64-4981-B4AD-EEB730792CD1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADH2qiDPoBoBHqgEan1OJO6M7BvNYOoTygha8/dR66w+wAAAAAOgAAAAAIAACAAAABznUVcxpJHKY/vqEOVy0Lc/r3lD4w/aIskSNz9dWYjKDAAAABAvKnSvrlCT7IZrSipL0q5Y90SCwGkyPIWDKKztTkh4K5nl1R7d1vSfFaF4xw2/hpAAAAAeMKZmhINo/loth3gIMWADOudD4T7Tsy6KiYRdGoTrElyVNIjud0QeiMF33LeE+WF19khEmx4z7/xMjwq+4K7yQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACCbAaBSDctZoKySAxdR6JAMn3kXpi9dOX8J541mxoaygAAAAAOgAAAAAIAACAAAAC8xOuFIwOLovFcFhHWTt6CvGsNtp4Ob1ZzowP8ezXmHzAAAADQBSdPmV2EacyngZ/upIblbkwH71eJJAnjMmvEc6NZ67Z9usIyYVsjLBOT/im002hAAAAAV8syqptk3mrliNY31HD2or/Iyafjlthw6a7+0zUNDEq1txmVMRPaj6ys3IE3ydWwk1X09vgw0XpTj617J822lQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABH0TrJPD3Ai9ou3SKrR50jilZ1PW3byM0FLvS6InNMlwAAAAAOgAAAAAIAACAAAACxN8coQ+p2cq3a8KKA9snf83Xec02geeGdwNAFrCvz7TAAAABPK/3ImGcwk+Z6VnI+LOpL/kgDbRuAUmZjrMa7NyIOtqLo7Ok5EBVQjgO4UjltOq5AAAAAezdMR0Asa/srpVxXxOEneR+XJoLftl8jCukXYnwr0jnDracq2mzjKz4r2OwXlxJHXdl1OaagV+B+LapaFPUTjg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACLT4E/OG5iNbn4n6Zf6/+PSfG942TsIR5OpPiAlnXaRAAAAAAOgAAAAAIAACAAAAAzPPqmL5Hyh0hgtsP384bUrv2mPTsyv6mLaB0HbN8HfjAAAAC7MMpmQyRQsAWqySl2lIbv9Wte6bG5f4fhHZpWzTx7O9E57X3WT2rBZ+v3lhYWvAJAAAAAQk+mUihOGLPP+JeT0X464fSjvfoVmWYkkyo7wdONpRzFCQd3moL+V3ZbTWaNnkfnJYFz5fV1Pub8v8rg/OyxLQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -67,6 +67,83 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\DFT_Load_DIM_Stan\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_DIM_Stan\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_DIM_Stan\Data Conversion.Inputs[Data Conversion Input].Columns[pod_wplywem_substancji]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="pod_wplywem_substancji"
+                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_DIM_Stan\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT_Load_DIM_Stan\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\Data Conversion.Outputs[Data Conversion Output].Columns[pod_wplywem_substancji_unicode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="200"
+                      lineageId="Package\DFT_Load_DIM_Stan\Data Conversion.Outputs[Data Conversion Output].Columns[pod_wplywem_substancji_unicode]"
+                      name="pod_wplywem_substancji_unicode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_DIM_Stan\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT_Load_DIM_Stan\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_DIM_Stan\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_DIM_Stan\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_DIM_Stan\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\DFT_Load_DIM_Stan\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
@@ -105,7 +182,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -176,20 +253,11 @@
                       lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji_kod]" />
                     <inputColumn
                       refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rola_uczestnika]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="12"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="rola_uczestnika"
                       externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rola_uczestnika]"
                       lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[rola_uczestnika]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pod_wplywem_substancji]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="19"
-                      cachedName="pod_wplywem_substancji"
-                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pod_wplywem_substancji]"
-                      lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji]" />
                     <inputColumn
                       refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[stan_trzezwosci_slownik]"
                       cachedDataType="wstr"
@@ -199,12 +267,18 @@
                       lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[stan_trzezwosci_slownik]" />
                     <inputColumn
                       refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[stan_trzezwosci]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="20"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="stan_trzezwosci"
                       externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[stan_trzezwosci]"
                       lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[stan_trzezwosci]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pod_wplywem_substancji_unicode]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="pod_wplywem_substancji_unicode"
+                      externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pod_wplywem_substancji]"
+                      lineageId="Package\DFT_Load_DIM_Stan\Data Conversion.Outputs[Data Conversion Output].Columns[pod_wplywem_substancji_unicode]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -310,48 +384,50 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT
-    ISNULL(rola_uczestnika_kod, 'N/D') AS rola_uczestnika_kod,
-    CASE ISNULL(rola_uczestnika_kod, '')
-        WHEN 'I' THEN 'Inny'
-        WHEN 'K' THEN 'Kierujący'
-        WHEN 'O' THEN 'Pasażer' 
-        WHEN 'P' THEN 'Pieszy'
-        ELSE 'Nieokreślono'
-    END AS rola_uczestnika,
-    ISNULL(pod_wplywem_kod, 'N/D') AS pod_wplywem_substancji_kod,
-    CASE ISNULL(pod_wplywem_kod, '')
-        WHEN 'A' THEN 'Alkohol'
-        WHEN 'I' THEN 'Inny środek'
-        WHEN 'N' THEN 'Narkotyki'
-        ELSE 'Brak / Nieokreślono'
-    END AS pod_wplywem_substancji,
-    ISNULL(stan_uczestnika_kod, 'N/D') AS stan_trzezwosci_slownik,
-    CASE ISNULL(stan_uczestnika_kod, '')
-        WHEN 'B' THEN 'Badano - Trzeźwy'
-        WHEN 'N' THEN 'Nie badano'
-        WHEN 'P' THEN 'Pijany / Po spożyciu'
-        ELSE 'Nieokreślono'
-    END AS stan_trzezwosci,
-    ISNULL(obcokrajowiec_kod, 'N') AS obcokrajowiec,
-    ISNULL(odblaski, 'N') AS odblaski,
-    ISNULL(inwalida, 'N') AS inwalida
-FROM dbo.STG_Osoba
-WHERE id_osoby IS NOT NULL
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT * FROM (
+    SELECT DISTINCT
+        ISNULL(rola_uczestnika_kod, 'N/D') AS rola_uczestnika_kod,
+        CAST(CASE ISNULL(rola_uczestnika_kod, '')
+            WHEN 'I' THEN 'Inny'
+            WHEN 'K' THEN 'Kierujący'
+            WHEN 'O' THEN 'Pasażer'
+            WHEN 'P' THEN 'Pieszy'
+            ELSE 'Nieokreślono'
+        END AS nvarchar(200)) AS rola_uczestnika,
+        ISNULL(pod_wplywem_kod, 'N/D') AS pod_wplywem_substancji_kod,
+        CAST(CASE ISNULL(pod_wplywem_kod, '')
+            WHEN 'A' THEN 'Alkohol'
+            WHEN 'I' THEN 'Inny środek'
+            WHEN 'N' THEN 'Narkotyki'
+            ELSE 'Brak / Nieokreślono'
+        END AS nvarchar(200)) AS pod_wplywem_substancji,
+        ISNULL(stan_uczestnika_kod, 'N/D') AS stan_trzezwosci_slownik,
+        CAST(CASE ISNULL(stan_uczestnika_kod, '')
+            WHEN 'B' THEN 'Badano - Trzeźwy'
+            WHEN 'N' THEN 'Nie badano'
+            WHEN 'P' THEN 'Pijany / Po spożyciu'
+            ELSE 'Nieokreślono'
+        END AS nvarchar(200)) AS stan_trzezwosci,
+        ISNULL(obcokrajowiec_kod, 'N') AS obcokrajowiec,
+        ISNULL(odblaski, 'N') AS odblaski,
+        ISNULL(inwalida, 'N') AS inwalida
+    FROM dbo.STG_Osoba
+    WHERE id_osoby IS NOT NULL
 
-EXCEPT
+    EXCEPT
 
-SELECT 
-    rola_uczestnika_kod,
-    rola_uczestnika,
-    pod_wplywem_substancji_kod,
-    pod_wplywem_substancji,
-    stan_trzezwosci_slownik,
-    stan_trzezwosci,
-    obcokrajowiec,
-    odblaski,
-    inwalida
-FROM dbo.DIM_Stan_Uczestnika;</property>
+    SELECT
+        rola_uczestnika_kod,
+        CAST(rola_uczestnika AS nvarchar(200)),
+        pod_wplywem_substancji_kod,
+        CAST(pod_wplywem_substancji AS nvarchar(200)),
+        stan_trzezwosci_slownik,
+        CAST(stan_trzezwosci AS nvarchar(200)),
+        obcokrajowiec,
+        odblaski,
+        inwalida
+    FROM dbo.DIM_Stan_Uczestnika
+) AS src;</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -439,23 +515,21 @@ FROM dbo.DIM_Stan_Uczestnika;</property>
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[rola_uczestnika]"
-                      codePage="1250"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rola_uczestnika]"
-                      length="12"
+                      length="50"
                       lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[rola_uczestnika]"
                       name="rola_uczestnika"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji]"
-                      codePage="1250"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pod_wplywem_substancji]"
-                      length="19"
+                      length="200"
                       lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji]"
                       name="pod_wplywem_substancji"
                       truncationRowDisposition="FailComponent" />
@@ -471,12 +545,11 @@ FROM dbo.DIM_Stan_Uczestnika;</property>
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[stan_trzezwosci]"
-                      codePage="1250"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[stan_trzezwosci]"
-                      length="20"
+                      length="50"
                       lineageId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output].Columns[stan_trzezwosci]"
                       name="stan_trzezwosci"
                       truncationRowDisposition="FailComponent" />
@@ -609,8 +682,13 @@ FROM dbo.DIM_Stan_Uczestnika;</property>
           </components>
           <paths>
             <path
-              refId="Package\DFT_Load_DIM_Stan.Paths[OLE DB Source Output]"
+              refId="Package\DFT_Load_DIM_Stan.Paths[Data Conversion Output]"
               endId="Package\DFT_Load_DIM_Stan\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT_Load_DIM_Stan\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT_Load_DIM_Stan.Paths[OLE DB Source Output]"
+              endId="Package\DFT_Load_DIM_Stan\Data Conversion.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
               startId="Package\DFT_Load_DIM_Stan\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -641,7 +719,7 @@ FROM dbo.DIM_Stan_Uczestnika;</property>
     design-time-name="Package\DFT_Load_DIM_Stan">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\DFT_Load_DIM_Stan\OLE DB Source"
@@ -649,33 +727,71 @@ FROM dbo.DIM_Stan_Uczestnika;</property>
         <NodeLayout
           Size="171,42"
           Id="Package\DFT_Load_DIM_Stan\OLE DB Destination"
-          TopLeft="236,154" />
+          TopLeft="258,237" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DFT_Load_DIM_Stan\Data Conversion"
+          TopLeft="251,142" />
         <EdgeLayout
           Id="Package\DFT_Load_DIM_Stan.Paths[OLE DB Source Output]"
           TopLeft="311,93">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.5,61"
+              EndConnector="18,49"
               Start="0,0"
-              End="10.5,53.5">
+              End="18,41.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.5" />
+                    End="0,20.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.5"
-                    Point2="0,30.5"
-                    Point3="4,30.5" />
+                    Point1="0,20.5"
+                    Point2="0,24.5"
+                    Point3="4,24.5" />
                   <mssgle:LineSegment
-                    End="6.5,30.5" />
+                    End="14,24.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="6.5,30.5"
-                    Point2="10.5,30.5"
-                    Point3="10.5,34.5" />
+                    Point1="14,24.5"
+                    Point2="18,24.5"
+                    Point3="18,28.5" />
                   <mssgle:LineSegment
-                    End="10.5,53.5" />
+                    End="18,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_DIM_Stan.Paths[Data Conversion Output]"
+          TopLeft="329,184">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.5,53"
+              Start="0,0"
+              End="14.5,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.5"
+                    Point2="0,26.5"
+                    Point3="4,26.5" />
+                  <mssgle:LineSegment
+                    End="10.5,26.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.5,26.5"
+                    Point2="14.5,26.5"
+                    Point3="14.5,30.5" />
+                  <mssgle:LineSegment
+                    End="14.5,45.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -688,7 +804,7 @@ FROM dbo.DIM_Stan_Uczestnika;</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_Load_DIM_Stan\OLE DB Source">
+    design-time-name="Package\DFT_Load_DIM_Stan\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -701,7 +817,7 @@ FROM dbo.DIM_Stan_Uczestnika;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_Load_DIM_Stan\OLE DB Destination">
+    design-time-name="Package\DFT_Load_DIM_Stan\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

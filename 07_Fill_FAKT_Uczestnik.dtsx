@@ -11,11 +11,221 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{0653223F-35B3-45BD-9EA5-99FE2747CDE0}">
+  DTS:VersionBuild="44"
+  DTS:VersionGUID="{4D58565A-997D-4CDC-9FE9-E7FC34015B9F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="file flat"
+      DTS:DTSID="{370DA870-AE85-484B-A754-F5FC6C34396B}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\lilia\source\repos\SEWIK_ETL\flat_file.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id_uczestnika_zrodlo"
+              DTS:DTSID="{AD0CEC12-91FF-4E4B-B25D-8BBBBB42ACB5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id_zdarzenia_zrodlo"
+              DTS:DTSID="{1E7566EF-BDF7-4868-AE9A-4303D74E9F12}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="data_urodzenia"
+              DTS:DTSID="{71675331-7595-450F-811F-D294A5A884A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="staz_kierowania_lata"
+              DTS:DTSID="{DB0C9A7C-EC6F-4051-9B4C-054D7CE2DB9F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="5"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="poziom_alkoholu"
+              DTS:DTSID="{9AE6823B-EAD5-4300-9DC5-FA799F9C1DFF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="godzina_zdarz_key"
+              DTS:DTSID="{8FA32C86-9842-43B9-9ED0-91E855D6BDC7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="data_zdarzenia_key"
+              DTS:DTSID="{CC1079BB-C517-4C4E-8ACE-3FFF381D8636}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="kod_gus"
+              DTS:DTSID="{9F225626-9A67-4251-92C8-AAA483A4B70F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ulica_adres"
+              DTS:DTSID="{647847CD-045E-4910-AE9B-E0907C33B89C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id_pojazd_zrodlo"
+              DTS:DTSID="{822D508D-6ADE-4F5A-ABB5-42221C9B95CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="rola_uczestnika_kod"
+              DTS:DTSID="{EE564C40-DFA3-4776-A995-4F87D2BAFB08}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="obcokrajowiec"
+              DTS:DTSID="{83C6EF18-B1B2-4BDA-B845-EFD2936D293F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="odblaski"
+              DTS:DTSID="{3BFA079F-A744-46EC-80A6-03964F090ECA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inwalida"
+              DTS:DTSID="{1B9A474B-34CB-4B20-8522-E953E11EC4A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pod_wplywem_substancji_kod"
+              DTS:DTSID="{4D820C88-350B-47AA-8E7E-1C7B30836359}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="zbiegl_z_miejsca"
+              DTS:DTSID="{9FF786CA-8354-4021-96B3-F634F86E17F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="rozstrzygniecie_kod"
+              DTS:DTSID="{8D139048-4E71-45AC-BE78-7A541638D9D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="przyczyna_kierowcy_kod"
+              DTS:DTSID="{A5D8B31A-3357-458D-824F-701910F03EC1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="przyczyna_pieszego_kod"
+              DTS:DTSID="{5B180514-44AC-4A1B-98BF-D7C75CB80A68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="jazda_bez_uprawnien_kod"
+              DTS:DTSID="{C14769E1-E8AF-41EE-9249-17829112CD07}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{D6037ABE-6E81-464E-86DC-193DDDDDEA68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{97F932DD-2E2A-4C71-9BB7-1191FD3EBDA0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
       DTS:CreationName="OLEDB"
@@ -29,12 +239,42 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADFYWKMYq3342Yrpdzf24M0Teb59hNi5UDVmiRxPnxOUgAAAAAOgAAAAAIAACAAAAAlQeDWAhaSptsfs5+L0+U0XhCDPLHCS5BLbQlSbPwqrTAAAADy9TzEtyhCPceiYDvgvXDieHvkepVPpQ3aRifzq41r5cZjmWgwc2DnIOCkBXYtrmVAAAAA72NzynSUFmb9RGzsn3GDX/hH3hDR/JFsIPZvn6MCV4qa/u5O+s29NU9vok1FbIDKUXkHRDs4TWypa9aogHo3+g</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD/ZfHBGlRalAzHwHfkI+rfdOEplHpWKGDMqKgUAAKTTAAAAAAOgAAAAAIAACAAAACkSWEJ9V3ve/fI6ckgNQucB52prWgnU9iHcVRwf6eIdzAAAAD7/57pPlB4hcrRMUlELSkea7ivTCEaLCDtKN21A1fwrJgNfJSOkoYKi7r1vMNfDJlAAAAAHQpj4SYZXvoXz9LxWsZE2zpIb/M6ILj361Z10HD0Hgd6t9UKqIcwjRyP+LNRpKN+RQ6Fu8m94U7zIgT1rEcuWA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{E941A22F-4C3D-4D98-9C98-29CC77AB1545}"
+      DTS:ObjectName="counter">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">0</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9E885490-8FBD-4A38-8216-3B0CBBB56FDF}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="counter">
+      <DTS:VariableValue
+        DTS:DataType="11">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A0C95935-6F40-43BC-BB58-01A71BDA0AB2}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Variable">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
@@ -64,13 +304,13 @@
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DIM_Czas]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT godzina, id_czas FROM [dbo].[DIM_Czas]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DIM_Czas]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT godzina, id_czas FROM [dbo].[DIM_Czas]) [refTable]
 where [refTable].[godzina] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -86,7 +326,7 @@ where [refTable].[godzina] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -102,7 +342,7 @@ where [refTable].[godzina] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="godzina" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="czy_godzina_szczytu" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="pora_dnia" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="pora_dnia_nr" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="czy_noc" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="godzina_etykieta" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_czas" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="godzina" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_czas" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -154,7 +394,6 @@ where [refTable].[godzina] = ?</property>
                 <output
                   refId="Package\Data Flow Task\Lookup_Czas.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Data Flow Task\Lookup_Czas.Inputs[Lookup Input]">
@@ -244,7 +483,7 @@ where [refTable].[data] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -312,7 +551,6 @@ where [refTable].[data] = ?</property>
                 <output
                   refId="Package\Data Flow Task\Lookup_Data.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Data Flow Task\Lookup_Data.Inputs[Lookup Input]">
@@ -402,7 +640,7 @@ where [refTable].[kod_terytorialny_gus] = ? and [refTable].[ulica] = ?</property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -488,7 +726,6 @@ where [refTable].[kod_terytorialny_gus] = ? and [refTable].[ulica] = ?</property
                 <output
                   refId="Package\Data Flow Task\Lookup_Lokalizacja.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Data Flow Task\Lookup_Lokalizacja.Inputs[Lookup Input]">
@@ -573,7 +810,7 @@ where [refTable].[id_pojazd_zrodlo] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -646,7 +883,7 @@ where [refTable].[id_pojazd_zrodlo] = ?</property>
                 <output
                   refId="Package\Data Flow Task\Lookup_Pojazd.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Data Flow Task\Lookup_Pojazd.Inputs[Lookup Input]">
@@ -693,460 +930,6 @@ where [refTable].[id_pojazd_zrodlo] = ?</property>
                       refId="Package\Data Flow Task\Lookup_Pojazd.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Lookup_Pojazd.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup_Postepowanie_Uczestnika"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DIM_Postepowanie_Uczestnika]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DIM_Postepowanie_Uczestnika]) [refTable]
-where [refTable].[zbiegl_z_miejsca] = ? and [refTable].[rozstrzygniecie_kod] = ? and [refTable].[przyczyna_kierowcy_kod] = ? and [refTable].[przyczyna_pieszego_kod] = ? and [refTable].[jazda_bez_uprawnien_kod] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_postepowania" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="zbiegl_z_miejsca" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rozstrzygniecie" dataType="DT_WSTR" length="200" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rozstrzygniecie_kod" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="przyczyna_kierowcy" dataType="DT_WSTR" length="200" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="przyczyna_kierowcy_kod" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="przyczyna_pieszego" dataType="DT_WSTR" length="200" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="przyczyna_pieszego_kod" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="jazda_bez_uprawnien" dataType="DT_WSTR" length="200" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="jazda_bez_uprawnien_kod" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zbiegl_z_miejsca]};#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rozstrzygniecie_kod]};#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[przyczyna_kierowcy_kod]};#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[przyczyna_pieszego_kod]};#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jazda_bez_uprawnien_kod]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
-                  connectionManagerRefId="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Inputs[Lookup Input].Columns[zbiegl_z_miejsca]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="zbiegl_z_miejsca"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zbiegl_z_miejsca]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">zbiegl_z_miejsca</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Inputs[Lookup Input].Columns[rozstrzygniecie_kod]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="rozstrzygniecie_kod"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rozstrzygniecie_kod]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">rozstrzygniecie_kod</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Inputs[Lookup Input].Columns[przyczyna_kierowcy_kod]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="przyczyna_kierowcy_kod"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[przyczyna_kierowcy_kod]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">przyczyna_kierowcy_kod</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Inputs[Lookup Input].Columns[przyczyna_pieszego_kod]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="przyczyna_pieszego_kod"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[przyczyna_pieszego_kod]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">przyczyna_pieszego_kod</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Inputs[Lookup Input].Columns[jazda_bez_uprawnien_kod]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="jazda_bez_uprawnien_kod"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jazda_bez_uprawnien_kod]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">jazda_bez_uprawnien_kod</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="IgnoreFailure"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Outputs[Lookup Match Output].Columns[id_postepowania]"
-                      dataType="i8"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Outputs[Lookup Match Output].Columns[id_postepowania]"
-                      name="id_postepowania"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">id_postepowania</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Lookup_Stan_Uczestnika"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup_Stan_Uczestnika"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DIM_Stan_Uczestnika]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DIM_Stan_Uczestnika]) [refTable]
-where [refTable].[rola_uczestnika_kod] = ? and [refTable].[obcokrajowiec] = ? and [refTable].[odblaski] = ? and [refTable].[inwalida] = ? and [refTable].[pod_wplywem_substancji_kod] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_opis_stanu" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rola_uczestnika" dataType="DT_WSTR" length="200" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rola_uczestnika_kod" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="obcokrajowiec" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="odblaski" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="inwalida" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="pod_wplywem_substancji" dataType="DT_WSTR" length="200" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="pod_wplywem_substancji_kod" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="stan_trzezwosci" dataType="DT_WSTR" length="200" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="stan_trzezwosci_slownik" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rola_uczestnika_kod]};#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[obcokrajowiec]};#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[odblaski]};#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[inwalida]};#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji_kod]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
-                  connectionManagerRefId="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Inputs[Lookup Input].Columns[rola_uczestnika_kod]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="rola_uczestnika_kod"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rola_uczestnika_kod]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">rola_uczestnika_kod</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Inputs[Lookup Input].Columns[obcokrajowiec]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="obcokrajowiec"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[obcokrajowiec]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">obcokrajowiec</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Inputs[Lookup Input].Columns[odblaski]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="odblaski"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[odblaski]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">odblaski</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Inputs[Lookup Input].Columns[inwalida]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="inwalida"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[inwalida]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">inwalida</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Inputs[Lookup Input].Columns[pod_wplywem_substancji_kod]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="pod_wplywem_substancji_kod"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji_kod]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">pod_wplywem_substancji_kod</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="IgnoreFailure"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Outputs[Lookup Match Output].Columns[id_opis_stanu]"
-                      dataType="i8"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Outputs[Lookup Match Output].Columns[id_opis_stanu]"
-                      name="id_opis_stanu"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">id_opis_stanu</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1259,12 +1042,6 @@ where [refTable].[rola_uczestnika_kod] = ? and [refTable].[obcokrajowiec] = ? an
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[poziom_alkoholu]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[poziom_alkoholu]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_postepowania]"
-                      cachedDataType="i8"
-                      cachedName="id_postepowania"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_postepowania]"
-                      lineageId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Outputs[Lookup Match Output].Columns[id_postepowania]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_czas]"
                       cachedDataType="i4"
                       cachedName="id_czas"
@@ -1293,7 +1070,13 @@ where [refTable].[rola_uczestnika_kod] = ? and [refTable].[obcokrajowiec] = ? an
                       cachedDataType="i8"
                       cachedName="id_opis_stanu"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_opis_stanu]"
-                      lineageId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Outputs[Lookup Match Output].Columns[id_opis_stanu]" />
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_opis_stanu]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_postepowania]"
+                      cachedDataType="i8"
+                      cachedName="id_postepowania"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_postepowania]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_postepowania]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1400,43 +1183,58 @@ where [refTable].[rola_uczestnika_kod] = ? and [refTable].[obcokrajowiec] = ? an
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
-    TRY_CAST(o.id_osoby AS int) AS id_uczestnika_zrodlo,
-    TRY_CAST(z.id_zdarzenia AS int) AS id_zdarzenia_zrodlo,
-    
-    -- Miary i atrybuty z rzutowaniem typów
-    TRY_CAST(o.data_urodzenia AS date) AS data_urodzenia,
-    TRY_CAST(o.liczba_lat_kier AS smallint) AS staz_kierowania_lata,
-    TRY_CAST(REPLACE(o.poziom_alkoholu, ',', '.') AS decimal(5,2)) AS poziom_alkoholu,
-
-    -- Klucze pomocnicze do Lookupu Czasu i Daty
-    TRY_CAST(z.godzina_zdarz AS smallint) AS godzina_zdarz_key,
-    TRY_CAST(z.data_zdarzenia AS date) AS data_zdarzenia_key,
-    
-    -- Klucze pomocnicze do Lookupu Lokalizacji
-    z.kod_gus,
-    z.ulica_adres,
-    
-    -- Klucze pomocnicze do Lookupu Pojazdu (POPRAWIONE NA BIGINT)
-    TRY_CAST(p.id_pojazdu AS bigint) AS id_pojazd_zrodlo,
-
-    -- Klucze pomocnicze do DIM_Stan_Uczestnika
-    ISNULL(o.rola_uczestnika_kod, 'N/D') AS rola_uczestnika_kod,
-    ISNULL(o.obcokrajowiec_kod, 'N') AS obcokrajowiec,
-    ISNULL(o.odblaski, 'N') AS odblaski,
-    ISNULL(o.inwalida, 'N') AS inwalida,
-    ISNULL(o.pod_wplywem_kod, 'N/D') AS pod_wplywem_substancji_kod,
-    
-    -- Klucze pomocnicze do DIM_Postepowanie_Uczestnika
-    ISNULL(o.zbiegl_z_miejsca, 'N') AS zbiegl_z_miejsca,
-    ISNULL(o.rozstrzygniecie_kod, 'N/D') AS rozstrzygniecie_kod,
-    ISNULL(o.przyczyna_kier_kod, 'N/D') AS przyczyna_kierowcy_kod,
-    ISNULL(o.przyczyna_piesz_kod, 'N/D') AS przyczyna_pieszego_kod,
-    ISNULL(o.jazda_bez_upr_kod, 'N/D') AS jazda_bez_uprawnien_kod
-
-FROM dbo.STG_Osoba o
-LEFT JOIN dbo.STG_Zdarzenie z ON o.id_zdarzenia = z.id_zdarzenia
-LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">WITH CleanedStaging AS (
+    SELECT 
+        TRY_CAST(o.id_osoby AS int) AS id_uczestnika_zrodlo,
+        TRY_CAST(z.id_zdarzenia AS int) AS id_zdarzenia_zrodlo,
+        TRY_CAST(o.data_urodzenia AS date) AS data_urodzenia,
+        TRY_CAST(o.liczba_lat_kier AS smallint) AS staz_kierowania_lata,
+        TRY_CAST(REPLACE(o.poziom_alkoholu, ',', '.') AS decimal(5,2)) AS poziom_alkoholu,
+        TRY_CAST(LEFT(REPLACE(z.godzina_zdarz, ':', ''), 2) AS smallint) AS godzina_zdarz_key,
+        TRY_CAST(z.data_zdarzenia AS date) AS data_zdarzenia_key,
+        ISNULL(NULLIF(LTRIM(RTRIM(z.kod_gus)), ''), 'N/D') AS kod_gus,
+        ISNULL(NULLIF(LTRIM(RTRIM(z.ulica_adres)), ''), 'N/D') AS ulica_adres,
+        TRY_CAST(p.id_pojazdu AS bigint) AS id_pojazd_zrodlo,
+        ISNULL(o.rola_uczestnika_kod, 'N/D') AS clean_rola,
+        ISNULL(o.obcokrajowiec_kod, 'N') AS clean_obcokrajowiec,
+        ISNULL(o.odblaski, 'N') AS clean_odblaski,
+        ISNULL(o.inwalida, 'N') AS clean_inwalida,
+        ISNULL(o.pod_wplywem_kod, 'N/D') AS clean_pod_wplywem,
+        CAST(ISNULL(NULLIF(LTRIM(RTRIM(o.zbiegl_z_miejsca)), ''), 'N') AS NVARCHAR(3)) AS clean_zbiegl,
+        CAST(ISNULL(NULLIF(LTRIM(RTRIM(o.rozstrzygniecie_kod)), ''), 'N/D') AS NVARCHAR(10)) AS clean_rozstrzygniecie,
+        CAST(ISNULL(NULLIF(LTRIM(RTRIM(o.przyczyna_kier_kod)), ''), 'N/D') AS NVARCHAR(10)) AS clean_kierowca,
+        CAST(ISNULL(NULLIF(LTRIM(RTRIM(o.przyczyna_piesz_kod)), ''), 'N/D') AS NVARCHAR(10)) AS clean_pieszy,
+        CAST(ISNULL(NULLIF(LTRIM(RTRIM(o.jazda_bez_upr_kod)), ''), 'N/D') AS NVARCHAR(10)) AS clean_uprawnienia
+    FROM dbo.STG_Osoba o
+    LEFT JOIN dbo.STG_Zdarzenie z ON o.id_zdarzenia = z.id_zdarzenia
+    LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu
+)
+SELECT 
+    c.id_uczestnika_zrodlo,
+    c.id_zdarzenia_zrodlo,
+    c.data_urodzenia,
+    c.staz_kierowania_lata,
+    c.poziom_alkoholu,
+    c.godzina_zdarz_key,
+    c.data_zdarzenia_key,
+    c.kod_gus,
+    c.ulica_adres,
+    c.id_pojazd_zrodlo,
+    ISNULL(dim_stan.id_opis_stanu, -1) AS id_opis_stanu,
+    ISNULL(dim_post.id_postepowania, -1) AS id_postepowania
+FROM CleanedStaging c
+LEFT JOIN dbo.DIM_Postepowanie_Uczestnika dim_post
+    ON c.clean_zbiegl = dim_post.zbiegl_z_miejsca
+    AND c.clean_rozstrzygniecie = dim_post.rozstrzygniecie_kod
+    AND c.clean_kierowca = dim_post.przyczyna_kierowcy_kod
+    AND c.clean_pieszy = dim_post.przyczyna_pieszego_kod
+    AND c.clean_uprawnienia = dim_post.jazda_bez_uprawnien_kod
+LEFT JOIN dbo.DIM_Stan_Uczestnika dim_stan
+    ON c.clean_rola = dim_stan.rola_uczestnika_kod
+    AND c.clean_obcokrajowiec = dim_stan.obcokrajowiec
+    AND c.clean_odblaski = dim_stan.odblaski
+    AND c.clean_inwalida = dim_stan.inwalida
+    AND c.clean_pod_wplywem = dim_stan.pod_wplywem_substancji_kod;</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -1567,104 +1365,22 @@ LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
                       name="id_pojazd_zrodlo"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rola_uczestnika_kod]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_postepowania]"
+                      dataType="i8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rola_uczestnika_kod]"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rola_uczestnika_kod]"
-                      name="rola_uczestnika_kod"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_postepowania]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_postepowania]"
+                      name="id_postepowania"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[obcokrajowiec]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_opis_stanu]"
+                      dataType="i8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[obcokrajowiec]"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[obcokrajowiec]"
-                      name="obcokrajowiec"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[odblaski]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[odblaski]"
-                      length="3"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[odblaski]"
-                      name="odblaski"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[inwalida]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[inwalida]"
-                      length="3"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[inwalida]"
-                      name="inwalida"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji_kod]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pod_wplywem_substancji_kod]"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[pod_wplywem_substancji_kod]"
-                      name="pod_wplywem_substancji_kod"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zbiegl_z_miejsca]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zbiegl_z_miejsca]"
-                      length="3"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zbiegl_z_miejsca]"
-                      name="zbiegl_z_miejsca"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rozstrzygniecie_kod]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rozstrzygniecie_kod]"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[rozstrzygniecie_kod]"
-                      name="rozstrzygniecie_kod"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[przyczyna_kierowcy_kod]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[przyczyna_kierowcy_kod]"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[przyczyna_kierowcy_kod]"
-                      name="przyczyna_kierowcy_kod"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[przyczyna_pieszego_kod]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[przyczyna_pieszego_kod]"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[przyczyna_pieszego_kod]"
-                      name="przyczyna_pieszego_kod"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jazda_bez_uprawnien_kod]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jazda_bez_uprawnien_kod]"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jazda_bez_uprawnien_kod]"
-                      name="jazda_bez_uprawnien_kod"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_opis_stanu]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_opis_stanu]"
+                      name="id_opis_stanu"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -1714,55 +1430,13 @@ LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
                       dataType="i8"
                       name="id_pojazd_zrodlo" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rola_uczestnika_kod]"
-                      dataType="wstr"
-                      length="10"
-                      name="rola_uczestnika_kod" />
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_postepowania]"
+                      dataType="i8"
+                      name="id_postepowania" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[obcokrajowiec]"
-                      dataType="wstr"
-                      length="10"
-                      name="obcokrajowiec" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[odblaski]"
-                      dataType="wstr"
-                      length="3"
-                      name="odblaski" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[inwalida]"
-                      dataType="wstr"
-                      length="3"
-                      name="inwalida" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pod_wplywem_substancji_kod]"
-                      dataType="wstr"
-                      length="10"
-                      name="pod_wplywem_substancji_kod" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zbiegl_z_miejsca]"
-                      dataType="wstr"
-                      length="3"
-                      name="zbiegl_z_miejsca" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rozstrzygniecie_kod]"
-                      dataType="wstr"
-                      length="10"
-                      name="rozstrzygniecie_kod" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[przyczyna_kierowcy_kod]"
-                      dataType="wstr"
-                      length="10"
-                      name="przyczyna_kierowcy_kod" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[przyczyna_pieszego_kod]"
-                      dataType="wstr"
-                      length="10"
-                      name="przyczyna_pieszego_kod" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jazda_bez_uprawnien_kod]"
-                      dataType="wstr"
-                      length="10"
-                      name="jazda_bez_uprawnien_kod" />
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[id_opis_stanu]"
+                      dataType="i8"
+                      name="id_opis_stanu" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1825,65 +1499,15 @@ LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_pojazd_zrodlo]"
                       name="id_pojazd_zrodlo" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rola_uczestnika_kod]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rola_uczestnika_kod]"
-                      name="rola_uczestnika_kod" />
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_opis_stanu]"
+                      dataType="i8"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_opis_stanu]"
+                      name="id_opis_stanu" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[obcokrajowiec]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[obcokrajowiec]"
-                      name="obcokrajowiec" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[odblaski]"
-                      dataType="wstr"
-                      length="3"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[odblaski]"
-                      name="odblaski" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[inwalida]"
-                      dataType="wstr"
-                      length="3"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[inwalida]"
-                      name="inwalida" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pod_wplywem_substancji_kod]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pod_wplywem_substancji_kod]"
-                      name="pod_wplywem_substancji_kod" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zbiegl_z_miejsca]"
-                      dataType="wstr"
-                      length="3"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zbiegl_z_miejsca]"
-                      name="zbiegl_z_miejsca" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rozstrzygniecie_kod]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rozstrzygniecie_kod]"
-                      name="rozstrzygniecie_kod" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[przyczyna_kierowcy_kod]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[przyczyna_kierowcy_kod]"
-                      name="przyczyna_kierowcy_kod" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[przyczyna_pieszego_kod]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[przyczyna_pieszego_kod]"
-                      name="przyczyna_pieszego_kod" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jazda_bez_uprawnien_kod]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jazda_bez_uprawnien_kod]"
-                      name="jazda_bez_uprawnien_kod" />
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_postepowania]"
+                      dataType="i8"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[id_postepowania]"
+                      name="id_postepowania" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1920,19 +1544,9 @@ LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
               startId="Package\Data Flow Task\Lookup_Lokalizacja.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output3]"
-              endId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup_Pojazd.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output4]"
-              endId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup_Stan_Uczestnika.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output5]"
               endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika.Outputs[Lookup Match Output]" />
+              startId="Package\Data Flow Task\Lookup_Pojazd.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
               endId="Package\Data Flow Task\Lookup_Czas.Inputs[Lookup Input]"
@@ -1955,6 +1569,7 @@ LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
+          SQLTask:Connection="{E998293B-BC10-4FB3-82FF-5DC917F37A5D}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.FAKT_Uczestnik" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1982,13 +1597,13 @@ LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42"
-          Id="Package\SQL_Truncate_FAKT"
-          TopLeft="97,32" />
-        <NodeLayout
           Size="151,42"
           Id="Package\Data Flow Task"
           TopLeft="159,151" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\SQL_Truncate_FAKT"
+          TopLeft="97,32" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="185,74">
@@ -2036,9 +1651,25 @@ LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
           Id="Package\Data Flow Task\OLE DB Source"
           TopLeft="227,37" />
         <NodeLayout
+          Size="150,42"
+          Id="Package\Data Flow Task\Lookup_Pojazd"
+          TopLeft="255,382" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Data Flow Task\Lookup_Data"
+          TopLeft="254,215" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="243,463" />
+        <NodeLayout
           Size="140,42"
           Id="Package\Data Flow Task\Lookup_Czas"
           TopLeft="245,134" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Data Flow Task\Lookup_Lokalizacja"
+          TopLeft="247,294" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="302,79">
@@ -2073,10 +1704,54 @@ LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="141,42"
-          Id="Package\Data Flow Task\Lookup_Data"
-          TopLeft="254,215" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
+          TopLeft="331,336">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,13.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
+          TopLeft="328.25,257">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,8.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
           TopLeft="315,176">
@@ -2113,167 +1788,27 @@ LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170,42"
-          Id="Package\Data Flow Task\Lookup_Lokalizacja"
-          TopLeft="247,294" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
-          TopLeft="328.25,257">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37"
-              Start="0,0"
-              End="0,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,8.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Data Flow Task\Lookup_Pojazd"
-          TopLeft="255,382" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
-          TopLeft="331,336">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46"
-              Start="0,0"
-              End="0,38.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,13.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="196,42"
-          Id="Package\Data Flow Task\Lookup_Stan_Uczestnika"
-          TopLeft="264,467" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output3]"
-          TopLeft="330,424">
+          TopLeft="329.25,424">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="32,43"
+              EndConnector="0,39"
               Start="0,0"
-              End="32,35.5">
+              End="0,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.5"
-                    Point2="0,21.5"
-                    Point3="4,21.5" />
-                  <mssgle:LineSegment
-                    End="28,21.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="28,21.5"
-                    Point2="32,21.5"
-                    Point3="32,25.5" />
-                  <mssgle:LineSegment
-                    End="32,35.5" />
+                    End="0,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-32.19138671875,26.5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="239,42"
-          Id="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika"
-          TopLeft="246,538" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output4]"
-          TopLeft="363.75,509">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,29"
-              Start="0,0"
-              End="0,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,4.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="261,604" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output5]"
-          TopLeft="365.5,580">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-19,24"
-              Start="0,0"
-              End="-19,16.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8"
-                    Point2="0,12"
-                    Point3="-4,12" />
-                  <mssgle:LineSegment
-                    End="-15,12" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-15,12"
-                    Point2="-19,12"
-                    Point3="-19,16" />
-                  <mssgle:LineSegment
-                    End="-19,16.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-57.69138671875,17,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,9.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2289,7 +1824,7 @@ LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup_Czas">
+    design-time-name="Package\Data Flow Task\Lookup_Pojazd">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -2299,12 +1834,12 @@ LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DIM_Czas]</Value>
+          type="q3:string">[dbo].[DIM_Pojazd]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2323,6 +1858,42 @@ LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[DIM_Data]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lookup_Czas">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -2350,92 +1921,10 @@ LEFT JOIN dbo.STG_Pojazd p ON o.id_pojazdu = p.id_pojazdu;</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup_Pojazd">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_Pojazd]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup_Stan_Uczestnika">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_Stan_Uczestnika]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup_Postepowanie_Uczestnika">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_Postepowanie_Uczestnika]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

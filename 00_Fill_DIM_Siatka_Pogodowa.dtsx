@@ -7,12 +7,12 @@
   DTS:CreatorName="ALICJA\alapr"
   DTS:DTSID="{A2429129-5ABD-4D8C-B9F4-CAA6C05177F9}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
   DTS:LocaleID="1045"
   DTS:ObjectName="00_Fill_DIM_Siatka_Pogodowa"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{57119D39-BD62-4C10-8530-FCEA116FE402}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{DABFE7A9-2343-4617-ABE0-9222374BFF2C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,11 +25,28 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=ALICJA;User ID=sa;Initial Catalog=DWH_SEWIK_METEO;Provider=SQLNCLI11.1;Application Name=SSIS-Fill_DIM_Siatka_Pogodowa-{ED6BD4F3-1351-49E7-844D-5CC0AA6D85B4}ALICJA.DWH_SEWIK_METEO.sa;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=DESKTOP-KKSSG5V;User ID=EmergencyAdmin;Initial Catalog=DWH_SEWIK_METEO_3;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Fill_DIM_Siatka_Pogodowa-{ED6BD4F3-1351-49E7-844D-5CC0AA6D85B4}ALICJA.DWH_SEWIK_METEO.sa;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwFGmjbGtEkaLzfxJSXdC7QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAGHH+sNam75pVsDUi3TIHDZJLFQ/6qaHzqQJ1A95BQVQAAAAAOgAAAAAIAACAAAADKEgk2VBP/8xCzBtcC9ddpgUQ7OPnS6M22VE2WAgSx/SAAAADa5aB8rabaQrl3d6JOZaZuaw9kHCVuJ1vvnz4TDAa56UAAAACORzfhMdPrPqHd/ejI2IDMF2SPMP7O0QQu3a5G/Ez0FcpDBzELHAtU4CY/gTyo6N5jWbX1L7Ddr3wWo0L53/lx</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA4I0BWfRm/cQvI3/E0vE6jsjDkBoXYYt26+L+5q/wLAgAAAAAOgAAAAAIAACAAAACtgQCe/mOiktVCql0hmtJi/gRNyywDsPNZyAZ+u5/agzAAAABgg1Un9lXJFis3lWYf8qBkEY3TvlIEMIAi6bgj4OXwo4zp7zCc1nLZv6MF6hYQMoZAAAAAQLwzvl8DVJeQ/Rl0ZVB8BP0o6tqJLazuto/yns+aBkanfjkrOhJ8AvfH0geBD8+vCE6cyHAVIXaqfxplctXvQA</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FD6BC97B-BC30-4463-84F5-B511914BAD55}"
+      DTS:ObjectName="local.DWH_SEWIK_METEO.EmergencyAdmin">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-KKSSG5V;User ID=EmergencyAdmin;Initial Catalog=DWH_SEWIK_METEO_3;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-00_Fill_DIM_Siatka_Pogodowa-{FD6BC97B-BC30-4463-84F5-B511914BAD55}local.DWH_SEWIK_METEO.EmergencyAdmin;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAL2pvxUuNtk+4qtMjpXZPGgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA9rfkAQF6t3mcyAsJU2GdAKY3PTzSX9NgKUZIjnAgnhgAAAAAOgAAAAAIAACAAAAD9VXOkYkMApiZcgoo7uVoTUMzefluiMp3SCmP+YjY1gTAAAADOOuyDBLhE8XUCB0X3y5gpWNvmggZrJGX2ocvaqRv9rmtZpOQFUZqGynA1DKlbcnRAAAAABMfQu/PNe4Qa1obZUFLxXEx+c1++IlNumPNC8P75nsPZw8Hdk+bO3HGgXGTu/Ci1nOYWPLBENq13z3Vkkd4aNQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -109,8 +126,8 @@
               <connections>
                 <connection
                   refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
+                  connectionManagerID="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
+                  connectionManagerRefId="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -185,8 +202,10 @@
                       name="model_pogody" />
                     <externalMetadataColumn
                       refId="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa.Inputs[OLE DB Destination Input].ExternalColumns[rozdzielczość]"
-                      dataType="i2"
-                      name="rozdzielczość" />
+                      dataType="numeric"
+                      name="rozdzielczość"
+                      precision="4"
+                      scale="2" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -286,8 +305,8 @@ CROSS JOIN Dlugosci dl;</property>
               <connections>
                 <connection
                   refId="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[ALICJA.DWH_SEWIK_METEO.sa]"
+                  connectionManagerID="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
+                  connectionManagerRefId="Package.ConnectionManagers[local.DWH_SEWIK_METEO.EmergencyAdmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -517,7 +536,7 @@ CROSS JOIN Dlugosci dl;</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{ED6BD4F3-1351-49E7-844D-5CC0AA6D85B4}"
-          SQLTask:SqlStatementSource="DELETE FROM DWH_SEWIK_METEO.dbo.DIM_Siatka_Pogodowa;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DELETE FROM DWH_SEWIK_METEO_3.dbo.DIM_Siatka_Pogodowa;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -594,10 +613,6 @@ CROSS JOIN Dlugosci dl;</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="181,42"
-          Id="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points"
-          TopLeft="345.5,92.5" />
-        <NodeLayout
           Size="179,42"
           Id="Package\Fill_DIM_Siatka_Pogodowa\DC_Missing_Columns"
           TopLeft="336.5,209.5" />
@@ -605,6 +620,10 @@ CROSS JOIN Dlugosci dl;</property>
           Size="214,42"
           Id="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa"
           TopLeft="334.5,319.5" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points"
+          TopLeft="345.5,92.5" />
         <EdgeLayout
           Id="Package\Fill_DIM_Siatka_Pogodowa.Paths[OLE DB Source Output]"
           TopLeft="436,134.5">
@@ -677,14 +696,6 @@ CROSS JOIN Dlugosci dl;</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Fill_DIM_Siatka_Pogodowa\DBD_DIM_Siatka_Pogodowa">
     <Properties>
       <Property>
@@ -694,6 +705,14 @@ CROSS JOIN Dlugosci dl;</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill_DIM_Siatka_Pogodowa\DBS_Generate_Points">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
